@@ -15,7 +15,7 @@ No prior experience with QGIS or other GIS software is needed, though attendees 
 By the end of this workshop, you will be able to:
 
 - Understand the basic distinctions between open-source QGIS and proprietary GIS products like ArcGIS Desktop and ArcGIS Pro
-- Download spatial data from the city’s open data portal (DataSF) and use it in QGIS to conduct data analysis and to produce maps. 
+- Download spatial data from the San Fransico’s [open data portal (DataSF)](https://datasf.org/opendata/) and use it in QGIS to conduct data analysis and to produce maps. 
 - Define GIS and geospatial concepts and terminology.
 - Know the difference between vector and raster data types
 - Properly connect and add data to a QGIS project
