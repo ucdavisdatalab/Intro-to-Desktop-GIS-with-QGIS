@@ -35,9 +35,10 @@ Start | End | Topic
 9:15 | 9:30| Why QGIS?
 9:30 | 10:15 | Data Types - Vector vs. Raster vs. other types of spatial data
 10:15 | 10:30 | **Break**
-10:30 | 10:45 | Download data, Import into QGIS, Save Project Files
-10:45 | 11:15 | Attributes tables
-11:15 | 11:45 | Select by attributes
+10:30 | 10:45 | Interface Tour, Download data, Import into QGIS, Save Project Files
+10:45 | 11:15 | Attributes Tables
+11:15 | 11:40 | Select by attributes
+11:40 | 11:45 | Plug-ins, Processing Toolbox, Menus
 11:45 | 12:00 | **Break**
 12:00 | 12:30 | Symbolizing layers by attributes
 12:30 | 12:50 | Making a map with the print composer
