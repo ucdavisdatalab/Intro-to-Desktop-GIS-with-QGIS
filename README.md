@@ -8,7 +8,7 @@ This tutorial uses QGIS 3 to teach the basics of desktop mapping software for be
 You should download and install [QGIS](https://qgis.org) version 3.4 to your computer.
 
 ## Workshop Aims
-This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze begin using Geographic Information Systems (GIS) software for the exploration and analysis of spatial data using the QGIS platform. QGIS is an open source GIS application, and enables users to perform location-based analysis similar to ArcGIS Desktop and ArcGIS Pro. There is growing interest in free, adaptable, and powerful tools such as QGIS. that can run on many platforms: Mac, PC, and Linux. 
+This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze begin using Geographic Information Systems (GIS) software for the exploration and analysis of spatial data using the QGIS platform. 
 
 No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing/organizing computer files. 
 
@@ -47,6 +47,9 @@ Start | End | Topic
 # What is GIS?
 
 # Why QGIS?
+
+[QGIS](https://www.qgis.org) is an open source, community-driven desktop GIS software that allows users to visualize and analyze spatial data in a variety of ways.  There are many reasons to use QGIS, but here are a few: 
+
 - It's a robust, powerful desktop GIS
 - Runs on all major platorms: Mac, Linux, & Windows
 - Free of charge, all access (no paid add-ons or extensions)
@@ -56,6 +59,7 @@ Start | End | Topic
 - Access to analysis tools from other established software like GRASS and SAGA
 - Native access to open data formats like geoJSON & GeoPackage
 - Comes in a [more than 40 languages](https://www.qgis.org/en/site/getinvolved/translate.html), making it easier to work with a larger variety of colaborators
+- Growing use by local, state, federal, and international governments
 
 # Data Types - Vector vs. Raster vs. other types of spatial data
 
