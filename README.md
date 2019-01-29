@@ -68,7 +68,14 @@ Start | End | Topic
 
 # Import data into QGIS
 
+1. Loading data
+1. Table of contents/layers panel
+1. Layer properties
+
 # Saving Project Files
+
+1. .qgs vs. .qgz files
+1. like ArcMap's .mxd files
 
 # Attributes tables
 
@@ -76,5 +83,13 @@ Start | End | Topic
 
 # Symbolizing layers by attributes
 
+1. Single symbols
+1. Changing symbols based on attributes
+
 # Making a map with the print composer
+
+1. Add map
+1. Adjust scale
+1. Add extras - legend, scale bar, etc. + item properties
+1. Export
 
