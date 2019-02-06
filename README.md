@@ -74,7 +74,7 @@ Start | End | Topic
 
 # Saving Project Files
 
-1. .qgs vs. .qgz files
+1. .qgs vs. .qgz files - see [this post](http://osgeo-org.1560.x6.nabble.com/QGIS-Developer-Why-is-qgz-the-default-format-td5392345.html) for more details about the discussion around .qgs vs. .qgz formats.
 1. like ArcMap's .mxd files
 
 # Attributes tables
