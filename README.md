@@ -102,3 +102,10 @@ Let's unpack some of that.
 1. Add extras - legend, scale bar, etc. + item properties
 1. Export
 
+# Further Reading & Resources
+
+[QGIS Documentation](https://qgis.org/en/docs/index.html): includes the User Guide, Training Manual, and Gentle Introduction to GIS
+
+[Open Source Geospatial Foundation](https://www.osgeo.org/): includes news and information about projects, conferences, and community
+
+
