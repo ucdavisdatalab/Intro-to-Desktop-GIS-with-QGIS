@@ -98,14 +98,49 @@ c. csv
 1. .qgs vs. .qgz files - see [this post](http://osgeo-org.1560.x6.nabble.com/QGIS-Developer-Why-is-qgz-the-default-format-td5392345.html) for more details about the discussion around .qgs vs. .qgz formats.
 1. like ArcMap's .mxd files
 
-# Attributes tables
+# Raster Data
 
-# Select by attributes
+Let's start by looking at some Raster data.  We'll work with a digital elevation model (DEM) for San Francisco.  A DEM is a raster in which each cell in the grid contains the elevation at that location.
 
-# Symbolizing layers by attributes
+Let's load the data:
+1. Click the Add Raster Layer button (it looks like a checker board).
+1. Navigate to where you saved your workshop data and select the DEM_SF.tif file.
+1. Click *Open*.
+
+Now you should see a gray scale image that roughly looks like the San Francisco peninsula.  This is a Digital Elevation Model (DEM).  Each cell in the raster contains a number representing the elevation at that location.  
+
+Let's style this data:
+1. Open the Layer Properties for your DEM (right click on the layer in the Layers Panel and select *Properties*).
+1. Click on the *Style* tab on the left side.
+1. For the *Render type* drop down, select *Singleband pseudocolor*.
+1. For the *Color*, select *New color ramp*
+1. Select *cpt-city* from the drop down and click *Ok*
+1. Pick *Topography* from the options on the left.
+1. Pick *c3t1* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
+1. Next, you'll see a dialog asking what you want to call your new gradient.  I suggest leaving the default name, but you can call it what you like.  Click *Ok* when you're done.
+1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data.
+
+This is good, but I think it would be easier to understand if we set the water to a more intuitive color.  Yes, this means our color ramp will have a disconnect in it, but I think it will help us visually interpret the data better.
+
+1. In the Layer Properties, double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you lick and click *Ok*.  And then click *Apply* in the Layer Properties to see how it looks.  
+1. Continue to adjust the colors until you are happy with the colors, then click *Ok*.
+
+![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Continuous.PNG "Digital Elevation Model with a continuous color ramp")
+
+
+# Vector Data
+
+## Attributes tables
+
+## Select by attributes
+
+Select trees older or larger than a certain value.
+
+## Symbolizing layers by attributes
 
 1. Single symbols
-1. Changing symbols based on attributes
+1. Changing symbols based on attributes - using Tree Species?
+1. Rule-based using DBH
 
 # Making a map with the print composer
 
@@ -113,6 +148,9 @@ c. csv
 1. Adjust scale
 1. Add extras - legend, scale bar, etc. + item properties
 1. Export
+
+# Select by Location
+Which large trees are in seismic hazard zones?
 
 # Further Reading & Resources
 
