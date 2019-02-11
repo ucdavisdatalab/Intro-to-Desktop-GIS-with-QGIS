@@ -74,10 +74,22 @@ Let's unpack some of that.
 # Data Types - Vector vs. Raster vs. other types of spatial data
 
 # Download data
+In this workshop, we'll be using the following data: 
+
+1. Digital Elevation Model (DEM) of San Francisco 
+1. Streets
+1. Trees
+1. Seismic Hazard Zones
+1. City of San Francisco Boundary
+
+You can download all of this data from this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
 # Import data into QGIS
 
 1. Loading data
+a. raster
+b. vector
+c. csv
 1. Table of contents/layers panel
 1. Layer properties
 
