@@ -149,6 +149,11 @@ Select trees older or larger than a certain value.
 1. Add extras - legend, scale bar, etc. + item properties
 1. Export
 
+You may want to add background layers such as coastlines or land masses from data sources like:
+* [Natural Earth Data](http://naturalearthdata.com/)
+* [Project Linework](http://www.projectlinework.org/)
+* [GADM](https://gadm.org/)
+
 # Select by Location
 Which large trees are in seismic hazard zones?
 
