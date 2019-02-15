@@ -99,28 +99,65 @@ In this workshop, we'll be using the following data:
 
 You can download all of this data from this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
-# Import data into QGIS
+# Start QGIS & Open a New Project
+Start QGIS in the way you typically open any program on your particular computer's operating system.  It's normal that it may take a minute to open.
 
-1. Loading data
-a. raster
-b. vector
-c. csv
+When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed.  It doesn't matter which you see, because we want to start a new project.  To do this, click on the *Project* menu in the upper left of the window and select *New* - or you can click the white page icon that is usually near the *Project* menu on the tool bar.
+
+# Import data into QGIS
+Let's load some data.
+
+##  Raster Data
+Let's load the data:
+
+1. Click on the *Add Data Source* button on your toolbar.  It looks like three cards (one red, one yellow, and one blue) fanned out.
+1. Click the *Raster* button (it looks like a checker board) on the left side of the *Data Source Manager* window.
+1. Click on the "..." button and then navigate to where you saved your workshop data and select the *DEM_SF.tif* file.
+1. Click *Open*.
+1. Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in.
+
+You can leave the *Data Source Manager* window open so we can add some more data.
+
+## Vector
+### Shapefiles
+Shapefiles are a very popular vector data format.  Let's load our shapefile data.
+
+1. In the *Data Source Manager*, click on the *Vector* tab on the left.
+1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
+1. Holding down the Shift button on your keyboard while you click, select your *Recreation and Parks Facilities.zip*, *San Francisco Basemap Street Centerlines.zip*, *San Francisco Seismic Hazard Zones.zip*, and *SF Shorelines and Islands.zip*.  Then click *Open*.
+1. In the *Data Source Manager* click *Add*.
+
+### CSV Data
+It's pretty common to get point data in "CSV" file, especially if the spatial data is represented by latitude and longitude coordinates.  CSV stands for Comma Separated Value.  Typically this is tabular data where the edge of each cell of the table is indicated by a comma.  Sometimes people use a different character instead of the comma such as a semicolon, tab, or pipe. The character used to indicate the edge of the cells is called the "delimiter".  If a file has tabs as the delimeter, for example, you would call that file a "tab delimited" file.
+
+To load our .csv file:
+
+1. In the *Data Source Manager*, click on the *Delimited Text* tab on the left.  Notice that the icon is a comma.
+1. Next to the *File Name* text box, click the "..." button, then navigate to your *Street_Tree_Map.csv* file and click *Open*.
+1. In the *File format* section, we'll leave the default selection of *CSV (comma separated values)*, but if you had a file with a different delimiter, you could change the delimiter by using *Custom delimiters*.
+1. In the *Records and fields options* section, make sure *First record has field names* is checked.  If your data didn't have table headings, you would want to uncheck this box.
+1. In the *Geometry definition* section is where we indicate what kind of geometry we have.  For ours, select *Point coordinates* and in the *X field*, pick "Longitude", and for the *Y field* pick "Latitude".
+1. Review the *Sample data* section to preview how the attribute table will look.  This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
+1. If everything looks good, click *Add*.  This is a reasonably large file, so be patient as it loads.
+
 1. Table of contents/layers panel
 1. Layer properties
 
 # Saving Project Files
+Now that we've added data to our project, let's save it so we can come back to it later.  
 
-1. .qgs vs. .qgz files - see [this post](http://osgeo-org.1560.x6.nabble.com/QGIS-Developer-Why-is-qgz-the-default-format-td5392345.html) for more details about the discussion around .qgs vs. .qgz formats.
-1. like ArcMap's .mxd files
+1. Click on the blue floppy disk icon (or from the *File* menu, select *Save*).
+1. Navigate to where you want to save your project file. 
+1. In the *File name* box, type the name you would like your file to have.  Give it a descriptive name so you'll remember what the file was for.
+1. In the *Save as type* drop down, choose *.qgs*.  *.qgz* is also an option that saves the project in a compressed format.  (See [this post](http://osgeo-org.1560.x6.nabble.com/QGIS-Developer-Why-is-qgz-the-default-format-td5392345.html) for more details about the discussion around .qgs vs. .qgz formats)
+
+Note for ESRI users: QGIS' .qgs file is analogous to ArcMap's .mxd files.
 
 # Raster Data
 
 Let's start by looking at some Raster data.  We'll work with a digital elevation model (DEM) for San Francisco.  A DEM is a raster in which each cell in the grid contains the elevation at that location.
 
-Let's load the data:
-1. Click the Add Raster Layer button (it looks like a checker board).
-1. Navigate to where you saved your workshop data and select the DEM_SF.tif file.
-1. Click *Open*.
+For now, let's turn off all of the layers in the *Layers* panel except for the DEM_SF layer.
 
 Now you should see a gray scale image that roughly looks like the San Francisco peninsula.  This is a Digital Elevation Model (DEM).  Each cell in the raster contains a number representing the elevation at that location.  
 
