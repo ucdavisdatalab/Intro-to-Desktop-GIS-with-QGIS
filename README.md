@@ -183,6 +183,8 @@ This is good, but I think it would be easier to understand if we set the water t
 
 Note: the Min value is -9.36748 and the Max value is 399.963
 
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_LayerProperties.PNG "Layer properties for DEM")
+
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_DEM.PNG "Digital Elevation Model with a continuous color ramp")
 
 
