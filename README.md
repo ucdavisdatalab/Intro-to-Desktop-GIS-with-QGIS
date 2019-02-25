@@ -74,6 +74,8 @@ Let's unpack some of that.
 # Data Types - Vector vs. Raster vs. other types of spatial data
 There are several data spatial data models that you may encounter as you work with spatial data.  The two you will likely encounter most frequently are called vector and raster data. 
 
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/geometries_data_types.png "A visual table of raster vs. vector data as continuous and discrete data.")
+
 ## Vector Data
 Vector data represents discrete objects in the real world with points, lines, and polygons in the dataset. 
 
