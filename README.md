@@ -165,18 +165,20 @@ Now you should see a gray scale image that roughly looks like the San Francisco 
 
 Let's style this data:
 1. Open the Layer Properties for your DEM (right click on the layer in the Layers Panel and select *Properties*).
-1. Click on the *Style* tab on the left side.
+1. Click on the *Symbology* tab on the left side.
 1. For the *Render type* drop down, select *Singleband pseudocolor*.
-1. For the *Color*, select *New color ramp*
-1. Select *cpt-city* from the drop down and click *Ok*
+1. Expand the *Min/Max Value Settings" area.  In the *Statistics extent* drop-down, select *Whole raster*.  For *Accuracy*, select *Actual (slower)*.
+1. For the *Color ramp*, select *Create new color ramp*
+1. Select *Catalog: cpt-city* from the drop down and click *Ok*
 1. Pick *Topography* from the options on the left.
 1. Pick *c3t1* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
-1. Next, you'll see a dialog asking what you want to call your new gradient.  I suggest leaving the default name, but you can call it what you like.  Click *Ok* when you're done.
 1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data.
 
 This is good, but I think it would be easier to understand if we set the water to a more intuitive color.  Yes, this means our color ramp will have a disconnect in it, but I think it will help us visually interpret the data better.
 
-1. In the Layer Properties, double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you lick and click *Ok*.  And then click *Apply* in the Layer Properties to see how it looks.  
+1. For the *Interpolation* drop-down, select *Discrete*.
+1. In the Layer Properties, for the *Mode*, select *Continuous*.
+1. Double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you like and click *Ok*.  Change the *Value* number for the lowest category to 0.  And then click *Apply* in the Layer Properties to see how it looks.  
 1. Continue to adjust the colors until you are happy with the colors, then click *Ok*.
 
 ![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Continuous.PNG "Digital Elevation Model with a continuous color ramp")
