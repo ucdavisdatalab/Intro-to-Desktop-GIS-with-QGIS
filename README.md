@@ -171,17 +171,19 @@ Let's style this data:
 1. For the *Color ramp*, select *Create new color ramp*
 1. Select *Catalog: cpt-city* from the drop down and click *Ok*
 1. Pick *Topography* from the options on the left.
-1. Pick *c3t1* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
+1. Pick *cd-a* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
 1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data.
 
 This is good, but I think it would be easier to understand if we set the water to a more intuitive color.  Yes, this means our color ramp will have a disconnect in it, but I think it will help us visually interpret the data better.
 
 1. For the *Interpolation* drop-down, select *Discrete*.
-1. In the Layer Properties, for the *Mode*, select *Continuous*.
-1. Double click on the color box representing the lowest value to open the Change Color dialog.  Select a shade of blue that you like and click *Ok*.  Change the *Value* number for the lowest category to 0.  And then click *Apply* in the Layer Properties to see how it looks.  
-1. Continue to adjust the colors until you are happy with the colors, then click *Ok*.
+1. In the Layer Properties, for the *Mode*, select *Equal Interval*. For *Classes*, input 10.
+1. Change the *Value* number for the lowest category to 0.  And then click *Apply* in the Layer Properties to see how it looks.  
+1. Continue to adjust the colors and/or breaks until you are happy with how it looks, then click *Ok*.
 
-![alt text](https://github.com/MicheleTobias/Geospatial-Data-Visualization/blob/master/images/Raster_Continuous.PNG "Digital Elevation Model with a continuous color ramp")
+Note: the Min value is -9.36748 and the Max value is 399.963
+
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_DEM.PNG "Digital Elevation Model with a continuous color ramp")
 
 
 # Vector Data
