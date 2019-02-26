@@ -188,8 +188,10 @@ Note: the Min value is -9.36748 and the Max value is 399.963.  You can reset thi
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_DEM.PNG "Digital Elevation Model with a continuous color ramp")
 
+Now you've had a first look at how to style raster data for better viewer understanding.  There is a wide variety of analysis and data processing that we can't learn today in our limited time.  For more on working with raster data, see the [Raster Module of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).
 
-# Vector Data
+
+# Working with Vector Data
 
 ## Attributes tables
 
