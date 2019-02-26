@@ -220,10 +220,14 @@ Selecting streets by hand is helpful, but depending on what we want to do, we mi
 1. We'll build an expression in the white box on the left side of the tool.  In the center panel, expand the *Fields and Values* list.
 1. Double click the *classcode* field to add it to the expression box on the left.  
 1. Then click the *=* button to add an equal sign to the equation.
-1. We can also click the *All Unique* button on the right to see all of the values that are found in the *classcode* column.  I don't recommend using this option on continuous data; it's best for categorical data with a relatively small number of unique values.  Click *'1'* in the list.  Note that while we think of the items in this list as numbers, this column was defined as text, so this is why the numbers are wrapped in quotes.  If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1.  Your expression should look like * "classcode"  =  '1' *.
+1. We can also click the *All Unique* button on the right to see all of the values that are found in the *classcode* column.  I don't recommend using this option on continuous data; it's best for categorical data with a relatively small number of unique values.  Click *'1'* in the list.  Note that while we think of the items in this list as numbers, this column was defined as text, so this is why the numbers are wrapped in quotes.  If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1.  Your expression should look like *"classcode"  =  '1'*.
 1. Click *Select features*.  You'll notice that rows in the attribute table and lines on the map have been highlighted.  What do you think a *classcode* of 1 means?
 
-**Challenge:** Try changing the expression to select different *classcode* categories.  What do you think each category means?
+**Challenge:** Try changing the expression to select different *classcode* categories.  What do you think each category means?  
+
+You can review the metadata/data dictionary on the About tab on the [data's homepage](https://data.sfgov.org/Geographic-Locations-and-Boundaries/San-Francisco-Basemap-Street-Centerlines).  1 Freeways; 2 Highways; 3 Major Streets; 4 Secondary Streets; 5 Local Streets; 6 Freeway Ramps; 0 Private Streets
+
+Selecting our data based on the attribute information is a good way to explore and understand data, but it is only a temprary way to highlight data.  To use differences in attribute data in a map, we'll need to work with the layer symbology.
 
 
 ## Symbolizing layers by attributes
