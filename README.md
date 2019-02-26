@@ -201,6 +201,7 @@ Your street layer is loaded by default with a randomly selected color.  Let's st
 1. In the *Color* box, click on the colored box to open the color selection dialog.
 1. The color selection dialog has multiple options for how you select your colors.  Take a minute to get a feel for how each of these works.  I find each of these has advantages for certain situations.
 1. Choose a color that you think represents roads well.  I used a dark gray.  You can enter *#666666* into the *HTML notation* box to use the same color if you'd like.  
+1. Once you've picked a color, use the *Go Back* button to return to the main dialog. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_GoBack.PNG "Go Back button.")
 
 ## Attributes tables
 Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the geometry and (2) information about those entities, typically in table format, called attributes.
@@ -231,12 +232,52 @@ Selecting our data based on the attribute information is a good way to explore a
 
 
 ## Symbolizing layers by attributes
+Let's style this street data based on the kind of street.  This will be a good visualization for giving context to some of the other data we have to work with.
 
-1. Single symbols
+1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool") 
+1. In the *Layer Styling* panel, pick the street data from the dropdown list so we are working with this data.  
+1. Instead of *Single symbol*, pick *Categorized* from the dropdown menu near the top of the dialog.
+1. For the *Column* dropdown, pick the *classcode* column so we can use this data for our categories.
+1. Click the *Classify* button to see our categories.  
+
+Ok! We can see each road classified by it's *classcode*.  The colors will default to *Random Colors* for the palette. We can change the colors to meet our needs and communicate better.  Let's use the width of the line rather than color to indicate the type of road.
+1. You can uncheck the 7th row in the list of symbols.  This category is for data with no *classcode*.
+1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
+1. Right click on the highlighted symbols and choose *Change Color*.
+1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Ok*.  All of the roads will now be the same gray color.  
+
+To guide our work, let's change the text of the legend.  For each legend item, double click on the label and change the number label to the following text:
+
+Value | Legend
+--- | ---
+0| Private Streets
+1| Freeways
+2| Highways
+3| Major Streets
+4| Secondary Streets
+5| Local Streets
+6| Freeway Ramps
+
+Next we'll change the line width (also known as the line weight).
+1. For each row in the legend, double click on the line symbol to open the *Symbol Selector* dialog.
+1. Change the *Width* to match the Line Weight in the table below.
+
+Value | Legend | Line Weight
+--- | --- | ---
+0| Private Streets | 0.26
+1| Freeways | 2.0
+2| Highways | 2.0
+3| Major Streets | 1.0
+4| Secondary Streets | 0.26
+5| Local Streets | 0.26
+6| Freeway Ramps | 0.5
+
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Vector_ClassifiedRoads.PNG "Classified Roads") 
+
 1. Changing symbols based on attributes - using Tree Species?
 1. Rule-based using DBH
 
-To learn more about processing and analyzing vector data, see the [QGIS Training Manual's Module on Vector Analysis](https://docs.qgis.org/2.18/en/docs/training_manual/vector_analysis/index.html).  To learn about creating vector data, see the [QGIS Training Manual's Module on Creating Vecotr Data](https://docs.qgis.org/2.18/en/docs/training_manual/create_vector_data/index.html).
+To learn more about processing and analyzing vector data, see the [QGIS Training Manual's Module on Vector Analysis](https://docs.qgis.org/2.18/en/docs/training_manual/vector_analysis/index.html).  To learn about creating vector data, see the [QGIS Training Manual's Module on Creating Vector Data](https://docs.qgis.org/2.18/en/docs/training_manual/create_vector_data/index.html).
 
 # Making a map with the print composer
 
