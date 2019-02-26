@@ -189,6 +189,19 @@ Now you've had a first look at how to style raster data for better viewer unders
 
 
 # Working with Vector Data
+Now let's learn about working with vector data.  In the *Layers* panel, turn off the DEM and turn on the streets layer.  Notice that the streets are represented with lines.
+
+## Single Symbol Styling
+Your street layer is loaded by default with a randomly selected color.  Let's start our vector work by changing the styling of our streets to something more appropriate.  
+
+1. If you *Layer Styling* panel isn't still open, reopen it from the *View* menu by selecing *Panels* and then checking the box next to *Layer Styling*.
+1. Make sure the drop-down to select the layers to work with is set to your streets data.
+1. Leave the drop-down for selecting the method of symbolizing the data on *Single symbol*.  We'll look at some of the other options later.
+1. In the white box near the top, you'll see the word *Line* and *Simple line*.  Click on the words *Simple line*.  This will let us access lots of options for how to symbolize this set of lines.
+1. In the *Color* box, click on the colored box to open the color selection dialog.
+1. The color selection dialog has multiple options for how you select your colors.  Take a minute to get a feel for how each of these works.  I find each of these has advantages for certain situations.
+1. Choose a color that you think represents roads well.  I used a dark gray.  You can enter *#666666* into the *HTML notation* box to use the same color if you'd like.  
+
 
 ## Attributes tables
 
