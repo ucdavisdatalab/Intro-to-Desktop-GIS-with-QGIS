@@ -155,7 +155,7 @@ Now that we've added data to our project, let's save it so we can come back to i
 
 Note for ESRI users: QGIS' .qgs file is analogous to ArcMap's .mxd files.
 
-# Raster Data
+# Working with Raster Data
 
 Let's start by looking at some Raster data.  We'll work with a digital elevation model (DEM) for San Francisco.  A DEM is a raster in which each cell in the grid contains the elevation at that location.
 
@@ -164,24 +164,25 @@ For now, let's turn off all of the layers in the *Layers* panel except for the D
 Now you should see a gray scale image that roughly looks like the San Francisco peninsula.  This is a Digital Elevation Model (DEM).  Each cell in the raster contains a number representing the elevation at that location.  
 
 Let's style this data:
-1. Open the Layer Properties for your DEM (right click on the layer in the Layers Panel and select *Properties*).
-1. Click on the *Symbology* tab on the left side.
-1. For the *Render type* drop down, select *Singleband pseudocolor*.
+1. Open the *Layer Styling* Panel by clicking on the *View* menu, then *Panels*, and checking the box for *Layer Styling*.
+1. At the top of the panel that opens, select the DEM from the drop-down menu, or highlight that layer in the *Layers* panel.
+1. Click on the *Symbology* tab on the left side (the icon looks like a paintbrush painting a rainbow).
+1. For the *Render type* drop down (just below where you selected the layer), select *Singleband pseudocolor*.
 1. Expand the *Min/Max Value Settings" area.  In the *Statistics extent* drop-down, select *Whole raster*.  For *Accuracy*, select *Actual (slower)*.
 1. For the *Color ramp*, select *Create new color ramp*
 1. Select *Catalog: cpt-city* from the drop down and click *Ok*
 1. Pick *Topography* from the options on the left.
 1. Pick *cd-a* for our gradient.  Or select another scheme you think will work well for representing topography.  Click *Ok*.
-1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data.
+1. You'll see that the color ramp in the Layers Properties has updated.  Click *Apply* to see what it looks like with our data or check the box next to *Live update* to apply changes as you make them.
 
-This is good, but I think it would be easier to understand if we set the water to a more intuitive color.  Yes, this means our color ramp will have a disconnect in it, but I think it will help us visually interpret the data better.
+This result is ok, but I think we can make some more improvements to see the shoreline better.  
 
-1. For the *Interpolation* drop-down, select *Discrete*.
-1. In the Layer Properties, for the *Mode*, select *Equal Interval*. For *Classes*, input 10.
-1. Change the *Value* number for the lowest category to 0.  And then click *Apply* in the Layer Properties to see how it looks.  
-1. Continue to adjust the colors and/or breaks until you are happy with how it looks, then click *Ok*.
+1. In the *Layer Styling* panel again, for the *Interpolation* drop-down, select *Discrete*.
+1. For the *Mode*, select *Equal Interval*. For *Classes*, input 10.
+1. Change the *Value* number for the lowest category to 0.  And then click *Apply* in the Layer Properties to see how it looks.  You should see a more defined coastline that looks more like the docks around the city.
+1. Continue to adjust the colors and/or breaks until you are happy with how it looks, then click *Ok*.  (See the image below for one option.)
 
-Note: the Min value is -9.36748 and the Max value is 399.963
+Note: the Min value is -9.36748 and the Max value is 399.963.  You can reset this if you need to by selecting the *Min/max* radio button in the *Min/Max Value Settings* again.
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_LayerProperties.PNG "Layer properties for DEM")
 
