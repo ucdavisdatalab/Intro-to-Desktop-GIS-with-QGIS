@@ -214,8 +214,17 @@ Let's look at the attribute table for our streets:
 1. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer*.
 
 ## Select by attributes
+Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight.  Let's investigate the *classcode* column.
 
-Select trees older or larger than a certain value.
+1. In the attribute table for the streets layer, click on the *Select features using an expression* to open the *Select by Expression* tool.
+1. We'll build an expression in the white box on the left side of the tool.  In the center panel, expand the *Fields and Values* list.
+1. Double click the *classcode* field to add it to the expression box on the left.  
+1. Then click the *=* button to add an equal sign to the equation.
+1. We can also click the *All Unique* button on the right to see all of the values that are found in the *classcode* column.  I don't recommend using this option on continuous data; it's best for categorical data with a relatively small number of unique values.  Click *'1'* in the list.  Note that while we think of the items in this list as numbers, this column was defined as text, so this is why the numbers are wrapped in quotes.  If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1.  Your expression should look like * "classcode"  =  '1' *.
+1. Click *Select features*.  You'll notice that rows in the attribute table and lines on the map have been highlighted.  What do you think a *classcode* of 1 means?
+
+**Challenge:** Try changing the expression to select different *classcode* categories.  What do you think each category means?
+
 
 ## Symbolizing layers by attributes
 
