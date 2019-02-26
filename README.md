@@ -210,6 +210,8 @@ Let's look at the attribute table for our streets:
 1. Scroll to the right to explore the information in this table.  We have information like the name of the street, whether or not it's a one-way street, and the name of the neighborhood it's in.
 1. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
 1. Minimize the attribute table, and use the zoom in and out tools ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Pan.PNG "Pan tool.")  
+1. You can clear the selection (make nothing selected) with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool")  This tool just makes nothing selected, it doesn't delete data.
+1. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer*.
 
 ## Select by attributes
 
