@@ -81,13 +81,10 @@ Vector data represents discrete objects in the real world with points, lines, an
 
 If you were to draw a map to your house for a friend, you would typically use vector data - roads would be lines, a shopping center included as an important landmark might be a rectangle of sorts, and your house might be a point (perhaps represented by a star or a house icon).
 
- 
-
 ## Raster Data
 Raster data represents continuous fields or discrete objects on a grid, storing measurements or category names in each cell of the grid.
 
 Digital photos are raster data you are already familiar with.  If you zoom in far enough on a digital photo, you'll see that photo is made up of pixels, which appear as colored squares.  Pixels are cells in a regular grid and each contains the digital code that corresponds to the color that should be displayed there.  Satellite images are a very similar situation.
-
 
 
 # Download data
@@ -204,6 +201,8 @@ Select trees older or larger than a certain value.
 1. Single symbols
 1. Changing symbols based on attributes - using Tree Species?
 1. Rule-based using DBH
+
+To learn more about processing and analyzing vector data, see the [QGIS Training Manual's Module on Vector Analysis](https://docs.qgis.org/2.18/en/docs/training_manual/vector_analysis/index.html).  To learn about creating vector data, see the [QGIS Training Manual's Module on Creating Vecotr Data](https://docs.qgis.org/2.18/en/docs/training_manual/create_vector_data/index.html).
 
 # Making a map with the print composer
 
