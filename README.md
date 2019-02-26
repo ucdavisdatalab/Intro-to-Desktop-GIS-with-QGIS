@@ -202,8 +202,14 @@ Your street layer is loaded by default with a randomly selected color.  Let's st
 1. The color selection dialog has multiple options for how you select your colors.  Take a minute to get a feel for how each of these works.  I find each of these has advantages for certain situations.
 1. Choose a color that you think represents roads well.  I used a dark gray.  You can enter *#666666* into the *HTML notation* box to use the same color if you'd like.  
 
-
 ## Attributes tables
+Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the geometry and (2) information about those entities, typically in table format, called attributes.
+
+Let's look at the attribute table for our streets:
+1. In the *Layers* panel, right click on the streets layer and select *Open Attribute Table*.
+1. Scroll to the right to explore the information in this table.  We have information like the name of the street, whether or not it's a one-way street, and the name of the neighborhood it's in.
+1. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
+1. Minimize the attribute table, and use the zoom in and out tools ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Pan.PNG "Pan tool.")  
 
 ## Select by attributes
 
