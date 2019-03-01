@@ -325,7 +325,7 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 1. When you've made a layout you like, you can export the map to a variety of formats.  On the *Layout* menu, select *Save as Image*.  Navigate to where you would like to save the image, name the file, and choose the type of image.  Let's pick .png for this image.  Click *Save*.
 1. Make any adjustments to the image parameters you would like.  Click *Save* to finish the process.
 
-![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_CanaryPineLocations.PNG "Finished map of canary pine locations.")
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
 
 
 
