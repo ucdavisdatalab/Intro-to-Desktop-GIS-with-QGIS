@@ -296,6 +296,8 @@ Let's look at rule-based symbology:
 
 Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts?  Are there places you think might be impacted more quickly if a bark beetle came to the city?
 
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Vector_CanaryPine.PNG "Map of canary pines.")
+
 
 **Challenge:** Choose another species to add to your map.  Add another rule-based classification with a different map symbol.
 
