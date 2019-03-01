@@ -290,7 +290,8 @@ Let's look at rule-based symbology:
 1. Add the *qSpecies* field to the expression window from the *Fields & Values* list.
 1. Next, type the word *LIKE*.  *LIKE* is a comparison operator for strings.  You might think of this as = for text.
 1. Finally, we need to say which species we want.  You may have noticed that the species column typically contains a long string with several pieces of information.  We can search for a portion of the text by using a wildcard character to match part of the string in the column.  Type *'%Pinus canariensis%'* after *LIKE* in your expression.  The single quotes indicate that the words we just typed are a string (and not another variable or field from the attribute table) and the *%* means "it doesn't matter what text is here".  So the program will search for rows that contain the sting *Pinus canariensis*, regardless of what else the column says.
-1. Your expression string should look like this: *"qSpecies" LIKE '%Pinus canariensis%'*
+1. Your expression string should look like this: *"qSpecies" LIKE '%Pinus canariensis%'*  Click *OK* when you are done.
+1. In the *Rule Editing* dialog, you can also make changes to the color, size, and shape.
 1. Click the back button when you are done. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_GoBack.PNG "Go Back button.")
 
 Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts?  Are there places you think might be impacted more quickly if a bark beetle came to the city?
