@@ -351,7 +351,26 @@ Because the street tree dataset is so large, let's save our large tree selection
 1. You should have a file with only the features we had previously selected.
 1. You can uncheck the full street trees layer in the *Layers Panel*.
 
+Before we move forward, let's make sure an invalid geometry doesn't stop our process:
+1. From the *Settings* menu, select *Options*.
+1. Open the *Processing* section with the button on the left side of the window.
+1. Expland the *General* section, and change the *Invalid features filtering* option to *Ignore features with invalid geometries*.
+1. Click *OK*.
+
 Now we can find which of the large trees are inside seismic hazard zones:
+1. On the *Vector* menu, select *Research Tools* and then *Select by Location* to open the *Select by Location* tool.
+1. Select features from *Large Trees*, that *Intersect* the *Seismic Hazards* layer and create a new selection.
+1. Click *Run*.
+
+The large trees that fall inside the seismic hazard zones are now selected.  But how to we record this information in a way that we can keep and use in a map?  Let's add a column with this information in our attribute table:
+1. Open the attribute table for the large trees layer.
+1. Click on the *Field Calculator* button.  It looks like an abacus.
+1. Name your new field "EarthQZone" so we remember what information it contains.
+1. For the field type, select *Text*.
+1. In the expression field, type *'yes'*.  This will add the word "yes" to the EarthQZone column where the record is currently selected.
+1. Click *OK* and then inspect your attribute table to see the new column.
+
+Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones.
 
 
 
@@ -362,6 +381,8 @@ Another option to find which of these large trees is inside an earthquake hazard
 1. *By comparing to the features from* our seismic hazard zone data.
 1. *Modify current selection by* - *Selecting within current selection*.  This will only select features from the ones we selected - so we'll only be looking at the large trees.
 1. Click *OK*.  A window will pop up showing the progress of the process we started.  The process may take a few minutes to complete.
+
+Change your settings back to *Stop algorithm execution when a geometry is invalid*.
 
 # Further Reading & Resources
 
