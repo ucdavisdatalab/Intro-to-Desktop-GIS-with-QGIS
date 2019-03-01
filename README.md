@@ -336,7 +336,32 @@ You may want to add background layers such as coastlines or land masses from dat
 * [GADM](https://gadm.org/)
 
 # Select by Location
-Which large trees are in seismic hazard zones?
+So far, we've seen analysis that relies mainly on cartographic choices.  There are many other kinds of analysis we could do.  Let's look at an example were we need to undertand the spatial relationship between two different layers: identify large trees inside areas designated as earthquake hazard zones.
+
+One way to measure the size of a tree is by measuring the width of the trunk, about 4 feet off the ground. This measurement is called the *Diameter at Breast Height* or *DBH* for short.  The street tree data has a column in the attribute table called DBH so we can use this to identify the larger trees.
+
+First, let's use the *Select By Attributes* process we learned earlier today to select trees with a DBH of 36 inches or larger.  A quick reminder of the process: open the attribute table and use the query tool to write a query.  *Hint:* We can write "greater than or equal to" as *>=* in the selection interface.
+
+Because the street tree dataset is so large, let's save our large tree selection as a new file to make processes run faster with this subset of the data.  Now that you have the trees with a DBH of 3 feet or more selected:
+1. Right click on the layer in the *Layers Panel*.  
+1. Select *Export* from the menu that pops up and then *Save selected features as*.  
+1. For the format, choose *ESRI Shapefile*, or any of the vector formats you prefer (I personally like geojson because it's one text file, but geopackage is also pretty handy... KML is only a good choice if you're going to use the file in a Google application).
+1. Next to the *File Name* box, click the "..." button to pick a folder to save the file in and give the file a name.  I called my "LargeTrees".  Click *Save* when you're done.
+1. Make sure the *Save only Selected Features* and *Add saved file to map* boxes are checked, then click *OK*.
+1. You should have a file with only the features we had previously selected.
+1. You can uncheck the full street trees layer in the *Layers Panel*.
+
+Now we can find which of the large trees are inside seismic hazard zones:
+
+
+
+Another option to find which of these large trees is inside an earthquake hazard zone by using the *Select By Location* tool (with a large dataset, this process takes a very long time):
+1. From the *Vector* menu, choose the *Select By Location* tool.
+1. We want to *Select features from* our street tree layer.
+1. Check the box next to *Intersect* because we want to select points that share a location with our hazard polygons.
+1. *By comparing to the features from* our seismic hazard zone data.
+1. *Modify current selection by* - *Selecting within current selection*.  This will only select features from the ones we selected - so we'll only be looking at the large trees.
+1. Click *OK*.  A window will pop up showing the progress of the process we started.  The process may take a few minutes to complete.
 
 # Further Reading & Resources
 
