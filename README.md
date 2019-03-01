@@ -232,6 +232,8 @@ Selecting our data based on the attribute information is a good way to explore a
 
 
 ## Symbolizing layers by attributes
+
+### Classifying Attributes
 Let's style this street data based on the kind of street.  This will be a good visualization for giving context to some of the other data we have to work with.
 
 1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool") 
@@ -274,8 +276,10 @@ Value | Legend | Line Weight
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Vector_ClassifiedRoads.PNG "Classified Roads") 
 
-1. Changing symbols based on attributes - using Tree Species?
-1. Rule-based using DBH
+### Rule-Based Symbology
+We've just seen how we can use an automated classification method to change the symbology of data.  Now let's look at how we can build rules based on attributes to create tailored symbology.  The street tree layer has many, many tree locations - too many to make a useful map of all the trees.  Here's a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California.  These beetles can damage and kill trees.  Let's make a map of one species of tree that might be affected to see the spatial distribution and think about where you might want to concentrate monitoring efforts.
+
+The [UC IPM site](http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html) has more information about bark beetle species and tree species affected by them.
 
 To learn more about processing and analyzing vector data, see the [QGIS Training Manual's Module on Vector Analysis](https://docs.qgis.org/2.18/en/docs/training_manual/vector_analysis/index.html).  To learn about creating vector data, see the [QGIS Training Manual's Module on Creating Vector Data](https://docs.qgis.org/2.18/en/docs/training_manual/create_vector_data/index.html).
 
