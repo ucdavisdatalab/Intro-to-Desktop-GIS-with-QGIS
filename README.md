@@ -326,6 +326,7 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 1. Make any adjustments to the image parameters you would like.  Click *Save* to finish the process.
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
+Your map might look something like this.  I added an *Outer Glow* in the *Draw Effects* menu to the Shoreline data to achieve the fading blue outline.
 
 
 
