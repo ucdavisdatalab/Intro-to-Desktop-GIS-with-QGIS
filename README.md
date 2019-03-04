@@ -1,7 +1,4 @@
 # Introduction
-
-**This is a work in progress.  Please be patient while I prepare this workshop.  Launch date: March 19, 2019**
-
 This tutorial uses QGIS 3 to teach the basics of desktop mapping software for beginners with no previous mapping experience.
 
 ## Workshop Preparation
@@ -369,6 +366,8 @@ The large trees that fall inside the seismic hazard zones are now selected.  But
 1. Click *OK* and then inspect your attribute table to see the new column.
 
 Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones.
+
+![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_BigTreesInZone.PNG "Map of large trees in seismic hazard zones.")
 
 Change your settings back to *Stop algorithm execution when a geometry is invalid*.
 
