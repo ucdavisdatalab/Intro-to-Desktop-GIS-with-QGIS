@@ -328,8 +328,6 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
 Your map might look something like this.  I added an *Outer Glow* in the *Draw Effects* menu to the Shoreline data to achieve the fading blue outline.
 
-
-
 You may want to add background layers such as coastlines or land masses from data sources like:
 * [Natural Earth Data](http://naturalearthdata.com/)
 * [Project Linework](http://www.projectlinework.org/)
@@ -371,16 +369,6 @@ The large trees that fall inside the seismic hazard zones are now selected.  But
 1. Click *OK* and then inspect your attribute table to see the new column.
 
 Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones.
-
-
-
-Another option to find which of these large trees is inside an earthquake hazard zone by using the *Select By Location* tool (with a large dataset, this process takes a very long time):
-1. From the *Vector* menu, choose the *Select By Location* tool.
-1. We want to *Select features from* our street tree layer.
-1. Check the box next to *Intersect* because we want to select points that share a location with our hazard polygons.
-1. *By comparing to the features from* our seismic hazard zone data.
-1. *Modify current selection by* - *Selecting within current selection*.  This will only select features from the ones we selected - so we'll only be looking at the large trees.
-1. Click *OK*.  A window will pop up showing the progress of the process we started.  The process may take a few minutes to complete.
 
 Change your settings back to *Stop algorithm execution when a geometry is invalid*.
 
