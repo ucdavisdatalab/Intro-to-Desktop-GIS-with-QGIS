@@ -11,8 +11,6 @@ No prior experience with QGIS or other GIS software is needed, though attendees 
 
 By the end of this workshop, you will be able to:
 
-- Understand the basic distinctions between open-source QGIS and proprietary GIS products like ArcGIS Desktop and ArcGIS Pro
-- Download spatial data from the San Fransico’s [open data portal (DataSF)](https://datasf.org/opendata/) and use it in QGIS to conduct data analysis and to produce maps. 
 - Define GIS and geospatial concepts and terminology.
 - Know the difference between vector and raster data types
 - Properly connect and add data to a QGIS project
@@ -20,26 +18,6 @@ By the end of this workshop, you will be able to:
 - Perform basic selections and queries in QGIS
 - Symbolize data by attributes
 - Assemble a basic map for export
-
-
-# Outline
-
-4 hour workshop (with 30 minutes of breaks included)
-
-Start | End | Topic
---- | --- | ---
-9:00 | 9:15| What is GIS?
-9:15 | 9:30| Why QGIS?
-9:30 | 10:15 | Data Types - Vector vs. Raster vs. other types of spatial data
-10:15 | 10:30 | **Break**
-10:30 | 10:45 | Interface Tour, Download data, Import into QGIS, Save Project Files
-10:45 | 11:15 | Attributes Tables
-11:15 | 11:40 | Select by attributes
-11:40 | 11:45 | Plug-ins, Processing Toolbox, Menus
-11:45 | 12:00 | **Break**
-12:00 | 12:30 | Symbolizing layers by attributes
-12:30 | 12:50 | Making a map with the print composer
-12:50 | 1:00 | Wrap Up & Thank You
 
 
 # What is GIS?
