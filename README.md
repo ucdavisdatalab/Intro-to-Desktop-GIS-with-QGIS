@@ -20,7 +20,7 @@ By the end of this workshop, you will be able to:
 - Assemble a basic map for export
 
 
-# What is GIS?
+# What is QGIS?
 From the [QGIS](https://qgis.org) website, "QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities."
 
 Let's unpack some of that.  
