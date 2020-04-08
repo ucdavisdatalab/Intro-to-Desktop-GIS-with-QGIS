@@ -124,9 +124,6 @@ To load our .csv file:
 1. Review the *Sample data* section to preview how the attribute table will look.  This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
 1. If everything looks good, click *Add*.  This is a reasonably large file, so be patient as it loads.
 
-1. Table of contents/layers panel
-1. Layer properties
-
 # Saving Project Files
 Now that we've added data to our project, let's save it so we can come back to it later.  
 
