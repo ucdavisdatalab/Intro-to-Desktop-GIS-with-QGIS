@@ -123,6 +123,7 @@ To load our .csv file:
 1. In the *Geometry definition* section is where we indicate what kind of geometry we have.  For ours, select *Point coordinates* and in the *X field*, pick "Longitude", and for the *Y field* pick "Latitude".
 1. Review the *Sample data* section to preview how the attribute table will look.  This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
 1. If everything looks good, click *Add*.  This is a reasonably large file, so be patient as it loads.
+1. Close the *Data Source Manager* window because we are done adding data.
 
 # Saving Project Files
 Now that we've added data to our project, let's save it so we can come back to it later.  
@@ -130,15 +131,15 @@ Now that we've added data to our project, let's save it so we can come back to i
 1. Click on the blue floppy disk icon (or from the *File* menu, select *Save*).
 1. Navigate to where you want to save your project file. 
 1. In the *File name* box, type the name you would like your file to have.  Give it a descriptive name so you'll remember what the file was for.
-1. In the *Save as type* drop down, choose *.qgs*.  *.qgz* is also an option that saves the project in a compressed format.  (See [this post](http://osgeo-org.1560.x6.nabble.com/QGIS-Developer-Why-is-qgz-the-default-format-td5392345.html) for more details about the discussion around .qgs vs. .qgz formats)
+1. Click *Save*.
 
-Note for ESRI users: QGIS' .qgs file is analogous to ArcMap's .mxd files.
+Note for ESRI users: QGIS' .qgs and .qgz file are analogous to ArcMap's .mxd files.
 
 # Working with Raster Data
 
 Let's start by looking at some Raster data.  We'll work with a digital elevation model (DEM) for San Francisco.  A DEM is a raster in which each cell in the grid contains the elevation at that location.
 
-For now, let's turn off all of the layers in the *Layers* panel except for the DEM_SF layer.
+For now, let's turn off all of the layers in the *Layers* panel except for the DEM_SF layer by unchecking the boxes next to the layer names in the *Layers* Panel on the left side of your screen.
 
 Now you should see a gray scale image that roughly looks like the San Francisco peninsula.  This is a Digital Elevation Model (DEM).  Each cell in the raster contains a number representing the elevation at that location.  
 
