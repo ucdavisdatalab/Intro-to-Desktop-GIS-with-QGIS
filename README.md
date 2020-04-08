@@ -2,7 +2,8 @@
 This tutorial uses QGIS 3 to teach the basics of desktop mapping software for beginners with no previous mapping experience.
 
 ## Workshop Preparation
-You should download and install [QGIS](https://qgis.org) version 3.4 to your computer.
+You should download and install [QGIS](https://qgis.org) version 3.10 or higher to your computer.
+The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
 ## Workshop Aims
 This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze begin using Geographic Information Systems (GIS) software for the exploration and analysis of spatial data using the QGIS platform. 
