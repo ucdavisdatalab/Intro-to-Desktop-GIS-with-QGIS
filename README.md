@@ -79,7 +79,7 @@ In this workshop, we'll be using the following data:
 1. Streets
 1. Trees
 1. Seismic Hazard Zones
-1. City of San Francisco Boundary
+1. City of San Francisco Boundary (shoreline)
 
 You can download all of this data from this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
@@ -108,7 +108,7 @@ Shapefiles are a very popular vector data format.  Let's load our shapefile data
 
 1. In the *Data Source Manager*, click on the *Vector* tab on the left.
 1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
-1. Holding down the Shift button on your keyboard while you click, select your *Recreation and Parks Facilities.zip*, *San Francisco Basemap Street Centerlines.zip*, *San Francisco Seismic Hazard Zones.zip*, and *SF Shorelines and Islands.zip*.  Then click *Open*.
+1. Holding down the Shift button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp*.  Then click *Open*.
 1. In the *Data Source Manager* click *Add*.
 
 ### CSV Data
