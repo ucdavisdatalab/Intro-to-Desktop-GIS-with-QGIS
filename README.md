@@ -3,6 +3,7 @@ This tutorial uses QGIS 3 to teach the basics of desktop mapping software for be
 
 ## Workshop Preparation
 You should download and install [QGIS](https://qgis.org) version 3.10 or higher to your computer.
+
 The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
 ## Workshop Aims
