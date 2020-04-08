@@ -200,7 +200,7 @@ Let's look at the attribute table for our streets:
 ## Select by attributes
 Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight.  Let's investigate the *classcode* column.
 
-1. In the attribute table for the streets layer, click on the *Select features using an expression* to open the *Select by Expression* tool.
+1. In the attribute table for the streets layer, click on the *Select features using an expression* ![alt text](./images/Tool_SelectFeaturesUsingExpression.png) to open the *Select by Expression* tool.
 1. We'll build an expression in the white box on the left side of the tool.  In the center panel, expand the *Fields and Values* list.
 1. Double click the *classcode* field to add it to the expression box on the left.  
 1. Then click the *=* button to add an equal sign to the equation.
