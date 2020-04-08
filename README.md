@@ -222,14 +222,15 @@ Let's style this street data based on the kind of street.  This will be a good v
 1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool") 
 1. In the *Layer Styling* panel, pick the street data from the dropdown list so we are working with this data.  
 1. Instead of *Single symbol*, pick *Categorized* from the dropdown menu near the top of the dialog.
-1. For the *Column* dropdown, pick the *classcode* column so we can use this data for our categories.
+1. For the *Value* dropdown, pick the *classcode* column so we can use this data for our categories.
 1. Click the *Classify* button to see our categories.  
 
 Ok! We can see each road classified by it's *classcode*.  The colors will default to *Random Colors* for the palette. We can change the colors to meet our needs and communicate better.  Let's use the width of the line rather than color to indicate the type of road.
 1. You can uncheck the 7th row in the list of symbols.  This category is for data with no *classcode*.
 1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
 1. Right click on the highlighted symbols and choose *Change Color*.
-1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Ok*.  All of the roads will now be the same gray color.  
+1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Apply*.  All of the roads will now be the same gray color. 
+1. Click the *Go Back* button (triangle) to return to the main window.
 
 To guide our work, let's change the text of the legend.  For each legend item, double click on the label and change the number label to the following text:
 
