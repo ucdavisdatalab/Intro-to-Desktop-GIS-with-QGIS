@@ -300,8 +300,8 @@ Just get to a point where you have a solid draft.  We can always make changes la
 ## Working in the Print Composer
 Once you've added all the layers you need to your Map Canvas and styled them in a way you like, we can start composing our map.
 
-1. Open the *Print Composer* by clicking on the *Project* menu and choosing *New Print Composer*.
-1. Give your new Print Composer a name.  I'll call mine "Canary Pine Locations".  You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map.  Click *OK* when you've picked a name. The *Print Composer* will now open.
+1. Open the *Print Composer* by clicking on the *Project* menu and choosing *New Print Layout*.
+1. Give your new Print Layout a name.  I'll call mine "Canary Pine Locations".  You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map.  Click *OK* when you've picked a name. The *Print Composer* will now open.
 1. The white box in the middle of the window is where you will compose your map.  Right click in this white space and choose *Page Properties* from the menu that appears.  The menu on the right will now let us adjust the page size and orientation.  Let's use size *Letter* and *Landscape* orientation for this map.  
 1. Add a map to your layout by clicking the *Add Map* tool and then clicking and dragging on your map layout. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_AddMap.PNG "Add Map tool.")  You can adjust the size so don't worry if it's not perfect at first.  The *Move Item* tool moves and adjusts items in your map.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_MoveItem.PNG "Move Item tool.")
 1. Adjust the scale of your map by selecting your map.  In the *Item Properties* on the right, adjust the scale number to zoom in or out of your map data.  I used a scale of about 40,000.
