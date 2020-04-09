@@ -333,12 +333,6 @@ Because the street tree dataset is so large, let's save our large tree selection
 1. You should have a file with only the features we had previously selected.
 1. You can uncheck the full street trees layer in the *Layers Panel*.
 
-Before we move forward, let's make sure an invalid geometry doesn't stop our process:
-1. From the *Settings* menu, select *Options*.
-1. Open the *Processing* section with the button on the left side of the window.
-1. Expland the *General* section, and change the *Invalid features filtering* option to *Ignore features with invalid geometries*.
-1. Click *OK*.
-
 Now we can find which of the large trees are inside seismic hazard zones:
 1. On the *Vector* menu, select *Research Tools* and then *Select by Location* to open the *Select by Location* tool.
 1. Select features from *Large Trees*, that *Intersect* the *Seismic Hazards* layer and create a new selection.
