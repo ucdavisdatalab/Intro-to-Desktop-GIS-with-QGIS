@@ -340,7 +340,7 @@ Now we can find which of the large trees are inside seismic hazard zones:
 
 The large trees that fall inside the seismic hazard zones are now selected.  But how to we record this information in a way that we can keep and use in a map?  Let's add a column with this information in our attribute table:
 1. Open the attribute table for the large trees layer.
-1. Click on the *Field Calculator* button.  It looks like an abacus.
+1. Click on the *Field Calculator* button.  ![alt text](./images/Tool_FieldCalculator.png)
 1. Name your new field "EarthQZone" so we remember what information it contains.
 1. For the field type, select *Text*.
 1. In the expression field, type *'yes'*.  This will add the word "yes" to the EarthQZone column where the record is currently selected.
