@@ -222,14 +222,15 @@ Let's style this street data based on the kind of street.  This will be a good v
 1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool") 
 1. In the *Layer Styling* panel, pick the street data from the dropdown list so we are working with this data.  
 1. Instead of *Single symbol*, pick *Categorized* from the dropdown menu near the top of the dialog.
-1. For the *Column* dropdown, pick the *classcode* column so we can use this data for our categories.
+1. For the *Value* dropdown, pick the *classcode* column so we can use this data for our categories.
 1. Click the *Classify* button to see our categories.  
 
 Ok! We can see each road classified by it's *classcode*.  The colors will default to *Random Colors* for the palette. We can change the colors to meet our needs and communicate better.  Let's use the width of the line rather than color to indicate the type of road.
 1. You can uncheck the 7th row in the list of symbols.  This category is for data with no *classcode*.
 1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
 1. Right click on the highlighted symbols and choose *Change Color*.
-1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Ok*.  All of the roads will now be the same gray color.  
+1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Apply*.  All of the roads will now be the same gray color. 
+1. Click the *Go Back* button (triangle) to return to the main window.
 
 To guide our work, let's change the text of the legend.  For each legend item, double click on the label and change the number label to the following text:
 
@@ -299,8 +300,8 @@ Just get to a point where you have a solid draft.  We can always make changes la
 ## Working in the Print Composer
 Once you've added all the layers you need to your Map Canvas and styled them in a way you like, we can start composing our map.
 
-1. Open the *Print Composer* by clicking on the *Project* menu and choosing *New Print Composer*.
-1. Give your new Print Composer a name.  I'll call mine "Canary Pine Locations".  You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map.  Click *OK* when you've picked a name. The *Print Composer* will now open.
+1. Open the *Print Composer* by clicking on the *Project* menu and choosing *New Print Layout*.
+1. Give your new Print Layout a name.  I'll call mine "Canary Pine Locations".  You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map.  Click *OK* when you've picked a name. The *Print Composer* will now open.
 1. The white box in the middle of the window is where you will compose your map.  Right click in this white space and choose *Page Properties* from the menu that appears.  The menu on the right will now let us adjust the page size and orientation.  Let's use size *Letter* and *Landscape* orientation for this map.  
 1. Add a map to your layout by clicking the *Add Map* tool and then clicking and dragging on your map layout. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_AddMap.PNG "Add Map tool.")  You can adjust the size so don't worry if it's not perfect at first.  The *Move Item* tool moves and adjusts items in your map.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_MoveItem.PNG "Move Item tool.")
 1. Adjust the scale of your map by selecting your map.  In the *Item Properties* on the right, adjust the scale number to zoom in or out of your map data.  I used a scale of about 40,000.
@@ -332,12 +333,6 @@ Because the street tree dataset is so large, let's save our large tree selection
 1. You should have a file with only the features we had previously selected.
 1. You can uncheck the full street trees layer in the *Layers Panel*.
 
-Before we move forward, let's make sure an invalid geometry doesn't stop our process:
-1. From the *Settings* menu, select *Options*.
-1. Open the *Processing* section with the button on the left side of the window.
-1. Expland the *General* section, and change the *Invalid features filtering* option to *Ignore features with invalid geometries*.
-1. Click *OK*.
-
 Now we can find which of the large trees are inside seismic hazard zones:
 1. On the *Vector* menu, select *Research Tools* and then *Select by Location* to open the *Select by Location* tool.
 1. Select features from *Large Trees*, that *Intersect* the *Seismic Hazards* layer and create a new selection.
@@ -345,7 +340,7 @@ Now we can find which of the large trees are inside seismic hazard zones:
 
 The large trees that fall inside the seismic hazard zones are now selected.  But how to we record this information in a way that we can keep and use in a map?  Let's add a column with this information in our attribute table:
 1. Open the attribute table for the large trees layer.
-1. Click on the *Field Calculator* button.  It looks like an abacus.
+1. Click on the *Field Calculator* button.  ![alt text](./images/Tool_FieldCalculator.png)
 1. Name your new field "EarthQZone" so we remember what information it contains.
 1. For the field type, select *Text*.
 1. In the expression field, type *'yes'*.  This will add the word "yes" to the EarthQZone column where the record is currently selected.
