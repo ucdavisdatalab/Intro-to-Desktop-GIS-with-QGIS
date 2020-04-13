@@ -59,7 +59,7 @@ Let's unpack some of that.
 # Data Types - Vector vs. Raster vs. other types of spatial data
 There are several data spatial data models that you may encounter as you work with spatial data.  The two you will likely encounter most frequently are called vector and raster data. 
 
-![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/geometries_data_types.png "A visual table of raster vs. vector data as continuous and discrete data.")
+![alt text](./images/geometries_data_types.png "A visual table of raster vs. vector data as continuous and discrete data.")
 
 ## Vector Data
 Vector data represents discrete objects in the real world with points, lines, and polygons in the dataset. 
@@ -168,7 +168,7 @@ Note: the Min value is -9.36748 and the Max value is 399.963.  You can reset thi
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_DEM.PNG "Digital Elevation Model with a continuous color ramp")
 
-Now you've had a first look at how to style raster data for better viewer understanding.  There is a wide variety of analysis and data processing that we can't learn today in our limited time.  For more on working with raster data, see the [Raster Module of the QGIS Training Manual](https://docs.qgis.org/2.18/en/docs/training_manual/rasters/index.html).
+Now you've had a first look at how to style raster data for better viewer understanding.  There is a wide variety of analysis and data processing that we can't learn today in our limited time.  For more on working with raster data, see the [Raster Module of the QGIS Training Manual](https://docs.qgis.org/3.10/en/docs/user_manual/working_with_raster/index.html).
 
 
 # Working with Vector Data
@@ -184,7 +184,7 @@ Your street layer is loaded by default with a randomly selected color.  Let's st
 1. In the *Color* box, click on the colored box to open the color selection dialog.
 1. The color selection dialog has multiple options for how you select your colors.  Take a minute to get a feel for how each of these works.  I find each of these has advantages for certain situations.
 1. Choose a color that you think represents roads well.  I used a dark gray.  You can enter *#666666* into the *HTML notation* box to use the same color if you'd like.  
-1. Once you've picked a color, use the *Go Back* button to return to the main dialog. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_GoBack.PNG "Go Back button.")
+1. Once you've picked a color, use the *Go Back* button to return to the main dialog. ![alt text](./images/Tool_GoBack.PNG "Go Back button.")
 
 ## Attributes tables
 Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the geometry and (2) information about those entities, typically in table format, called attributes.
@@ -192,9 +192,9 @@ Vector data is typically made of up of two parts: (1) the points, lines, or poly
 Let's look at the attribute table for our streets:
 1. In the *Layers* panel, right click on the streets layer and select *Open Attribute Table*.
 1. Scroll to the right to explore the information in this table.  We have information like the name of the street, whether or not it's a one-way street, and the name of the neighborhood it's in.
-1. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
-1. Minimize the attribute table, and use the zoom in and out tools ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Pan.PNG "Pan tool.")  
-1. You can clear the selection (make nothing selected) with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool")  This tool just makes nothing selected, it doesn't delete data.
+1. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](./images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
+1. Minimize the attribute table, and use the zoom in and out tools ![alt text](./images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](./images/Tool_Pan.PNG "Pan tool.")  
+1. You can clear the selection (make nothing selected) with the *Deselect Features* tool.  ![alt text](./images/Tool_Deselect.PNG "Deselect tool")  This tool just makes nothing selected, it doesn't delete data.
 1. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer*.
 
 ## Select by attributes
@@ -219,7 +219,7 @@ Selecting our data based on the attribute information is a good way to explore a
 ### Classifying Attributes
 Let's style this street data based on the kind of street.  This will be a good visualization for giving context to some of the other data we have to work with.
 
-1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_Deselect.PNG "Deselect tool") 
+1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](./images/Tool_Deselect.PNG "Deselect tool") 
 1. In the *Layer Styling* panel, pick the street data from the dropdown list so we are working with this data.  
 1. Instead of *Single symbol*, pick *Categorized* from the dropdown menu near the top of the dialog.
 1. For the *Value* dropdown, pick the *classcode* column so we can use this data for our categories.
@@ -258,7 +258,7 @@ Value | Legend | Line Weight
 5| Local Streets | 0.26
 6| Freeway Ramps | 0.5
 
-![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Vector_ClassifiedRoads.PNG "Classified Roads") 
+![alt text](./images/Vector_ClassifiedRoads.PNG "Classified Roads") 
 
 ### Rule-Based Symbology
 We've just seen how we can use an automated classification method to change the symbology of data.  Now let's look at how we can build rules based on attributes to create tailored symbology.  The street tree layer has many, many tree locations - too many to make a useful map of all the trees so we'll need to select a subset of the data to include.  
@@ -270,17 +270,17 @@ Let's look at rule-based symbology:
 1. Select *Rule-Based* from the drop-down menu for the symbology method.
 1. Click the green + button (near the bottom) to add a rule.
 1. In the *Label* box, type "Canary Pine".  This will give our new rule a name we can easily understand.
-1. Next to the *Filter* box, click on the *Expression* button ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_ExpressionButton.PNG "Expression button") to open the *Expression String Builder* dialog.  This should look familiar - it's very similar to how we selected rows by their attributes earlier.
+1. Next to the *Filter* box, click on the *Expression* button ![alt text](./images/Tool_ExpressionButton.PNG "Expression button") to open the *Expression String Builder* dialog.  This should look familiar - it's very similar to how we selected rows by their attributes earlier.
 1. Add the *qSpecies* field to the expression window from the *Fields & Values* list.
 1. Next, type the word *LIKE*.  *LIKE* is a comparison operator for strings.  You might think of this as = for text.
 1. Finally, we need to say which species we want.  You may have noticed that the species column typically contains a long string with several pieces of information.  We can search for a portion of the text by using a wildcard character to match part of the string in the column.  Type *'%Pinus canariensis%'* after *LIKE* in your expression.  The single quotes indicate that the words we just typed are a string (and not another variable or field from the attribute table) and the *%* means "it doesn't matter what text is here".  So the program will search for rows that contain the sting *Pinus canariensis*, regardless of what else the column says.
 1. Your expression string should look like this: *"qSpecies" LIKE '%Pinus canariensis%'*  Click *OK* when you are done.
 1. In the *Rule Editing* dialog, you can also make changes to the color, size, and shape.
-1. Click the back button when you are done. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_GoBack.PNG "Go Back button.")
+1. Click the back button when you are done. ![alt text](./images/Tool_GoBack.PNG "Go Back button.")
 
 Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts?  Are there places you think might be impacted more quickly if a bark beetle came to the city?
 
-![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Vector_CanaryPine.PNG "Map of canary pines.")
+![alt text](./images/Vector_CanaryPine.PNG "Map of canary pines.")
 
 
 **Challenge:** Choose another species to add to your map.  Add another rule-based classification with a different map symbol.
@@ -303,13 +303,13 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 1. Open the *Print Composer* by clicking on the *Project* menu and choosing *New Print Layout*.
 1. Give your new Print Layout a name.  I'll call mine "Canary Pine Locations".  You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map.  Click *OK* when you've picked a name. The *Print Composer* will now open.
 1. The white box in the middle of the window is where you will compose your map.  Right click in this white space and choose *Page Properties* from the menu that appears.  The menu on the right will now let us adjust the page size and orientation.  Let's use size *Letter* and *Landscape* orientation for this map.  
-1. Add a map to your layout by clicking the *Add Map* tool and then clicking and dragging on your map layout. ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_AddMap.PNG "Add Map tool.")  You can adjust the size so don't worry if it's not perfect at first.  The *Move Item* tool moves and adjusts items in your map.  ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Tool_MoveItem.PNG "Move Item tool.")
+1. Add a map to your layout by clicking the *Add Map* tool and then clicking and dragging on your map layout. ![alt text](./images/Tool_AddMap.PNG "Add Map tool.")  You can adjust the size so don't worry if it's not perfect at first.  The *Move Item* tool moves and adjusts items in your map.  ![alt text](./images/Tool_MoveItem.PNG "Move Item tool.")
 1. Adjust the scale of your map by selecting your map.  In the *Item Properties* on the right, adjust the scale number to zoom in or out of your map data.  I used a scale of about 40,000.
 1. Add other items to your map as needed: title, legend, scale bar, etc. The item properties for each item you add are available by selecting the item and editing the properties in the pane on the right side of the *Print Composer* window.
 1. When you've made a layout you like, you can export the map to a variety of formats.  On the *Layout* menu, select *Save as Image*.  Navigate to where you would like to save the image, name the file, and choose the type of image.  Let's pick .png for this image.  Click *Save*.
 1. Make any adjustments to the image parameters you would like.  Click *Save* to finish the process.
 
-![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
+![alt text](./images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
 Your map might look something like this.  I added an *Outer Glow* in the *Draw Effects* menu to the Shoreline data to achieve the fading blue outline.
 
 You may want to add background layers such as coastlines or land masses from data sources like:
@@ -348,7 +348,7 @@ The large trees that fall inside the seismic hazard zones are now selected.  But
 
 Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones.
 
-![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Map_BigTreesInZone.PNG "Map of large trees in seismic hazard zones.")
+![alt text](./images/Map_BigTreesInZone.PNG "Map of large trees in seismic hazard zones.")
 
 Change your settings back to *Stop algorithm execution when a geometry is invalid*.
 
