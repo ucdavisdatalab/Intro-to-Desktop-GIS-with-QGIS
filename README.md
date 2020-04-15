@@ -211,7 +211,7 @@ Selecting streets by hand is helpful, but depending on what we want to do, we mi
 
 You can review the metadata/data dictionary on the About tab on the [data's homepage](https://data.sfgov.org/Geographic-Locations-and-Boundaries/San-Francisco-Basemap-Street-Centerlines).  1 Freeways; 2 Highways; 3 Major Streets; 4 Secondary Streets; 5 Local Streets; 6 Freeway Ramps; 0 Private Streets
 
-Selecting our data based on the attribute information is a good way to explore and understand data, but it is only a temprary way to highlight data.  To use differences in attribute data in a map, we'll need to work with the layer symbology.
+Selecting our data based on the attribute information is a good way to explore and understand data, but it is only a temporary way to highlight data.  To use differences in attribute data in a map, we'll need to work with the layer symbology.
 
 
 ## Symbolizing layers by attributes
@@ -230,7 +230,7 @@ Ok! We can see each road classified by it's *classcode*.  The colors will defaul
 1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
 1. Right click on the highlighted symbols and choose *Change Color*.
 1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Apply*.  All of the roads will now be the same gray color. 
-1. Click the *Go Back* button (triangle) to return to the main window.
+1. Click the *Go Back* button ![alt text](./images/Tool_GoBack.PNG) to return to the main window.
 
 To guide our work, let's change the text of the legend.  For each legend item, double click on the label and change the number label to the following text:
 
