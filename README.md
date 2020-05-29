@@ -1,6 +1,8 @@
 # Introduction
 This tutorial uses QGIS 3 to teach the basics of desktop mapping software for beginners with no previous mapping experience.
 
+A recording of the workshop from April 14, 2020, is available on the [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=XnabNKLop7c)
+
 ## Workshop Preparation
 You should download and install [QGIS](https://qgis.org) version 3.10 or higher to your computer.
 
