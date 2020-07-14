@@ -1,10 +1,14 @@
 # Introduction
 This tutorial uses QGIS 3 to teach the basics of desktop mapping software for beginners with no previous mapping experience.
 
-A recording of the workshop from April 14, 2020, is available on the [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=XnabNKLop7c)
+Several recordings of this workshop are available:
+
+- April 30, 2019 with QGIS 3.4 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=avscRlskV2E&t=1s)
+- April 14, 2020 with QGIS 3.12 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=XnabNKLop7c)
+- July 17, 2020 with QGIS 3.14 [QGIS North America YouTube Channel](https://www.youtube.com/channel/UCLQd1MsyWWPoIi6rNLUCjhg)
 
 ## Workshop Preparation
-You should download and install [QGIS](https://qgis.org) version 3.10 or higher to your computer.
+You should download and install [QGIS](https://qgis.org) version 3.14 or higher to your computer.
 
 The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
@@ -94,9 +98,9 @@ When QGIS opens, you may see a list of recent projects, or if this is a new inst
 Let's load some data.
 
 ##  Raster Data
-Let's load the data:
+Let's start by loading the raster data:
 
-1. Click on the *Add Data Source* button on your toolbar.  It looks like three cards (one red, one yellow, and one blue) fanned out.
+1. Click on the *Open Datta Source Manager* button on your toolbar.  It looks like three cards (one red, one yellow, and one blue) fanned out.
 1. Click the *Raster* button (it looks like a checker board) on the left side of the *Data Source Manager* window.
 1. Click on the "..." button and then navigate to where you saved your workshop data and select the *DEM_SF.tif* file.
 1. Click *Open*.
@@ -110,7 +114,7 @@ Shapefiles are a very popular vector data format.  Let's load our shapefile data
 
 1. In the *Data Source Manager*, click on the *Vector* tab on the left.
 1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
-1. Holding down the Shift button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp*.  Then click *Open*.
+1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp*.  Then click *Open*.
 1. In the *Data Source Manager* click *Add*.
 
 ### CSV Data
@@ -164,6 +168,8 @@ This result is ok, but I think we can make some more improvements to see the sho
 1. Change the *Value* number for the lowest category to 0.  And then click *Apply* in the Layer Properties to see how it looks.  You should see a more defined coastline that looks more like the docks around the city.
 1. Continue to adjust the colors and/or breaks until you are happy with how it looks, then click *Ok*.  (See the image below for one option.)
 
+I chose breaks at 0, 50, 75, 125, 175, 225, 275, 325, 350, and inf.
+
 Note: the Min value is -9.36748 and the Max value is 399.963.  You can reset this if you need to by selecting the *Min/max* radio button in the *Min/Max Value Settings* again.
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_LayerProperties.PNG "Layer properties for DEM")
@@ -179,7 +185,7 @@ Now let's learn about working with vector data.  In the *Layers* panel, turn off
 ## Single Symbol Styling
 Your street layer is loaded by default with a randomly selected color.  Let's start our vector work by changing the styling of our streets to something more appropriate.  
 
-1. If you *Layer Styling* panel isn't still open, reopen it from the *View* menu by selecing *Panels* and then checking the box next to *Layer Styling*.
+1. If your *Layer Styling* panel isn't still open, reopen it from the *View* menu by selecing *Panels* and then checking the box next to *Layer Styling*.
 1. Make sure the drop-down to select the layers to work with is set to your streets data.
 1. Leave the drop-down for selecting the method of symbolizing the data on *Single symbol*.  We'll look at some of the other options later.
 1. In the white box near the top, you'll see the word *Line* and *Simple line*.  Click on the words *Simple line*.  This will let us access lots of options for how to symbolize this set of lines.
@@ -312,6 +318,7 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 1. Make any adjustments to the image parameters you would like.  Click *Save* to finish the process.
 
 ![alt text](./images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
+
 Your map might look something like this.  I added an *Outer Glow* in the *Draw Effects* menu to the Shoreline data to achieve the fading blue outline.
 
 You may want to add background layers such as coastlines or land masses from data sources like:
@@ -343,10 +350,12 @@ Now we can find which of the large trees are inside seismic hazard zones:
 The large trees that fall inside the seismic hazard zones are now selected.  But how to we record this information in a way that we can keep and use in a map?  Let's add a column with this information in our attribute table:
 1. Open the attribute table for the large trees layer.
 1. Click on the *Field Calculator* button.  ![alt text](./images/Tool_FieldCalculator.png)
+1. Check the box next to "Only update selected features" at the top of the window.
 1. Name your new field "EarthQZone" so we remember what information it contains.
 1. For the field type, select *Text*.
 1. In the expression field, type *'yes'*.  This will add the word "yes" to the EarthQZone column where the record is currently selected.
 1. Click *OK* and then inspect your attribute table to see the new column.
+1. When we started the Field Calculator, QGIS automatically turned on editing for our shapefile.  Save the edits we made by clicking the Save Edits button (blue floppy disk on the attribute table) and turn off the editing mode by clicking the Toggle Editing Mode button (yellow pencil).
 
 Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones.
 
