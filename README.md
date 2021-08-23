@@ -13,7 +13,7 @@ You should download and install [QGIS](https://qgis.org) version 3.14 or higher 
 The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
 ## Workshop Aims
-This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze begin using Geographic Information Systems (GIS) software for the exploration and analysis of spatial data using the QGIS platform. 
+This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform. 
 
 No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing/organizing computer files. 
 
