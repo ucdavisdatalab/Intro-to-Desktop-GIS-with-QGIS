@@ -108,17 +108,17 @@ Let's start by loading the raster data:
 1. Click on the "..." button in the *Source* section in the middle of the window. Navigate to where you saved your workshop data and select the *DEM_SF.tif* file.
 3. Click *Open*.
 4. Some options will appear on the page. We can leave the defaults for this dataset.
-5. Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in. If the *Select Transformation* dialog pops up, select a transformation you feel fits the data well. I'd recommend *NAD83 to WGS 84 (43)* because it has a high accuracy and is intended for California north of 36.5 degrees north.
+5. Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in. If the *Select Transformation* dialog pops up, select a transformation you feel fits the data well. I'd recommend *NAD83 to WGS 84 (43)* because the table of options says this one has a high accuracy and is intended for California north of 36.5 degrees north, which fits our data.
 
 You can leave the *Data Source Manager* window open so we can add some more data.
 
 ## Vector
 ### Shapefiles
-Shapefiles are a very popular vector data format.  Let's load our shapefile data.
+Shapefiles are a very popular vector data format, so that's what we'll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file).  Let's load our shapefile data:
 
 1. In the *Data Source Manager*, click on the *Vector* tab on the left.
 1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
-1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp*.  Then click *Open*.
+1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp* (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file).  Then click *Open*. If the *Select Transformation* dialog appears, pick a transformation that fits the data, such as *NAD83 to WGS 84 (43)*.
 1. In the *Data Source Manager* click *Add*.
 
 ### CSV Data
@@ -129,7 +129,7 @@ To load our .csv file:
 1. In the *Data Source Manager*, click on the *Delimited Text* tab on the left.  Notice that the icon is a comma.
 1. Next to the *File Name* text box, click the "..." button, then navigate to your *Street_Tree_Map.csv* file and click *Open*.
 1. In the *File format* section, we'll leave the default selection of *CSV (comma separated values)*, but if you had a file with a different delimiter, you could change the delimiter by using *Custom delimiters*.
-1. In the *Records and fields options* section, make sure *First record has field names* is checked.  If your data didn't have table headings, you would want to uncheck this box.
+1. In the *Records and Fields Options* section, make sure *First record has field names* is checked.  If your data didn't have table headings, you would want to uncheck this box. You can also check *Detect field types*.
 1. In the *Geometry definition* section is where we indicate what kind of geometry we have.  For ours, select *Point coordinates* and in the *X field*, pick "Longitude", and for the *Y field* pick "Latitude".
 1. Review the *Sample data* section to preview how the attribute table will look.  This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
 1. If everything looks good, click *Add*.  This is a reasonably large file, so be patient as it loads.
