@@ -321,6 +321,7 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 1. Add other items to your map as needed: title, legend, scale bar, etc. The item properties for each item you add are available by selecting the item and editing the properties in the pane on the right side of the *Print Composer* window.
 1. When you've made a layout you like, you can export the map to a variety of formats.  On the *Layout* menu, select *Save as Image*.  Navigate to where you would like to save the image, name the file, and choose the type of image.  Let's pick .png for this image.  Click *Save*.
 1. Make any adjustments to the image parameters you would like.  Click *Save* to finish the process.
+1. When you're finished exporting your map, you can close the *Print Composer* window.
 
 ![alt text](./images/Map_CanaryPineLocations.png "Finished map of canary pine locations.")
 
