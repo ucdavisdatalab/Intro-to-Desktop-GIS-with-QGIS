@@ -199,7 +199,7 @@ Your street layer is loaded by default with a randomly selected color.  Let's st
 1. Once you've picked a color, use the *Go Back* button to return to the main dialog. ![alt text](./images/Tool_GoBack.PNG "Go Back button.")
 
 ## Attributes tables
-Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the geometry and (2) information about those entities, typically in table format, called attributes.
+Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the **geometry** and (2) information about those entities, typically in table format, called **attributes**.
 
 Let's look at the attribute table for our streets:
 1. In the *Layers* panel, right click on the streets layer and select *Open Attribute Table*.
@@ -207,7 +207,7 @@ Let's look at the attribute table for our streets:
 1. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](./images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
 1. Minimize the attribute table, and use the zoom in and out tools ![alt text](./images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](./images/Tool_Pan.PNG "Pan tool.")  
 1. You can clear the selection (make nothing selected) with the *Deselect Features* tool.  ![alt text](./images/Tool_Deselect.PNG "Deselect tool")  This tool just makes nothing selected, it doesn't delete data.
-1. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer*.
+1. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer(s)*.
 
 ## Select by attributes
 Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight.  Let's investigate the *classcode* column.
@@ -233,15 +233,15 @@ Let's style this street data based on the kind of street.  This will be a good v
 
 1. Clear out any selections you may still have with the *Deselect Features* tool.  ![alt text](./images/Tool_Deselect.PNG "Deselect tool") 
 1. In the *Layer Styling* panel, pick the street data from the dropdown list so we are working with this data.  
-1. Instead of *Single symbol*, pick *Categorized* from the dropdown menu near the top of the dialog.
+1. Instead of *Single symbol*, pick *Categorized* from the dropdown menu near the top of the dialog. (Don't worry if the data disappears.)
 1. For the *Value* dropdown, pick the *classcode* column so we can use this data for our categories.
 1. Click the *Classify* button to see our categories.  
 
 Ok! We can see each road classified by it's *classcode*.  The colors will default to *Random Colors* for the palette. We can change the colors to meet our needs and communicate better.  Let's use the width of the line rather than color to indicate the type of road.
-1. You can uncheck the 7th row in the list of symbols.  This category is for data with no *classcode*.
+1. You can uncheck the last row in the list of symbols.  This category is for data with no *classcode*.
 1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
 1. Right click on the highlighted symbols and choose *Change Color*.
-1. Pick a gray color.  I picked *HTML code* #a0a0a0.  Click *Apply*.  All of the roads will now be the same gray color. 
+1. Pick a gray color.  I used *HTML code* #a0a0a0.  Click *Apply*.  All of the roads will now be the same gray color.  Remember that our goal is to vary the widths of the lines based on the type of road.
 1. Click the *Go Back* button ![alt text](./images/Tool_GoBack.PNG) to return to the main window.
 
 To guide our work, let's change the text of the legend.  For each legend item, double click on the label and change the number label to the following text:
@@ -275,7 +275,7 @@ Value | Legend | Line Weight
 ### Rule-Based Symbology
 We've just seen how we can use an automated classification method to change the symbology of data.  Now let's look at how we can build rules based on attributes to create tailored symbology.  The street tree layer has many, many tree locations - too many to make a useful map of all the trees so we'll need to select a subset of the data to include.  
 
-Here's a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California.  These beetles can damage and kill trees.  Let's make a map of one species of tree that might be affected, Canary Pine (*Pinus canariensis*) to see the spatial distribution and think about where you might want to concentrate monitoring efforts.  The [UC IPM site](http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html) has more information about bark beetle species and tree species affected by them.
+Here's a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California.  These beetles can damage and kill trees.  Let's make a map of one species of tree that might be affected, Canary Pine (*Pinus canariensis*), to investigate their spatial distribution and think about where you might want to concentrate monitoring efforts.  The [UC IPM site](http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html) has more information about bark beetle species and tree species affected by them.
 
 Let's look at rule-based symbology:
 1. In the *Layer Styling* panel, select the street tree data.
@@ -289,6 +289,7 @@ Let's look at rule-based symbology:
 1. Your expression string should look like this: *"qSpecies" LIKE '%Pinus canariensis%'*  Click *OK* when you are done.
 1. In the *Rule Editing* dialog, you can also make changes to the color, size, and shape.
 1. Click the back button when you are done. ![alt text](./images/Tool_GoBack.PNG "Go Back button.")
+1. You may need to uncheck the box next to the *(no filter)* rule to see the results of our *Canary Pine* filter.
 
 Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts?  Are there places you think might be impacted more quickly if a bark beetle came to the city?
 
