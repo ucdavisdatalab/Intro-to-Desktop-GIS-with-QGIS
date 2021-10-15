@@ -353,7 +353,7 @@ Now we can find which of the large trees are inside seismic hazard zones:
 1. Select features from *Large Trees*, that *Intersect* the *Seismic Hazards* layer and create a new selection.
 1. Click *Run*.
 
-The large trees that fall inside the seismic hazard zones are now selected.  But how to we record this information in a way that we can keep and use in a map?  Let's add a column with this information in our attribute table:
+The large trees that fall inside the seismic hazard zones are now selected.  But how do we record this information in a way that we can keep and use in a map?  Let's add a column with this information in our attribute table:
 1. Open the attribute table for the large trees layer.
 1. Click on the *Field Calculator* button.  ![alt text](./images/Tool_FieldCalculator.png)
 1. Check the box next to "Only update selected features" at the top of the window.
@@ -362,12 +362,11 @@ The large trees that fall inside the seismic hazard zones are now selected.  But
 1. In the expression field, type *'yes'*.  This will add the word "yes" to the EarthQZone column where the record is currently selected.
 1. Click *OK* and then inspect your attribute table to see the new column.
 1. When we started the Field Calculator, QGIS automatically turned on editing for our shapefile.  Save the edits we made by clicking the Save Edits button (blue floppy disk on the attribute table) and turn off the editing mode by clicking the Toggle Editing Mode button (yellow pencil).
+1. You can now clear your selection because the attribute information now contains the information we need.
 
-Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones.
+Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones. Hint: Rule-based or Categorized symbology are good options!
 
 ![alt text](./images/Map_BigTreesInZone.PNG "Map of large trees in seismic hazard zones.")
-
-Change your settings back to *Stop algorithm execution when a geometry is invalid*.
 
 # Further Reading & Resources
 
