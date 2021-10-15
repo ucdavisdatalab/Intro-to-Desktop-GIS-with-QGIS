@@ -90,7 +90,7 @@ In this workshop, we'll be using the following data:
 1. Seismic Hazard Zones
 1. City of San Francisco Boundary (shoreline)
 
-You can download all of this data from this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
+You can download all of this data from this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm). Use the *Download* button in the upper right corner of the screen to download a zipped file containing all of the workshop data (sometimes you'll need to dismiss a message at the top of the screen before you can see the download button). Unzip the file to a location on your computer that you can find later.
 
 # Start QGIS & Open a New Project
 Start QGIS in the way you typically open any program on your particular computer's operating system.  It's normal that it may take a minute to open.
@@ -103,11 +103,12 @@ Let's load some data.
 ##  Raster Data
 Let's start by loading the raster data:
 
-1. Click on the *Open Datta Source Manager* button on your toolbar.  It looks like three cards (one red, one yellow, and one blue) fanned out.
+1. Click on the *Open Data Source Manager* button on your toolbar.  It looks like three cards (one red, one yellow, and one blue) fanned out. Or, find it on the *Layer* menu.
 1. Click the *Raster* button (it looks like a checker board) on the left side of the *Data Source Manager* window.
-1. Click on the "..." button and then navigate to where you saved your workshop data and select the *DEM_SF.tif* file.
-1. Click *Open*.
-1. Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in.
+1. Click on the "..." button in the *Source* section in the middle of the window. Navigate to where you saved your workshop data and select the *DEM_SF.tif* file.
+3. Click *Open*.
+4. Some options will appear on the page. We can leave the defaults for this dataset.
+5. Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in. If the *Select Transformation* dialog pops up, select a transformation you feel fits the data well. I'd recommend *NAD83 to WGS 84 (43)* because it has a high accuracy and is intended for California north of 36.5 degrees north.
 
 You can leave the *Data Source Manager* window open so we can add some more data.
 
