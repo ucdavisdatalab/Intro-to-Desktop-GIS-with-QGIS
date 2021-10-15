@@ -6,17 +6,20 @@ Several recordings of this workshop are available:
 - ~~April 30, 2019 with QGIS 3.4 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=avscRlskV2E&t=1s)~~
 - ~~April 14, 2020 with QGIS 3.12 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=XnabNKLop7c)~~
 - July 17, 2020 with QGIS 3.14 [QGIS North America YouTube Channel](https://www.youtube.com/channel/UCLQd1MsyWWPoIi6rNLUCjhg)
+- November 16, 2021 with QGIS 3.20
 
 ## Workshop Preparation
-You should download and install [QGIS](https://qgis.org) version 3.14 or higher to your computer.
+You should download and install [QGIS](https://qgis.org) version 3.16 (long term release) or higher to your computer.
 
 The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
 ## Workshop Aims
 This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform. 
 
+### Prerequisites
 No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing/organizing computer files. 
 
+### Learning Objectives
 By the end of this workshop, you will be able to:
 
 - Define GIS and geospatial concepts and terminology.
