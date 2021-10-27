@@ -119,6 +119,7 @@ Shapefiles are a very popular vector data format, so that's what we'll work with
 1. In the *Data Source Manager*, click on the *Vector* tab on the left.
 1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
 1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp* (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file).  Then click *Open*. If the *Select Transformation* dialog appears, pick a transformation that fits the data, such as *NAD83 to WGS 84 (43)*.
+1. In the *Options* section, you can leave the default values as they are for this data. Make note of what options are there - the *ENCODING* section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
 1. In the *Data Source Manager* click *Add*.
 
 ### CSV Data
@@ -174,6 +175,8 @@ Chances are, this isn't exactly what you want and we can make some more improvem
 
 I chose breaks at 0, 50, 75, 125, 175, 225, 275, 325, 350, and inf.
 
+In the event that you need to reset your classes to start over with modifying your classes, click the *Classify* button again.
+
 Note: In case you need to know, in our DEM data, the Min value is -9.36748 and the Max value is 399.963.  You can reset this if you need to by selecting the *Min/max* radio button in the *Min/Max Value Settings* again.
 
 ![alt text](https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_LayerProperties.PNG "Layer properties for DEM")
@@ -189,7 +192,7 @@ Now let's learn about working with vector data.  In the *Layers* panel, turn off
 ## Single Symbol Styling
 Your street layer is loaded by default with a randomly selected color.  Let's start our vector work by changing the styling of our streets to something more appropriate.  
 
-1. If your *Layer Styling* panel isn't still open, reopen it from the *View* menu by selecing *Panels* and then checking the box next to *Layer Styling*.
+1. If your *Layer Styling* panel isn't still open, reopen it from the *View* menu by selecting *Panels* and then checking the box next to *Layer Styling*.
 1. Make sure the drop-down to select the layers to work with is set to your streets data.
 1. Leave the drop-down for selecting the method of symbolizing the data on *Single symbol*.  We'll look at some of the other options later.
 1. In the white box near the top, you'll see the word *Line* and *Simple line*.  Click on the words *Simple line*.  This will let us access lots of options for how to symbolize this set of lines.
@@ -216,7 +219,7 @@ Selecting streets by hand is helpful, but depending on what we want to do, we mi
 1. We'll build an expression in the white box on the left side of the tool.  In the center panel, expand the *Fields and Values* list.
 1. Double click the *classcode* field to add it to the expression box on the left.  
 1. Then click the *=* button to add an equal sign to the equation.
-1. We can also click the *All Unique* button on the right to see all of the values that are found in the *classcode* column.  I don't recommend using this option on continuous data; it's best for categorical data with a relatively small number of unique values.  Click *'1'* in the list.  Note that while we think of the items in this list as numbers, this column was defined as text, so this is why the numbers are wrapped in quotes.  If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1.  Your expression should look like *"classcode"  =  '1'*.
+1. We can also click the *All Unique* button on the right to see all of the values that are found in the *classcode* column.  I don't recommend using this option on continuous data; it's best for categorical data with a relatively small number of unique values.  Click *'1'* in the list.  Note that while we think of the items in this list as numbers, this column was likely defined as text, so this is why the numbers are wrapped in quotes.  If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1.  Your expression should look like *"classcode"  =  '1'*. If QGIS read the *classcode* field as numbers, your expression should look like this: *"classcode"  =  1*
 1. Click *Select features*.  You'll notice that rows in the attribute table and lines on the map have been highlighted.  What do you think a *classcode* of 1 means?
 
 **Challenge:** Try changing the expression to select different *classcode* categories.  What do you think each category means?  
@@ -333,7 +336,7 @@ You may want to add background layers such as coastlines or land masses from dat
 * [GADM](https://gadm.org/)
 
 # Select by Location
-So far, we've seen analysis that relies mainly on cartographic choices.  There are many other kinds of analysis we could do.  Let's look at an example were we need to undertand the spatial relationship between two different layers: identify large trees inside areas designated as earthquake hazard zones.
+So far, we've seen analysis that relies mainly on cartographic choices.  There are many other kinds of analysis we could do.  Let's look at an example where we need to undertand the spatial relationship between two different layers: identify large trees inside areas designated as earthquake hazard zones.
 
 One way to measure the size of a tree is by measuring the width of the trunk, about 4 feet off the ground. This measurement is called the *Diameter at Breast Height* or *DBH* for short.  The street tree data has a column in the attribute table called DBH so we can use this to identify the larger trees.
 
