@@ -132,6 +132,7 @@ To load our .csv file:
 1. In the *File format* section, we'll leave the default selection of *CSV (comma separated values)*, but if you had a file with a different delimiter, you could change the delimiter by using *Custom delimiters*.
 1. In the *Records and Fields Options* section, make sure *First record has field names* is checked.  If your data didn't have table headings, you would want to uncheck this box. You can also check *Detect field types*.
 1. In the *Geometry definition* section is where we indicate what kind of geometry we have.  For ours, select *Point coordinates* and in the *X field*, pick "Longitude", and for the *Y field* pick "Latitude".
+1. For the *Geometry CRS*, click on the *Select CRS* button (it looks like a little globe wearing a cone-shaped hat). In the *Filter*, type 4326 to find and select *WGS 84*.
 1. Review the *Sample data* section to preview how the attribute table will look.  This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
 1. If everything looks good, click *Add*.  This is a reasonably large file, so be patient as it loads.
 1. Close the *Data Source Manager* window because we are done adding data.
