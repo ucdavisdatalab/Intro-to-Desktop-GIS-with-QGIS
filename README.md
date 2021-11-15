@@ -6,7 +6,7 @@ Several recordings of this workshop are available:
 - ~~April 30, 2019 with QGIS 3.4 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=avscRlskV2E&t=1s)~~
 - ~~April 14, 2020 with QGIS 3.12 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=XnabNKLop7c)~~
 - July 17, 2020 with QGIS 3.14 [QGIS North America YouTube Channel](https://www.youtube.com/channel/UCLQd1MsyWWPoIi6rNLUCjhg)
-- November 16, 2021 with QGIS 3.20
+- November 16, 2021 with QGIS 3.16
 
 ## Workshop Preparation
 You should download and install [QGIS](https://qgis.org) version 3.16 (long term release) or higher to your computer.
