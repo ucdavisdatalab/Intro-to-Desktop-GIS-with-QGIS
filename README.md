@@ -62,7 +62,7 @@ Let's unpack some of that.
 - Integration with other geospatial tools & programming languages like R, Python, & PostGIS
 - Access to analysis tools from other established software like GRASS and SAGA
 - Native access to open data formats like geoJSON & GeoPackage
-- Comes in a [more than 40 languages](https://www.qgis.org/en/site/getinvolved/translate.html), making it easier to work with a larger variety of colaborators
+- Comes in [more than 40 languages](https://www.qgis.org/en/site/getinvolved/translate.html), making it easier to work with a larger variety of colaborators
 - Growing use by local, state, federal, and international governments
 
 # Data Types - Vector vs. Raster vs. other types of spatial data
