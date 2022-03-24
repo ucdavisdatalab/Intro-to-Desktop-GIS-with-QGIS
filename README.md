@@ -119,9 +119,9 @@ Shapefiles are a very popular vector data format, so that's what we'll work with
 
 1. In the *Data Source Manager*, click on the *Vector* tab on the left.
 1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
-1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp* (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file).  Then click *Open*. If the *Select Transformation* dialog appears, pick a transformation that fits the data, such as *NAD83 to WGS 84 (43)*.
+1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp* (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file).  Then click *Open*. 
 1. In the *Options* section, you can leave the default values as they are for this data. Make note of what options are there - the *ENCODING* section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
-1. In the *Data Source Manager* click *Add*.
+1. In the *Data Source Manager* click *Add*. If the *Select Transformation* dialog appears, pick a transformation that fits the data, such as *NAD83 to WGS 84 (43)*.
 
 ### CSV Data
 It's pretty common to get point data in "CSV" file, especially if the spatial data is represented by latitude and longitude coordinates.  CSV stands for Comma Separated Value.  Typically this is tabular data where the edge of each cell of the table is indicated by a comma.  Sometimes people use a different character instead of the comma such as a semicolon, tab, or pipe. The character used to indicate the edge of the cells is called the "delimiter".  If a file has tabs as the delimeter, for example, you would call that file a "tab delimited" file.
