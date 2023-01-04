@@ -7,7 +7,7 @@ This workshop has been taught on multiple occasions, some of which have video re
 - April 14, 2020 with QGIS 3.12 [UC Davis DataLab YouTube Channel](https://www.youtube.com/watch?v=XnabNKLop7c)
 - July 17, 2020 with QGIS 3.14 [QGIS North America YouTube Channel](https://www.youtube.com/channel/UCLQd1MsyWWPoIi6rNLUCjhg)
 - November 16, 2021 with QGIS 3.16
-- April 12, 2022 with QGIS 3.24
+- April 12, 2022 with QGIS 3.24 [#maptimeDavis YouTube Channel](https://youtu.be/PAcZUPSmqDE)
 
 ## Workshop Preparation
 You should download and install [QGIS](https://qgis.org) version 3.24 (long term release) or higher to your computer.
