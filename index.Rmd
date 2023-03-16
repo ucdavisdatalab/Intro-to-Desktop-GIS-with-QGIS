@@ -3,7 +3,7 @@ title: Intro to Desktop GIS with QGIS
 author: [YOUR NAME]
 date: "`r Sys.Date()`"
 
-github-repo: ucdavisdatalab/YOUR_REPO
+github-repo: ucdavisdatalab/workshop-intro-QGIS
 url: "https://ucdavisdatalab.github.io/YOUR_REPO/"
 
 lang: en-us
