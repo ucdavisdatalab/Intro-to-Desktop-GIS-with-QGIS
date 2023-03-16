@@ -1,5 +1,5 @@
 ---
-title: YOUR WORKSHOP TITLE
+title: Intro to Desktop GIS with QGIS
 author: [YOUR NAME]
 date: "`r Sys.Date()`"
 
