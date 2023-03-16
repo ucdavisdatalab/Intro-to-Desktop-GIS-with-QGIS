@@ -1,10 +1,10 @@
 ---
 title: Intro to Desktop GIS with QGIS
-author: [YOUR NAME]
+author: [Michele Tobias]
 date: "`r Sys.Date()`"
 
 github-repo: ucdavisdatalab/workshop-intro-QGIS
-url: "https://ucdavisdatalab.github.io/YOUR_REPO/"
+url: "[https://github.com/ucdavisdatalab/workshop-intro-QGIS]"
 
 lang: en-us
 
