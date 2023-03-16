@@ -63,17 +63,18 @@ repo:
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
 _Spring 2023_  
 _Instructor: Michele Tobias <<mmtobias@ucdavis.edu>>_  
-_Maintainer: MAINTAINER'S NAME <<MAINTAINER_EMAIL@ucdavis.edu>>_
+_Maintainer: Michele Tobias <<mmtobias@ucdavis.edu>>_
 
 * [Reader](https://ucdavisdatalab.github.io/YOUR_REPOSITORY/)
 * [Event Page](https://datalab.ucdavis.edu/eventscalendar/YOUR_EVENT/)
 
+# Workshop Description
 This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.
 
-Prerequisites
+# Prerequisites
 No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.
 
-Learning Objectives
+# Learning Objectives
 By the end of this workshop, you will be able to:
 
 Define GIS and geospatial concepts and terminology.
