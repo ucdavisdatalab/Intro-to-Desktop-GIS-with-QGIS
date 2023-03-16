@@ -58,17 +58,31 @@ repo:
 8. `git add` all changed files, then `git commit` and `git push`.
 
 
-# Workshop: YOUR WORKSHOP TITLE
+# Workshop: Intro to Desktop GIS with QGIS
 
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
-_QUARTER YEAR_  
-_Instructor: YOUR NAME <<YOUR_EMAIL@ucdavis.edu>>_  
+_Spring 2023_  
+_Instructor: Michele Tobias <<mmtobias@ucdavis.edu>>_  
 _Maintainer: MAINTAINER'S NAME <<MAINTAINER_EMAIL@ucdavis.edu>>_
 
 * [Reader](https://ucdavisdatalab.github.io/YOUR_REPOSITORY/)
 * [Event Page](https://datalab.ucdavis.edu/eventscalendar/YOUR_EVENT/)
 
-YOUR DESCRIPTION, LEARNING GOALS, PREREQUISITES, ETC
+This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.
+
+Prerequisites
+No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.
+
+Learning Objectives
+By the end of this workshop, you will be able to:
+
+Define GIS and geospatial concepts and terminology.
+Know the difference between vector and raster data types
+Properly connect and add data to a QGIS project
+Know where to find the attributes of your data in QGIS
+Perform basic selections and queries in QGIS
+Symbolize data by attributes
+Assemble a basic map for export
 
 
 ## Contributing
