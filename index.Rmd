@@ -1,0 +1,35 @@
+---
+title: YOUR WORKSHOP TITLE
+author: [YOUR NAME]
+date: "`r Sys.Date()`"
+
+github-repo: ucdavisdatalab/YOUR_REPO
+url: "https://ucdavisdatalab.github.io/YOUR_REPO/"
+
+lang: en-us
+
+site: "bookdown::bookdown_site"
+knit: "bookdown::render_book"
+output:
+  bookdown::gitbook:
+    fig_caption: false
+    config:
+      toc:
+        before: |
+          <li><a href="https://datalab.ucdavis.edu/">
+            <img src="https://datalab.ucdavis.edu/wp-content/uploads/2019/07/datalab-logo-full-color-rgb-1.png" style="height: 100%; width: 100%; object-fit: contain" />
+          </a></li>
+          <li><a href="./" style="font-size: 18px">YOUR WORKSHOP TITLE</a></li>
+        after: |
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+            <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
+          </a>
+        collapse: section
+      sharing: no
+      view: https://github.com/ucdavisdatalab/YOUR_REPO/blob/master/%s
+      edit: https://github.com/ucdavisdatalab/YOUR_REPO/edit/master/%s
+---
+
+# Overview {-}
+
+YOUR DESCRIPTION, LEARNING GOALS, PREREQUISITES, ETC
