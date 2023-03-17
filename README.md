@@ -8,9 +8,10 @@ This workshop has been taught on multiple occasions, some of which have video re
 - July 17, 2020 with QGIS 3.14 [QGIS North America YouTube Channel](https://www.youtube.com/channel/UCLQd1MsyWWPoIi6rNLUCjhg)
 - November 16, 2021 with QGIS 3.16
 - April 12, 2022 with QGIS 3.24 [#maptimeDavis YouTube Channel](https://youtu.be/PAcZUPSmqDE)
+- March 24, 2023 with QGIS 3.30 for the [Interagency Ecological Program (IEP)](https://iep.ca.gov/) Annual Workshop
 
 ## Workshop Preparation
-You should download and install [QGIS](https://qgis.org) version 3.24 (long term release) or higher to your computer.
+You should download and install [QGIS](https://qgis.org) on your computer. This workshop was last proofed for version 3.30.
 
 The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
