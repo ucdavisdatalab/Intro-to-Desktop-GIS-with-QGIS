@@ -77,13 +77,13 @@ No prior experience with QGIS or other GIS software is needed, though attendees 
 # Learning Objectives
 By the end of this workshop, you will be able to:
 
-Define GIS and geospatial concepts and terminology
-Know the difference between vector and raster data types
-Properly connect and add data to a QGIS project
-Know where to find the attributes of your data in QGIS
-Perform basic selections and queries in QGIS
-Symbolize data by attributes
-Assemble a basic map for export
++ Define GIS and geospatial concepts and terminology
++ Know the difference between vector and raster data types
++ Properly connect and add data to a QGIS project
++ Know where to find the attributes of your data in QGIS
++ Perform basic selections and queries in QGIS
++ Symbolize data by attributes
++ Assemble a basic map for export
 
 
 ## Contributing
