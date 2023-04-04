@@ -26,8 +26,8 @@ output:
           </a>
         collapse: section
       sharing: no
-      view: https://github.com/ucdavisdatalab/YOUR_REPO/blob/master/%s
-      edit: https://github.com/ucdavisdatalab/YOUR_REPO/edit/master/%s
+      view: https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/%s
+      edit: https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/%s
 ---
 
 # Overview {-}
