@@ -1,63 +1,3 @@
-# Template: Workshop Reader
-
-This repository is a template for workshop readers for the UC Davis DataLab.
-This template uses **bookdown** to knit the reader. You can also optionally use
-**renv** to manage packages and Git Large File Storage to manage large files
-(instructions included).
-
-To get started, create a new repo on GitHub from this template
-([instructions][gh]), then `git clone` your new repo.
-
-[gh]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
-
-Once you've cloned the repo, here's a checklist of things to do to prepare the
-repo:
-
-1. **renv** (optional): To set up **renv**, open R at the top level of the repo
-   and run:
-
-    ```r
-    renv::init()
-    ```
-
-    Restart R. Then, to install the **bookdown** toolchain to the project
-    package library, run:
-
-    ```r
-    install.packages("bookdown")
-    renv::snapshot()
-    ```
-
-    You can skip this step if you're not going to use **renv**.
-
-2. `index.Rmd`: Replace the all-caps text with your workshop details.
-    + Title (in 2 places, 1 of them in the `output:` HTML block)
-    + Author's name
-    + Repo name (in 4 places, 2 of them in the `output:` HTML block)
-    + Description, learning goals, & prerequisites
-
-3. `README.md`: Replace the all-caps text with your workshop details.
-    + Title
-    + Quarter & year
-    + Author's name & email
-    + Reader URL
-    + Event URL
-    + Description, learning goals, & prerequisites
-
-4. If this workshop does not have an assessment, delete `99_assessment.Rmd`.
-
-5. GitHub: In the repo's About section, add the reader URL and appropriate
-   tags.
-
-6. GitHub: In the repo's Settings page, enable GitHub pages. Set the branch to
-   `main` and the directory to `docs/`.
-
-7. `README.md`: Remove these template instructions, which end at the `#
-   Workshop:` header below
-
-8. `git add` all changed files, then `git commit` and `git push`.
-
-
 # Workshop: Intro to Desktop GIS with QGIS
 
 _[UC Davis DataLab](https://datalab.ucdavis.edu/)_  
@@ -71,10 +11,10 @@ _Maintainer: Michele Tobias <<mmtobias@ucdavis.edu>>_
 # Workshop Description
 This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.
 
-# Prerequisites
+## Prerequisites
 No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.
 
-# Learning Objectives
+## Learning Objectives
 By the end of this workshop, you will be able to:
 
 + Define GIS and geospatial concepts and terminology
@@ -86,7 +26,7 @@ By the end of this workshop, you will be able to:
 + Assemble a basic map for export
 
 
-## Contributing
+# Contributing
 
 The course reader is a live webpage, hosted through GitHub, where you can enter
 curriculum content and post it to a public-facing site for learners.
