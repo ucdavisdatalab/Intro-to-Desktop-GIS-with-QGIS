@@ -1,0 +1,3 @@
+workshop-description
+prerequisites
+learning-objectives
