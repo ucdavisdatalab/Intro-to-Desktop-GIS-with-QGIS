@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Intro to Desktop GIS with QGIS</title>
-  <meta name="description" content="Intro to Desktop GIS with QGIS" />
+  <title>10 Working with Raster Data | Intro to Desktop GIS with QGIS</title>
+  <meta name="description" content="10 Working with Raster Data | Intro to Desktop GIS with QGIS" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Intro to Desktop GIS with QGIS" />
+  <meta property="og:title" content="10 Working with Raster Data | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/workshop-intro-QGIS" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Intro to Desktop GIS with QGIS" />
+  <meta name="twitter:title" content="10 Working with Raster Data | Intro to Desktop GIS with QGIS" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="saving-project-files.html"/>
+<link rel="next" href="working-with-vector-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,41 +135,44 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Intro to Desktop GIS with QGIS</h1>
-<p class="author"><em>Michele Tobias</em></p>
-<p class="date"><em>2023-04-07</em></p>
-</div>
-<div id="overview" class="section level1 unnumbered hasAnchor">
-<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="workshop-description" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.1</span> Workshop Description<a href="index.html#workshop-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.</p>
-</div>
-<div id="prerequisites" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.2</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.</p>
-</div>
-<div id="learning-objectives" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.3</span> Learning Objectives<a href="index.html#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this workshop, you will be able to:</p>
-<p>Define GIS and geospatial concepts and terminology.
-Know the difference between vector and raster data types
-Properly connect and add data to a QGIS project
-Know where to find the attributes of your data in QGIS
-Perform basic selections and queries in QGIS
-Symbolize data by attributes
-Assemble a basic map for export</p>
+<div id="working-with-raster-data" class="section level1 hasAnchor">
+<h1><span class="header-section-number">10</span> Working with Raster Data<a href="working-with-raster-data.html#working-with-raster-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Let’s start by looking at some Raster data. We’ll work with a digital elevation model (DEM) for San Francisco. A DEM is a raster in which each cell in the grid contains the elevation at that location.</p>
+<p>For now, let’s turn off all of the layers in the <em>Layers</em> panel except for the <em>DEM_SF</em> layer by unchecking the boxes next to the layer names in the <em>Layers</em> Panel on the left side of your screen.</p>
+<p>Now you should see a gray scale image that roughly looks like the San Francisco peninsula. This is a Digital Elevation Model (DEM). Each cell in the raster contains a number representing the elevation at that location.</p>
+<p>Let’s style this data:
+1. Open the <em>Layer Styling</em> Panel by clicking on the <em>View</em> menu, then <em>Panels</em>, and checking the box for <em>Layer Styling</em>.
+1. At the top of the panel that opens, select the DEM from the drop-down menu, or highlight that layer in the <em>Layers</em> panel.
+1. Click on the <em>Symbology</em> tab on the left side (the icon looks like a paintbrush painting a rainbow).
+1. For the <em>Render type</em> drop down (just below where you selected the layer), select <em>Singleband pseudocolor</em>.
+1. Expand the <em>Min/Max Value Settings" area. In the </em>Statistics extent* drop-down, select <em>Whole raster</em>. For <em>Accuracy</em>, select <em>Actual (slower)</em>.
+1. For the <em>Color ramp</em>, select <em>Create new color ramp</em>
+1. Select <em>Catalog: cpt-city</em> from the drop down and click <em>Ok</em>
+1. Pick <em>Topography</em> from the options on the left.
+1. Pick <em>cd-a</em> for our gradient. Or select another scheme you think will work well for representing topography. Click <em>Ok</em>.
+1. You’ll see that the color ramp in the Layers Properties has updated. Click <em>Apply</em> to see what it looks like with our data or check the box next to <em>Live update</em> to apply changes as you make them.</p>
+<p>Chances are, this isn’t exactly what you want and we can make some more improvements to see the shoreline and topography better.</p>
+<ol style="list-style-type: decimal">
+<li>In the <em>Layer Styling</em> panel again, for the <em>Interpolation</em> drop-down, select <em>Discrete</em>.</li>
+<li>For the <em>Mode</em>, select <em>Equal Interval</em>. For <em>Classes</em>, input 10.</li>
+<li>Change the <em>Value</em> number for the lowest category to 0 by double clicking on the default number and typing in the number 0 and pressing enter on your keyboard. If it doesn’t automatically upadte, click <em>Apply</em> in the Layer Properties to see how it looks. You should see a more defined coastline that looks more like the docks around the city.</li>
+<li>Continue to adjust the colors and/or breaks until you are happy with how it looks, then click <em>Ok</em>. (See the image below for one option.)</li>
+</ol>
+<p>I chose breaks at 0, 50, 75, 125, 175, 225, 275, 325, 350, and inf.</p>
+<p>In the event that you need to reset your classes to start over with modifying your classes, click the <em>Classify</em> button again.</p>
+<p>Note: In case you need to know, in our DEM data, the Min value is -9.36748 and the Max value is 399.963. You can reset this if you need to by selecting the <em>Min/max</em> radio button in the <em>Min/Max Value Settings</em> again.</p>
+<p><img src="https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_LayerProperties.PNG" title="Layer properties for DEM" alt="alt text" /></p>
+<p><img src="https://github.com/MicheleTobias/Intro-to-Desktop-GIS-with-QGIS/blob/master/images/Raster_DEM.PNG" title="Digital Elevation Model with a continuous color ramp" alt="alt text" /></p>
+<p>Now you’ve had a first look at how to style raster data for better viewer understanding. There is a wide variety of analysis and data processing that we can’t learn today in our limited time. For more on working with raster data, see the <a href="https://docs.qgis.org/3.10/en/docs/user_manual/working_with_raster/index.html">Raster Module of the QGIS Training Manual</a>.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="saving-project-files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="working-with-vector-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -190,7 +193,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/09_Working-with-Raster-Data.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -198,7 +201,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/09_Working-with-Raster-Data.Rmd",
 "text": null
 },
 "download": null,

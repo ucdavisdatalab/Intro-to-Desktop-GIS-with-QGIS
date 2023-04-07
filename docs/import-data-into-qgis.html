@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Intro to Desktop GIS with QGIS</title>
-  <meta name="description" content="Intro to Desktop GIS with QGIS" />
+  <title>8 Import data into QGIS | Intro to Desktop GIS with QGIS</title>
+  <meta name="description" content="8 Import data into QGIS | Intro to Desktop GIS with QGIS" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Intro to Desktop GIS with QGIS" />
+  <meta property="og:title" content="8 Import data into QGIS | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/workshop-intro-QGIS" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Intro to Desktop GIS with QGIS" />
+  <meta name="twitter:title" content="8 Import data into QGIS | Intro to Desktop GIS with QGIS" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="start-qgis-open-a-new-project.html"/>
+<link rel="next" href="saving-project-files.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,32 +135,52 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Intro to Desktop GIS with QGIS</h1>
-<p class="author"><em>Michele Tobias</em></p>
-<p class="date"><em>2023-04-07</em></p>
+<div id="import-data-into-qgis" class="section level1 hasAnchor">
+<h1><span class="header-section-number">8</span> Import data into QGIS<a href="import-data-into-qgis.html#import-data-into-qgis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Let’s load some data.</p>
+<div id="raster-data-1" class="section level2 hasAnchor">
+<h2><span class="header-section-number">8.1</span> Raster Data<a href="import-data-into-qgis.html#raster-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s start by loading the raster data:</p>
+<ol style="list-style-type: decimal">
+<li>Click on the <em>Open Data Source Manager</em> button on your toolbar. It looks like three cards (one red, one yellow, and one blue) fanned out. Or, find it on the <em>Layer</em> menu.</li>
+<li>Click the <em>Raster</em> button (it looks like a checker board) on the left side of the <em>Data Source Manager</em> window.</li>
+<li>Click on the “…” button in the <em>Source</em> section in the middle of the window. Navigate to where you saved your workshop data and select the <em>DEM_SF.tif</em> file.</li>
+<li>Click <em>Open</em>.</li>
+<li>Some options will appear on the page. We can leave the defaults for this dataset.</li>
+<li>Finally, click “Add” and you should see a black and white raster image appear in the map canvas below the dialog you’re working in. If the <em>Select Transformation</em> dialog pops up, select a transformation you feel fits the data well. I’d recommend <em>NAD83 to WGS 84 (43)</em> because the table of options says this one has a high accuracy and is intended for California north of 36.5 degrees north, which fits our data.</li>
+</ol>
+<p>You can leave the <em>Data Source Manager</em> window open so we can add some more data.</p>
 </div>
-<div id="overview" class="section level1 unnumbered hasAnchor">
-<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="workshop-description" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.1</span> Workshop Description<a href="index.html#workshop-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.</p>
+<div id="vector" class="section level2 hasAnchor">
+<h2><span class="header-section-number">8.2</span> Vector<a href="import-data-into-qgis.html#vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="shapefiles" class="section level3 hasAnchor">
+<h3><span class="header-section-number">8.2.1</span> Shapefiles<a href="import-data-into-qgis.html#shapefiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Shapefiles are a very popular vector data format, so that’s what we’ll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file). Let’s load our shapefile data:</p>
+<ol style="list-style-type: decimal">
+<li>In the <em>Data Source Manager</em>, click on the <em>Vector</em> tab on the left.</li>
+<li>In the <em>Source</em> section, click on the “…” and navigate to the folder containing your vector data.</li>
+<li>Holding down the Ctrl button on your keyboard while you click, select the <em>StreetCenterlines.shp</em>, <em>SeismicHazardZones.shp</em>, and <em>Shoreline.shp</em> (don’t worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click <em>Open</em>.</li>
+<li>In the <em>Options</em> section, you can leave the default values as they are for this data. Make note of what options are there - the <em>ENCODING</em> section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.</li>
+<li>In the <em>Data Source Manager</em> click <em>Add</em>. If the <em>Select Transformation</em> dialog appears, pick a transformation that fits the data, such as <em>NAD83 to WGS 84 (43)</em>.</li>
+</ol>
 </div>
-<div id="prerequisites" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.2</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.</p>
-</div>
-<div id="learning-objectives" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.3</span> Learning Objectives<a href="index.html#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this workshop, you will be able to:</p>
-<p>Define GIS and geospatial concepts and terminology.
-Know the difference between vector and raster data types
-Properly connect and add data to a QGIS project
-Know where to find the attributes of your data in QGIS
-Perform basic selections and queries in QGIS
-Symbolize data by attributes
-Assemble a basic map for export</p>
+<div id="csv-data" class="section level3 hasAnchor">
+<h3><span class="header-section-number">8.2.2</span> CSV Data<a href="import-data-into-qgis.html#csv-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It’s pretty common to get point data in “CSV” file, especially if the spatial data is represented by latitude and longitude coordinates. CSV stands for Comma Separated Value. Typically this is tabular data where the edge of each cell of the table is indicated by a comma. Sometimes people use a different character instead of the comma such as a semicolon, tab, or pipe. The character used to indicate the edge of the cells is called the “delimiter”. If a file has tabs as the delimeter, for example, you would call that file a “tab delimited” file.</p>
+<p>To load our .csv file:</p>
+<ol style="list-style-type: decimal">
+<li>In the <em>Data Source Manager</em>, click on the <em>Delimited Text</em> tab on the left. Notice that the icon is a comma.</li>
+<li>Next to the <em>File Name</em> text box, click the “…” button, then navigate to your <em>Street_Tree_Map.csv</em> file and click <em>Open</em>.</li>
+<li>In the <em>File format</em> section, we’ll leave the default selection of <em>CSV (comma separated values)</em>, but if you had a file with a different delimiter, you could change the delimiter by using <em>Custom delimiters</em>.</li>
+<li>In the <em>Records and Fields Options</em> section, make sure <em>First record has field names</em> is checked. If your data didn’t have table headings, you would want to uncheck this box. You can also check <em>Detect field types</em>.</li>
+<li>In the <em>Geometry definition</em> section is where we indicate what kind of geometry we have. For ours, select <em>Point coordinates</em> and in the <em>X field</em>, pick “Longitude”, and for the <em>Y field</em> pick “Latitude”.</li>
+<li>For the <em>Geometry CRS</em>, click on the <em>Select CRS</em> button (it looks like a little globe wearing a cone-shaped hat). In the <em>Filter</em>, type 4326 to find and select <em>WGS 84</em>.</li>
+<li>Review the <em>Sample data</em> section to preview how the attribute table will look. This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).</li>
+<li>If everything looks good, click <em>Add</em>. This is a reasonably large file, so be patient as it loads.</li>
+<li>Close the <em>Data Source Manager</em> window because we are done adding data.</li>
+</ol>
 
+</div>
 </div>
 </div>
             </section>
@@ -168,8 +188,8 @@ Assemble a basic map for export</p>
           </div>
         </div>
       </div>
-
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="start-qgis-open-a-new-project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="saving-project-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -190,7 +210,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/07_Import-data-into-QGIS.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -198,7 +218,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/07_Import-data-into-QGIS.Rmd",
 "text": null
 },
 "download": null,

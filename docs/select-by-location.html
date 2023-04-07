@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Intro to Desktop GIS with QGIS</title>
-  <meta name="description" content="Intro to Desktop GIS with QGIS" />
+  <title>13 Select by Location | Intro to Desktop GIS with QGIS</title>
+  <meta name="description" content="13 Select by Location | Intro to Desktop GIS with QGIS" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Intro to Desktop GIS with QGIS" />
+  <meta property="og:title" content="13 Select by Location | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/workshop-intro-QGIS" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Intro to Desktop GIS with QGIS" />
+  <meta name="twitter:title" content="13 Select by Location | Intro to Desktop GIS with QGIS" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="making-a-map-with-the-print-composer.html"/>
 
-<link rel="next" href="introduction.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,41 +135,47 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Intro to Desktop GIS with QGIS</h1>
-<p class="author"><em>Michele Tobias</em></p>
-<p class="date"><em>2023-04-07</em></p>
-</div>
-<div id="overview" class="section level1 unnumbered hasAnchor">
-<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="workshop-description" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.1</span> Workshop Description<a href="index.html#workshop-description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.</p>
-</div>
-<div id="prerequisites" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.2</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.</p>
-</div>
-<div id="learning-objectives" class="section level2 hasAnchor">
-<h2><span class="header-section-number">0.3</span> Learning Objectives<a href="index.html#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this workshop, you will be able to:</p>
-<p>Define GIS and geospatial concepts and terminology.
-Know the difference between vector and raster data types
-Properly connect and add data to a QGIS project
-Know where to find the attributes of your data in QGIS
-Perform basic selections and queries in QGIS
-Symbolize data by attributes
-Assemble a basic map for export</p>
+<div id="select-by-location" class="section level1 hasAnchor">
+<h1><span class="header-section-number">13</span> Select by Location<a href="select-by-location.html#select-by-location" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>So far, we’ve seen analysis that relies mainly on cartographic choices. There are many other kinds of analysis we could do. Let’s look at an example where we need to undertand the spatial relationship between two different layers: identify large trees inside areas designated as earthquake hazard zones.</p>
+<p>One way to measure the size of a tree is by measuring the width of the trunk, about 4 feet off the ground. This measurement is called the <em>Diameter at Breast Height</em> or <em>DBH</em> for short. The street tree data has a column in the attribute table called DBH so we can use this to identify the larger trees.</p>
+<p>First, let’s use the <em>Select By Attributes</em> process we learned earlier today to select trees with a DBH of 36 inches or larger. A quick reminder of the process: open the attribute table and use the query tool to write a query. <em>Hint:</em> We can write “greater than or equal to” as <em>&gt;=</em> in the selection interface.</p>
+<p>Because the street tree dataset is so large, let’s save our large tree selection as a new file to make processes run faster with this subset of the data. Now that you have the trees with a DBH of 3 feet or more selected:
+1. Right click on the layer in the <em>Layers Panel</em>.<br />
+1. Select <em>Export</em> from the menu that pops up and then <em>Save selected features as</em>.<br />
+1. For the format, choose <em>ESRI Shapefile</em>, or any of the vector formats you prefer (I personally like geojson because it’s one text file, but geopackage is also pretty handy… KML is only a good choice if you’re going to use the file in a Google application).
+1. Next to the <em>File Name</em> box, click the “…” button to pick a folder to save the file in and give the file a name. I called my “LargeTrees”. Click <em>Save</em> when you’re done.
+1. Make sure the <em>Save only Selected Features</em> and <em>Add saved file to map</em> boxes are checked, then click <em>OK</em>.
+1. You should have a file with only the features we had previously selected.
+1. You can uncheck the full street trees layer in the <em>Layers Panel</em>.</p>
+<p>Now we can find which of the large trees are inside seismic hazard zones:
+1. On the <em>Vector</em> menu, select <em>Research Tools</em> and then <em>Select by Location</em> to open the <em>Select by Location</em> tool.
+1. Select features from <em>Large Trees</em>, that <em>Intersect</em> the <em>Seismic Hazards</em> layer and create a new selection.
+1. Click <em>Run</em>.</p>
+<p>The large trees that fall inside the seismic hazard zones are now selected. But how do we record this information in a way that we can keep and use in a map? Let’s add a column with this information in our attribute table:
+1. Open the attribute table for the large trees layer.
+1. Click on the <em>Field Calculator</em> button. <img src="./images/Tool_FieldCalculator.png" alt="alt text" />
+1. Check the box next to “Only update selected features” at the top of the window.
+1. Name your new field “EarthQZone” so we remember what information it contains.
+1. For the field type, select <em>Text</em>.
+1. In the expression field, type <em>‘yes’</em>. This will add the word “yes” to the EarthQZone column where the record is currently selected.
+1. Click <em>OK</em> and then inspect your attribute table to see the new column.
+1. When we started the Field Calculator, QGIS automatically turned on editing for our shapefile. Save the edits we made by clicking the Save Edits button (blue floppy disk on the attribute table) and turn off the editing mode by clicking the Toggle Editing Mode button (yellow pencil).
+1. You can now clear your selection because the attribute information now contains the information we need.</p>
+<p>Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones. Hint: Rule-based or Categorized symbology are good options!</p>
+<p><img src="./images/Map_BigTreesInZone.PNG" title="Map of large trees in seismic hazard zones." alt="alt text" /></p>
 
-</div>
+<p><a href="https://qgis.org/en/docs/index.html">QGIS Documentation</a>: includes the User Guide, Training Manual, and Gentle Introduction to GIS</p>
+<p><a href="https://www.osgeo.org/">Open Source Geospatial Foundation</a>: includes news and information about projects, conferences, and community</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="making-a-map-with-the-print-composer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -190,7 +196,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/12_Select-by-Location.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -198,7 +204,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/12_Select-by-Location.Rmd",
 "text": null
 },
 "download": null,
