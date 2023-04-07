@@ -1,0 +1,24 @@
+on:
+  push:
+    branches: main
+
+name: Render site
+
+jobs:
+  render:
+    name: Render site
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install bookdown
+        run: Rscript -e 'install.packages("bookdown")'
+      - name: Render site
+        run: Rscript knit.R
+      - name: Add new site files
+        run: git add docs
+      - name: Commit results
+        run: |
+          git commit docs -m 'Re-build site' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
