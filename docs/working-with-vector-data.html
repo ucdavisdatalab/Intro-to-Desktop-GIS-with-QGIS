@@ -150,7 +150,7 @@
 <li>The color selection dialog has multiple options for how you select your colors. Take a minute to get a feel for how each of these works. I find each of these has advantages for certain situations.</li>
 <li>Choose a color that you think represents roads well. I used a dark gray. You can enter <em>#666666</em> into the <em>HTML notation</em> box to use the same color if you’d like.<br />
 </li>
-<li>Once you’ve picked a color, use the <em>Go Back</em> button to return to the main dialog. <img src="./images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" /></li>
+<li>Once you’ve picked a color, use the <em>Go Back</em> button to return to the main dialog. <img src="images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" /></li>
 </ol>
 </div>
 <div id="attributes-tables" class="section level2 hasAnchor">
@@ -159,16 +159,16 @@
 <p>Let’s look at the attribute table for our streets:
 1. In the <em>Layers</em> panel, right click on the streets layer and select <em>Open Attribute Table</em>.
 1. Scroll to the right to explore the information in this table. We have information like the name of the street, whether or not it’s a one-way street, and the name of the neighborhood it’s in.
-1. Each row in this table is linked to a street in our data set. Click on the row number of any row. The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away. We can zoom to the selected row by clicking the <em>Zoom map to selected row</em> button. <img src="./images/Tool_ZoomToSelection.PNG" title="Zoom to selection tool." alt="alt text" />
-1. Minimize the attribute table, and use the zoom in and out tools <img src="./images/Tool_ZoomInOut.PNG" title="Zoom in and out tools." alt="alt text" /> to adjust your view. The <em>Pan</em> tool can also help navigate. <img src="./images/Tool_Pan.PNG" title="Pan tool." alt="alt text" /><br />
-1. You can clear the selection (make nothing selected) with the <em>Deselect Features</em> tool. <img src="./images/Tool_Deselect.PNG" title="Deselect tool" alt="alt text" /> This tool just makes nothing selected, it doesn’t delete data.
+1. Each row in this table is linked to a street in our data set. Click on the row number of any row. The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away. We can zoom to the selected row by clicking the <em>Zoom map to selected row</em> button. <img src="images/Tool_ZoomToSelection.PNG" title="Zoom to selection tool." alt="alt text" />
+1. Minimize the attribute table, and use the zoom in and out tools <img src="images/Tool_ZoomInOut.PNG" title="Zoom in and out tools." alt="alt text" /> to adjust your view. The <em>Pan</em> tool can also help navigate. <img src="images/Tool_Pan.PNG" title="Pan tool." alt="alt text" /><br />
+1. You can clear the selection (make nothing selected) with the <em>Deselect Features</em> tool. <img src="images/Tool_Deselect.PNG" title="Deselect tool" alt="alt text" /> This tool just makes nothing selected, it doesn’t delete data.
 1. If you’d like to zoom to see all of the streets data, right click on the streets layer in the <em>Layers</em> panel and select <em>Zoom to layer(s)</em>.</p>
 </div>
 <div id="select-by-attributes" class="section level2 hasAnchor">
 <h2><span class="header-section-number">11.3</span> Select by attributes<a href="working-with-vector-data.html#select-by-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight. Let’s investigate the <em>classcode</em> column.</p>
 <ol style="list-style-type: decimal">
-<li>In the attribute table for the streets layer, click on the <em>Select features using an expression</em> <img src="./images/Tool_SelectFeaturesUsingExpression.png" alt="alt text" /> to open the <em>Select by Expression</em> tool.</li>
+<li>In the attribute table for the streets layer, click on the <em>Select features using an expression</em> <img src="images/Tool_SelectFeaturesUsingExpression.png" alt="alt text" /> to open the <em>Select by Expression</em> tool.</li>
 <li>We’ll build an expression in the white box on the left side of the tool. In the center panel, expand the <em>Fields and Values</em> list.</li>
 <li>Double click the <em>classcode</em> field to add it to the expression box on the left.<br />
 </li>
@@ -186,7 +186,7 @@
 <h3><span class="header-section-number">11.4.1</span> Classifying Attributes<a href="working-with-vector-data.html#classifying-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s style this street data based on the kind of street. This will be a good visualization for giving context to some of the other data we have to work with.</p>
 <ol style="list-style-type: decimal">
-<li>Clear out any selections you may still have with the <em>Deselect Features</em> tool. <img src="./images/Tool_Deselect.PNG" title="Deselect tool" alt="alt text" /></li>
+<li>Clear out any selections you may still have with the <em>Deselect Features</em> tool. <img src="images/Tool_Deselect.PNG" title="Deselect tool" alt="alt text" /></li>
 <li>In the <em>Layer Styling</em> panel, pick the street data from the dropdown list so we are working with this data.<br />
 </li>
 <li>Instead of <em>Single symbol</em>, pick <em>Categorized</em> from the dropdown menu near the top of the dialog. (Don’t worry if the data disappears.)</li>
@@ -198,7 +198,7 @@
 1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
 1. Right click on the highlighted symbols and choose <em>Change Color</em>.
 1. Pick a gray color. I used <em>HTML code</em> #a0a0a0. Click <em>Apply</em>. All of the roads will now be the same gray color. Remember that our goal is to vary the widths of the lines based on the type of road.
-1. Click the <em>Go Back</em> button <img src="./images/Tool_GoBack.PNG" alt="alt text" /> to return to the main window.</p>
+1. Click the <em>Go Back</em> button <img src="images/Tool_GoBack.PNG" alt="alt text" /> to return to the main window.</p>
 <p>To guide our work, let’s change the text of the legend. For each legend item, double click on the label and change the number label to the following text:</p>
 <table>
 <thead>
@@ -287,7 +287,7 @@
 </tr>
 </tbody>
 </table>
-<p><img src="./images/Vector_ClassifiedRoads.PNG" title="Classified Roads" alt="alt text" /></p>
+<p><img src="images/Vector_ClassifiedRoads.PNG" title="Classified Roads" alt="alt text" /></p>
 </div>
 <div id="rule-based-symbology" class="section level3 hasAnchor">
 <h3><span class="header-section-number">11.4.2</span> Rule-Based Symbology<a href="working-with-vector-data.html#rule-based-symbology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -298,16 +298,16 @@
 1. Select <em>Rule-Based</em> from the drop-down menu for the symbology method.
 1. Click the green + button (near the bottom) to add a rule.
 1. In the <em>Label</em> box, type “Canary Pine”. This will give our new rule a name we can easily understand.
-1. Next to the <em>Filter</em> box, click on the <em>Expression</em> button <img src="./images/Tool_ExpressionButton.PNG" title="Expression button" alt="alt text" /> to open the <em>Expression String Builder</em> dialog. This should look familiar - it’s very similar to how we selected rows by their attributes earlier.
+1. Next to the <em>Filter</em> box, click on the <em>Expression</em> button <img src="images/Tool_ExpressionButton.PNG" title="Expression button" alt="alt text" /> to open the <em>Expression String Builder</em> dialog. This should look familiar - it’s very similar to how we selected rows by their attributes earlier.
 1. Add the <em>qSpecies</em> field to the expression window from the <em>Fields &amp; Values</em> list.
 1. Next, type the word <em>LIKE</em>. <em>LIKE</em> is a comparison operator for strings. You might think of this as = for text.
 1. Finally, we need to say which species we want. You may have noticed that the species column typically contains a long string with several pieces of information. We can search for a portion of the text by using a wildcard character to match part of the string in the column. Type <em>‘%Pinus canariensis%’</em> after <em>LIKE</em> in your expression. The single quotes indicate that the words we just typed are a string (and not another variable or field from the attribute table) and the <em>%</em> means “it doesn’t matter what text is here”. So the program will search for rows that contain the sting <em>Pinus canariensis</em>, regardless of what else the column says.
 1. Your expression string should look like this: <em>“qSpecies” LIKE ‘%Pinus canariensis%’</em> Click <em>OK</em> when you are done.
 1. In the <em>Rule Editing</em> dialog, you can also make changes to the color, size, and shape.
-1. Click the back button when you are done. <img src="./images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" />
+1. Click the back button when you are done. <img src="images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" />
 1. You may need to uncheck the box next to the <em>(no filter)</em> rule to see the results of our <em>Canary Pine</em> filter.</p>
 <p>Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts? Are there places you think might be impacted more quickly if a bark beetle came to the city?</p>
-<p><img src="./images/Vector_CanaryPine.PNG" title="Map of canary pines." alt="alt text" /></p>
+<p><img src="images/Vector_CanaryPine.PNG" title="Map of canary pines." alt="alt text" /></p>
 <p><strong>Challenge:</strong> Choose another species to add to your map. Add another rule-based classification with a different map symbol.</p>
 <p>To learn more about processing and analyzing vector data, see the <a href="https://docs.qgis.org/2.18/en/docs/training_manual/vector_analysis/index.html">QGIS Training Manual’s Module on Vector Analysis</a>. To learn about creating vector data, see the <a href="https://docs.qgis.org/2.18/en/docs/training_manual/create_vector_data/index.html">QGIS Training Manual’s Module on Creating Vector Data</a>.</p>
 
