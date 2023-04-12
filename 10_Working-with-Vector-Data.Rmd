@@ -19,11 +19,11 @@ Vector data is typically made of up of two parts: (1) the points, lines, or poly
 Let's look at the attribute table for our streets:
 
 1. In the *Layers* panel, right click on the streets layer and select *Open Attribute Table*.
-2. 1. Scroll to the right to explore the information in this table.  We have information like the name of the street, whether or not it's a one-way street, and the name of the neighborhood it's in.
-3. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](./images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
-4. Minimize the attribute table, and use the zoom in and out tools ![alt text](./images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](./images/Tool_Pan.PNG "Pan tool.")  
-5. You can clear the selection (make nothing selected) with the *Deselect Features* tool.  ![alt text](./images/Tool_Deselect.PNG "Deselect tool")  This tool just makes nothing selected, it doesn't delete data.
-6. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer(s)*.
+1. Scroll to the right to explore the information in this table.  We have information like the name of the street, whether or not it's a one-way street, and the name of the neighborhood it's in.
+1. Each row in this table is linked to a street in our data set.  Click on the row number of any row.  The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away.  We can zoom to the selected row by clicking the *Zoom map to selected row* button. ![alt text](./images/Tool_ZoomToSelection.PNG "Zoom to selection tool.")
+1. Minimize the attribute table, and use the zoom in and out tools ![alt text](./images/Tool_ZoomInOut.PNG "Zoom in and out tools.") to adjust your view.  The *Pan* tool can also help navigate. ![alt text](./images/Tool_Pan.PNG "Pan tool.")  
+1. You can clear the selection (make nothing selected) with the *Deselect Features* tool.  ![alt text](./images/Tool_Deselect.PNG "Deselect tool")  This tool just makes nothing selected, it doesn't delete data.
+1. If you'd like to zoom to see all of the streets data, right click on the streets layer in the *Layers* panel and select *Zoom to layer(s)*.
 
 ## Select by attributes
 Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight.  Let's investigate the *classcode* column.
