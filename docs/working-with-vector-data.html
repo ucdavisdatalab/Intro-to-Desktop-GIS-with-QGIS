@@ -196,12 +196,14 @@
 <li>For the <em>Value</em> dropdown, pick the <em>classcode</em> column so we can use this data for our categories.</li>
 <li>Click the <em>Classify</em> button to see our categories.</li>
 </ol>
-<p>Ok! We can see each road classified by it’s <em>classcode</em>. The colors will default to <em>Random Colors</em> for the palette. We can change the colors to meet our needs and communicate better. Let’s use the width of the line rather than color to indicate the type of road.
-1. You can uncheck the last row in the list of symbols. This category is for data with no <em>classcode</em>.
-1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
-1. Right click on the highlighted symbols and choose <em>Change Color</em>.
-1. Pick a gray color. I used <em>HTML code</em> #a0a0a0. Click <em>Apply</em>. All of the roads will now be the same gray color. Remember that our goal is to vary the widths of the lines based on the type of road.
-1. Click the <em>Go Back</em> button <img src="images/Tool_GoBack.PNG" alt="alt text" /> to return to the main window.</p>
+<p>Ok! We can see each road classified by it’s <em>classcode</em>. The colors will default to <em>Random Colors</em> for the palette. We can change the colors to meet our needs and communicate better. Let’s use the width of the line rather than color to indicate the type of road.</p>
+<ol style="list-style-type: decimal">
+<li>You can uncheck the last row in the list of symbols. This category is for data with no <em>classcode</em>.</li>
+<li>Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.</li>
+<li>Right click on the highlighted symbols and choose <em>Change Color</em>.</li>
+<li>Pick a gray color. I used <em>HTML code</em> #a0a0a0. Click <em>Apply</em>. All of the roads will now be the same gray color. Remember that our goal is to vary the widths of the lines based on the type of road.</li>
+<li>Click the <em>Go Back</em> button <img src="images/Tool_GoBack.PNG" alt="alt text" /> to return to the main window.</li>
+</ol>
 <p>To guide our work, let’s change the text of the legend. For each legend item, double click on the label and change the number label to the following text:</p>
 <table>
 <thead>
@@ -241,9 +243,11 @@
 </tr>
 </tbody>
 </table>
-<p>Next we’ll change the line width (also known as the line weight).
-1. For each row in the legend, double click on the line symbol to open the <em>Symbol Selector</em> dialog.
-1. Change the <em>Width</em> to match the Line Weight in the table below.</p>
+<p>Next we’ll change the line width (also known as the line weight).</p>
+<ol style="list-style-type: decimal">
+<li>For each row in the legend, double click on the line symbol to open the <em>Symbol Selector</em> dialog.</li>
+<li>Change the <em>Width</em> to match the Line Weight in the table below.</li>
+</ol>
 <table>
 <thead>
 <tr class="header">
@@ -296,19 +300,21 @@
 <h3><span class="header-section-number">11.4.2</span> Rule-Based Symbology<a href="working-with-vector-data.html#rule-based-symbology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We’ve just seen how we can use an automated classification method to change the symbology of data. Now let’s look at how we can build rules based on attributes to create tailored symbology. The street tree layer has many, many tree locations - too many to make a useful map of all the trees so we’ll need to select a subset of the data to include.</p>
 <p>Here’s a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California. These beetles can damage and kill trees. Let’s make a map of one species of tree that might be affected, Canary Pine (<em>Pinus canariensis</em>), to investigate their spatial distribution and think about where you might want to concentrate monitoring efforts. The <a href="http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html">UC IPM site</a> has more information about bark beetle species and tree species affected by them.</p>
-<p>Let’s look at rule-based symbology:
-1. In the <em>Layer Styling</em> panel, select the street tree data.
-1. Select <em>Rule-Based</em> from the drop-down menu for the symbology method.
-1. Click the green + button (near the bottom) to add a rule.
-1. In the <em>Label</em> box, type “Canary Pine”. This will give our new rule a name we can easily understand.
-1. Next to the <em>Filter</em> box, click on the <em>Expression</em> button <img src="images/Tool_ExpressionButton.PNG" title="Expression button" alt="alt text" /> to open the <em>Expression String Builder</em> dialog. This should look familiar - it’s very similar to how we selected rows by their attributes earlier.
-1. Add the <em>qSpecies</em> field to the expression window from the <em>Fields &amp; Values</em> list.
-1. Next, type the word <em>LIKE</em>. <em>LIKE</em> is a comparison operator for strings. You might think of this as = for text.
-1. Finally, we need to say which species we want. You may have noticed that the species column typically contains a long string with several pieces of information. We can search for a portion of the text by using a wildcard character to match part of the string in the column. Type <em>‘%Pinus canariensis%’</em> after <em>LIKE</em> in your expression. The single quotes indicate that the words we just typed are a string (and not another variable or field from the attribute table) and the <em>%</em> means “it doesn’t matter what text is here”. So the program will search for rows that contain the sting <em>Pinus canariensis</em>, regardless of what else the column says.
-1. Your expression string should look like this: <em>“qSpecies” LIKE ‘%Pinus canariensis%’</em> Click <em>OK</em> when you are done.
-1. In the <em>Rule Editing</em> dialog, you can also make changes to the color, size, and shape.
-1. Click the back button when you are done. <img src="images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" />
-1. You may need to uncheck the box next to the <em>(no filter)</em> rule to see the results of our <em>Canary Pine</em> filter.</p>
+<p>Let’s look at rule-based symbology:</p>
+<ol style="list-style-type: decimal">
+<li>In the <em>Layer Styling</em> panel, select the street tree data.</li>
+<li>Select <em>Rule-Based</em> from the drop-down menu for the symbology method.</li>
+<li>Click the green + button (near the bottom) to add a rule.</li>
+<li>In the <em>Label</em> box, type “Canary Pine”. This will give our new rule a name we can easily understand.</li>
+<li>Next to the <em>Filter</em> box, click on the <em>Expression</em> button <img src="images/Tool_ExpressionButton.PNG" title="Expression button" alt="alt text" /> to open the <em>Expression String Builder</em> dialog. This should look familiar - it’s very similar to how we selected rows by their attributes earlier.</li>
+<li>Add the <em>qSpecies</em> field to the expression window from the <em>Fields &amp; Values</em> list.</li>
+<li>Next, type the word <em>LIKE</em>. <em>LIKE</em> is a comparison operator for strings. You might think of this as = for text.</li>
+<li>Finally, we need to say which species we want. You may have noticed that the species column typically contains a long string with several pieces of information. We can search for a portion of the text by using a wildcard character to match part of the string in the column. Type <em>‘%Pinus canariensis%’</em> after <em>LIKE</em> in your expression. The single quotes indicate that the words we just typed are a string (and not another variable or field from the attribute table) and the <em>%</em> means “it doesn’t matter what text is here”. So the program will search for rows that contain the sting <em>Pinus canariensis</em>, regardless of what else the column says.</li>
+<li>Your expression string should look like this: <em>“qSpecies” LIKE ‘%Pinus canariensis%’</em> Click <em>OK</em> when you are done.</li>
+<li>In the <em>Rule Editing</em> dialog, you can also make changes to the color, size, and shape.</li>
+<li>Click the back button when you are done. <img src="images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" /></li>
+<li>You may need to uncheck the box next to the <em>(no filter)</em> rule to see the results of our <em>Canary Pine</em> filter.</li>
+</ol>
 <p>Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts? Are there places you think might be impacted more quickly if a bark beetle came to the city?</p>
 <p><img src="images/Vector_CanaryPine.PNG" title="Map of canary pines." alt="alt text" /></p>
 <p><strong>Challenge:</strong> Choose another species to add to your map. Add another rule-based classification with a different map symbol.</p>
