@@ -7,6 +7,7 @@ For now, let's turn off all of the layers in the *Layers* panel except for the *
 Now you should see a gray scale image that roughly looks like the San Francisco peninsula.  This is a Digital Elevation Model (DEM).  Each cell in the raster contains a number representing the elevation at that location.  
 
 Let's style this data:
+
 1. Open the *Layer Styling* Panel by clicking on the *View* menu, then *Panels*, and checking the box for *Layer Styling*.
 1. At the top of the panel that opens, select the DEM from the drop-down menu, or highlight that layer in the *Layers* panel.
 1. Click on the *Symbology* tab on the left side (the icon looks like a paintbrush painting a rainbow).
