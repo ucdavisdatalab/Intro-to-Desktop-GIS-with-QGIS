@@ -23,7 +23,7 @@
 <meta name="author" content="Michele Tobias" />
 
 
-<meta name="date" content="2023-04-12" />
+<meta name="date" content="2023-04-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -140,17 +140,19 @@
 <p>Let’s start by looking at some Raster data. We’ll work with a digital elevation model (DEM) for San Francisco. A DEM is a raster in which each cell in the grid contains the elevation at that location.</p>
 <p>For now, let’s turn off all of the layers in the <em>Layers</em> panel except for the <em>DEM_SF</em> layer by unchecking the boxes next to the layer names in the <em>Layers</em> Panel on the left side of your screen.</p>
 <p>Now you should see a gray scale image that roughly looks like the San Francisco peninsula. This is a Digital Elevation Model (DEM). Each cell in the raster contains a number representing the elevation at that location.</p>
-<p>Let’s style this data:
-1. Open the <em>Layer Styling</em> Panel by clicking on the <em>View</em> menu, then <em>Panels</em>, and checking the box for <em>Layer Styling</em>.
-1. At the top of the panel that opens, select the DEM from the drop-down menu, or highlight that layer in the <em>Layers</em> panel.
-1. Click on the <em>Symbology</em> tab on the left side (the icon looks like a paintbrush painting a rainbow).
-1. For the <em>Render type</em> drop down (just below where you selected the layer), select <em>Singleband pseudocolor</em>.
-1. Expand the <em>Min/Max Value Settings" area. In the </em>Statistics extent* drop-down, select <em>Whole raster</em>. For <em>Accuracy</em>, select <em>Actual (slower)</em>.
-1. For the <em>Color ramp</em>, select <em>Create new color ramp</em>
-1. Select <em>Catalog: cpt-city</em> from the drop down and click <em>Ok</em>
-1. Pick <em>Topography</em> from the options on the left.
-1. Pick <em>cd-a</em> for our gradient. Or select another scheme you think will work well for representing topography. Click <em>Ok</em>.
-1. You’ll see that the color ramp in the Layers Properties has updated. Click <em>Apply</em> to see what it looks like with our data or check the box next to <em>Live update</em> to apply changes as you make them.</p>
+<p>Let’s style this data:</p>
+<ol style="list-style-type: decimal">
+<li>Open the <em>Layer Styling</em> Panel by clicking on the <em>View</em> menu, then <em>Panels</em>, and checking the box for <em>Layer Styling</em>.</li>
+<li>At the top of the panel that opens, select the DEM from the drop-down menu, or highlight that layer in the <em>Layers</em> panel.</li>
+<li>Click on the <em>Symbology</em> tab on the left side (the icon looks like a paintbrush painting a rainbow).</li>
+<li>For the <em>Render type</em> drop down (just below where you selected the layer), select <em>Singleband pseudocolor</em>.</li>
+<li>Expand the <em>Min/Max Value Settings" area. In the </em>Statistics extent* drop-down, select <em>Whole raster</em>. For <em>Accuracy</em>, select <em>Actual (slower)</em>.</li>
+<li>For the <em>Color ramp</em>, select <em>Create new color ramp</em></li>
+<li>Select <em>Catalog: cpt-city</em> from the drop down and click <em>Ok</em></li>
+<li>Pick <em>Topography</em> from the options on the left.</li>
+<li>Pick <em>cd-a</em> for our gradient. Or select another scheme you think will work well for representing topography. Click <em>Ok</em>.</li>
+<li>You’ll see that the color ramp in the Layers Properties has updated. Click <em>Apply</em> to see what it looks like with our data or check the box next to <em>Live update</em> to apply changes as you make them.</li>
+</ol>
 <p>Chances are, this isn’t exactly what you want and we can make some more improvements to see the shoreline and topography better.</p>
 <ol style="list-style-type: decimal">
 <li>In the <em>Layer Styling</em> panel again, for the <em>Interpolation</em> drop-down, select <em>Discrete</em>.</li>
