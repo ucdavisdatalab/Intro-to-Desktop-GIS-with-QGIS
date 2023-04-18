@@ -54,6 +54,7 @@ Let's style this street data based on the kind of street.  This will be a good v
 1. Click the *Classify* button to see our categories.  
 
 Ok! We can see each road classified by it's *classcode*.  The colors will default to *Random Colors* for the palette. We can change the colors to meet our needs and communicate better.  Let's use the width of the line rather than color to indicate the type of road.
+
 1. You can uncheck the last row in the list of symbols.  This category is for data with no *classcode*.
 1. Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
 1. Right click on the highlighted symbols and choose *Change Color*.
@@ -73,6 +74,7 @@ Value | Legend
 6| Freeway Ramps
 
 Next we'll change the line width (also known as the line weight).
+
 1. For each row in the legend, double click on the line symbol to open the *Symbol Selector* dialog.
 1. Change the *Width* to match the Line Weight in the table below.
 
@@ -94,6 +96,7 @@ We've just seen how we can use an automated classification method to change the 
 Here's a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California.  These beetles can damage and kill trees.  Let's make a map of one species of tree that might be affected, Canary Pine (*Pinus canariensis*), to investigate their spatial distribution and think about where you might want to concentrate monitoring efforts.  The [UC IPM site](http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html) has more information about bark beetle species and tree species affected by them.
 
 Let's look at rule-based symbology:
+
 1. In the *Layer Styling* panel, select the street tree data.
 1. Select *Rule-Based* from the drop-down menu for the symbology method.
 1. Click the green + button (near the bottom) to add a rule.
