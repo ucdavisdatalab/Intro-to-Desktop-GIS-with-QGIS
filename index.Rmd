@@ -3,8 +3,8 @@ title: Intro to Desktop GIS with QGIS
 author: [Michele Tobias]
 date: "`r Sys.Date()`"
 
-github-repo: ucdavisdatalab/workshop-intro-QGIS
-url: "[https://github.com/ucdavisdatalab/workshop-intro-QGIS]"
+github-repo: ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS
+url: "[https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS]"
 
 lang: en-us
 
@@ -26,8 +26,8 @@ output:
           </a>
         collapse: section
       sharing: no
-      view: https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/%s
-      edit: https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/%s
+      view: https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/blob/master/%s
+      edit: https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/edit/master/%s
 ---
 
 # Overview {-}
@@ -37,6 +37,10 @@ This introductory-level workshop will focus upon the fundamental concepts and sk
 
 ## Prerequisites
 No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.
+
+You should download and install [QGIS](https://qgis.org/) on your computer. This workshop was last proofed for version 3.30.
+
+The data we'll use in this workshop is available in this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm).
 
 ## Learning Objectives
 By the end of this workshop, you will be able to:
