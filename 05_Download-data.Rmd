@@ -1,0 +1,10 @@
+# Download data
+In this workshop, we'll be using the following data: 
+
+1. Digital Elevation Model (DEM) of San Francisco 
+1. Streets
+1. Trees
+1. Seismic Hazard Zones
+1. City of San Francisco Boundary (shoreline)
+
+You can download all of this data from this [Box Folder Online](https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm). Use the *Download* button in the upper right corner of the screen to download a zipped file containing all of the workshop data (sometimes you'll need to dismiss a message at the top of the screen before you can see the download button). Unzip the file to a location on your computer that you can find later.

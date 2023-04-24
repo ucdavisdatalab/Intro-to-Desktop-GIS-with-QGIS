@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>13 Select by Location | Intro to Desktop GIS with QGIS</title>
+  <meta name="description" content="13 Select by Location | Intro to Desktop GIS with QGIS" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="13 Select by Location | Intro to Desktop GIS with QGIS" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="ucdavisdatalab/workshop-intro-QGIS" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="13 Select by Location | Intro to Desktop GIS with QGIS" />
+  
+  
+  
+
+<meta name="author" content="Michele Tobias" />
+
+
+<meta name="date" content="2023-04-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="making-a-map-with-the-print-composer.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://datalab.ucdavis.edu/">
+  <img src="https://datalab.ucdavis.edu/wp-content/uploads/2019/07/datalab-logo-full-color-rgb-1.png" style="height: 100%; width: 100%; object-fit: contain" />
+</a></li>
+<li><a href="./" style="font-size: 18px">Intro to Desktop GIS with QGIS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#workshop-description"><i class="fa fa-check"></i><b>0.1</b> Workshop Description</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>0.2</b> Prerequisites</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>0.3</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="what-is-gis.html"><a href="what-is-gis.html"><i class="fa fa-check"></i><b>2</b> What is GIS?</a></li>
+<li class="chapter" data-level="3" data-path="what-is-qgis.html"><a href="what-is-qgis.html"><i class="fa fa-check"></i><b>3</b> What is QGIS?</a></li>
+<li class="chapter" data-level="4" data-path="why-qgis.html"><a href="why-qgis.html"><i class="fa fa-check"></i><b>4</b> Why QGIS?</a></li>
+<li class="chapter" data-level="5" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Data Types - Vector vs. Raster vs. other types of spatial data</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#vector-data"><i class="fa fa-check"></i><b>5.1</b> Vector Data</a></li>
+<li class="chapter" data-level="5.2" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#raster-data"><i class="fa fa-check"></i><b>5.2</b> Raster Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="download-data.html"><a href="download-data.html"><i class="fa fa-check"></i><b>6</b> Download data</a></li>
+<li class="chapter" data-level="7" data-path="start-qgis-open-a-new-project.html"><a href="start-qgis-open-a-new-project.html"><i class="fa fa-check"></i><b>7</b> Start QGIS &amp; Open a New Project</a></li>
+<li class="chapter" data-level="8" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html"><i class="fa fa-check"></i><b>8</b> Import data into QGIS</a><ul>
+<li class="chapter" data-level="8.1" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#raster-data-1"><i class="fa fa-check"></i><b>8.1</b> Raster Data</a></li>
+<li class="chapter" data-level="8.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#vector"><i class="fa fa-check"></i><b>8.2</b> Vector</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#shapefiles"><i class="fa fa-check"></i><b>8.2.1</b> Shapefiles</a></li>
+<li class="chapter" data-level="8.2.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#csv-data"><i class="fa fa-check"></i><b>8.2.2</b> CSV Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="saving-project-files.html"><a href="saving-project-files.html"><i class="fa fa-check"></i><b>9</b> Saving Project Files</a></li>
+<li class="chapter" data-level="10" data-path="working-with-raster-data.html"><a href="working-with-raster-data.html"><i class="fa fa-check"></i><b>10</b> Working with Raster Data</a></li>
+<li class="chapter" data-level="11" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html"><i class="fa fa-check"></i><b>11</b> Working with Vector Data</a><ul>
+<li class="chapter" data-level="11.1" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#single-symbol-styling"><i class="fa fa-check"></i><b>11.1</b> Single Symbol Styling</a></li>
+<li class="chapter" data-level="11.2" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#attributes-tables"><i class="fa fa-check"></i><b>11.2</b> Attributes tables</a></li>
+<li class="chapter" data-level="11.3" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#select-by-attributes"><i class="fa fa-check"></i><b>11.3</b> Select by attributes</a></li>
+<li class="chapter" data-level="11.4" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#symbolizing-layers-by-attributes"><i class="fa fa-check"></i><b>11.4</b> Symbolizing layers by attributes</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#classifying-attributes"><i class="fa fa-check"></i><b>11.4.1</b> Classifying Attributes</a></li>
+<li class="chapter" data-level="11.4.2" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#rule-based-symbology"><i class="fa fa-check"></i><b>11.4.2</b> Rule-Based Symbology</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html"><i class="fa fa-check"></i><b>12</b> Making a map with the print composer</a><ul>
+<li class="chapter" data-level="12.1" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html#prepare-your-layers"><i class="fa fa-check"></i><b>12.1</b> Prepare your Layers</a></li>
+<li class="chapter" data-level="12.2" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html#working-in-the-print-composer"><i class="fa fa-check"></i><b>12.2</b> Working in the Print Composer</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="select-by-location.html"><a href="select-by-location.html"><i class="fa fa-check"></i><b>13</b> Select by Location</a></li>
+<li class="divider"></li>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+  <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
+</a>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to Desktop GIS with QGIS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="select-by-location" class="section level1 hasAnchor">
+<h1><span class="header-section-number">13</span> Select by Location<a href="select-by-location.html#select-by-location" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>So far, we’ve seen analysis that relies mainly on cartographic choices. There are many other kinds of analysis we could do. Let’s look at an example where we need to undertand the spatial relationship between two different layers: identify large trees inside areas designated as earthquake hazard zones.</p>
+<p>One way to measure the size of a tree is by measuring the width of the trunk, about 4 feet off the ground. This measurement is called the <em>Diameter at Breast Height</em> or <em>DBH</em> for short. The street tree data has a column in the attribute table called DBH so we can use this to identify the larger trees.</p>
+<p>First, let’s use the <em>Select By Attributes</em> process we learned earlier today to select trees with a DBH of 36 inches or larger. A quick reminder of the process: open the attribute table and use the query tool to write a query. <em>Hint:</em> We can write “greater than or equal to” as <em>&gt;=</em> in the selection interface.</p>
+<p>Because the street tree dataset is so large, let’s save our large tree selection as a new file to make processes run faster with this subset of the data. Now that you have the trees with a DBH of 3 feet or more selected:</p>
+<ol style="list-style-type: decimal">
+<li>Right click on the layer in the <em>Layers Panel</em>.<br />
+</li>
+<li>Select <em>Export</em> from the menu that pops up and then <em>Save selected features as</em>.<br />
+</li>
+<li>For the format, choose <em>ESRI Shapefile</em>, or any of the vector formats you prefer (I personally like geojson because it’s one text file, but geopackage is also pretty handy… KML is only a good choice if you’re going to use the file in a Google application).</li>
+<li>Next to the <em>File Name</em> box, click the “…” button to pick a folder to save the file in and give the file a name. I called my “LargeTrees”. Click <em>Save</em> when you’re done.</li>
+<li>Make sure the <em>Save only Selected Features</em> and <em>Add saved file to map</em> boxes are checked, then click <em>OK</em>.</li>
+<li>You should have a file with only the features we had previously selected.</li>
+<li>You can uncheck the full street trees layer in the <em>Layers Panel</em>.</li>
+</ol>
+<p>Now we can find which of the large trees are inside seismic hazard zones:</p>
+<ol style="list-style-type: decimal">
+<li>On the <em>Vector</em> menu, select <em>Research Tools</em> and then <em>Select by Location</em> to open the <em>Select by Location</em> tool.</li>
+<li>Select features from <em>Large Trees</em>, that <em>Intersect</em> the <em>Seismic Hazards</em> layer and create a new selection.</li>
+<li>Click <em>Run</em>.</li>
+</ol>
+<p>The large trees that fall inside the seismic hazard zones are now selected. But how do we record this information in a way that we can keep and use in a map? Let’s add a column with this information in our attribute table:</p>
+<ol style="list-style-type: decimal">
+<li>Open the attribute table for the large trees layer.</li>
+<li>Click on the <em>Field Calculator</em> button. <img src="images/Tool_FieldCalculator.png" alt="alt text" /></li>
+<li>Check the box next to “Only update selected features” at the top of the window.</li>
+<li>Name your new field “EarthQZone” so we remember what information it contains.</li>
+<li>For the field type, select <em>Text</em>.</li>
+<li>In the expression field, type <em>‘yes’</em>. This will add the word “yes” to the EarthQZone column where the record is currently selected.</li>
+<li>Click <em>OK</em> and then inspect your attribute table to see the new column.</li>
+<li>When we started the Field Calculator, QGIS automatically turned on editing for our shapefile. Save the edits we made by clicking the Save Edits button (blue floppy disk on the attribute table) and turn off the editing mode by clicking the Toggle Editing Mode button (yellow pencil).</li>
+<li>You can now clear your selection because the attribute information now contains the information we need.</li>
+</ol>
+<p>Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones. Hint: Rule-based or Categorized symbology are good options!</p>
+<p><img src="images/Map_BigTreesInZone.PNG" title="Map of large trees in seismic hazard zones." alt="alt text" /></p>
+
+<p><a href="https://qgis.org/en/docs/index.html">QGIS Documentation</a>: includes the User Guide, Training Manual, and Gentle Introduction to GIS</p>
+<p><a href="https://www.osgeo.org/">Open Source Geospatial Foundation</a>: includes news and information about projects, conferences, and community</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="making-a-map-with-the-print-composer.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/12_Select-by-Location.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/12_Select-by-Location.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

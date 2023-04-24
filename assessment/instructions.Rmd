@@ -1,0 +1,62 @@
+---
+output:
+    pdf_document:
+        highlight: tango
+urlcolor: blue
+---
+
+<!--
+Render your instructions using R Markdown's "knit" functionality. This will
+create a PDF document (which R creates using LaTeX). You can knit a file within
+RStudio, or, in a script or console, run:
+
+rmarkdown::render("instructions.Rmd", "pdf_document")
+
+-->
+
+<!-- Left-align text -->
+\raggedright
+
+<!-- Use a light-grey background for text inside single backticks -->
+```{=latex}
+\definecolor{codegray}{gray}{0.96}
+\let\textttOrig\texttt
+\renewcommand{\texttt}[1]{\textttOrig{\colorbox{codegray}{#1}}}
+```
+
+Assessment: WORKSHOP TITLE
+==========================
+
+DESCRIPTION
+
+Links
+-----
+
++ [GradPathways Badge](link)
++ [Event page](link)
++ [Workshop reader](link)
+
+
+<!-- Optional -->
+Environment Setup
+-----------------
+
+Rubric
+------
+
+<!-- A sample rubric is included below, but you should adapt as needed -->
+
+1. Working code: were you able to produce successful script for each prompt?
+2. Understanding your actions: can you explain what your actions do and why you
+   implemented them?
+3. Critical reflection: do your short answers provide context (conceptual,
+   domain-specific, etc.) for your actions?
+
+<!-- Prompts go on a new page -->
+\pagebreak
+
+Prompts
+-------
+
+1. PROMPT ONE...
+

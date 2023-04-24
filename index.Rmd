@@ -1,0 +1,50 @@
+---
+title: Intro to Desktop GIS with QGIS
+author: [Michele Tobias]
+date: "`r Sys.Date()`"
+
+github-repo: ucdavisdatalab/workshop-intro-QGIS
+url: "[https://github.com/ucdavisdatalab/workshop-intro-QGIS]"
+
+lang: en-us
+
+site: "bookdown::bookdown_site"
+knit: "bookdown::render_book"
+output:
+  bookdown::gitbook:
+    fig_caption: false
+    config:
+      toc:
+        before: |
+          <li><a href="https://datalab.ucdavis.edu/">
+            <img src="https://datalab.ucdavis.edu/wp-content/uploads/2019/07/datalab-logo-full-color-rgb-1.png" style="height: 100%; width: 100%; object-fit: contain" />
+          </a></li>
+          <li><a href="./" style="font-size: 18px">Intro to Desktop GIS with QGIS</a></li>
+        after: |
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+            <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
+          </a>
+        collapse: section
+      sharing: no
+      view: https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/%s
+      edit: https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/%s
+---
+
+# Overview {-}
+
+## Workshop Description
+This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.
+
+## Prerequisites
+No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.
+
+## Learning Objectives
+By the end of this workshop, you will be able to:
+
++ Define GIS and geospatial concepts and terminology.
++ Know the difference between vector and raster data types
++ Properly connect and add data to a QGIS project
++ Know where to find the attributes of your data in QGIS
++ Perform basic selections and queries in QGIS
++ Symbolize data by attributes
++ Assemble a basic map for export

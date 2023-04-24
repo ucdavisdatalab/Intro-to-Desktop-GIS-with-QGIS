@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Data Types - Vector vs. Raster vs. other types of spatial data | Intro to Desktop GIS with QGIS</title>
+  <meta name="description" content="5 Data Types - Vector vs. Raster vs. other types of spatial data | Intro to Desktop GIS with QGIS" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Data Types - Vector vs. Raster vs. other types of spatial data | Intro to Desktop GIS with QGIS" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="ucdavisdatalab/workshop-intro-QGIS" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Data Types - Vector vs. Raster vs. other types of spatial data | Intro to Desktop GIS with QGIS" />
+  
+  
+  
+
+<meta name="author" content="Michele Tobias" />
+
+
+<meta name="date" content="2023-04-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="why-qgis.html"/>
+<link rel="next" href="download-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://datalab.ucdavis.edu/">
+  <img src="https://datalab.ucdavis.edu/wp-content/uploads/2019/07/datalab-logo-full-color-rgb-1.png" style="height: 100%; width: 100%; object-fit: contain" />
+</a></li>
+<li><a href="./" style="font-size: 18px">Intro to Desktop GIS with QGIS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#workshop-description"><i class="fa fa-check"></i><b>0.1</b> Workshop Description</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>0.2</b> Prerequisites</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>0.3</b> Learning Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="what-is-gis.html"><a href="what-is-gis.html"><i class="fa fa-check"></i><b>2</b> What is GIS?</a></li>
+<li class="chapter" data-level="3" data-path="what-is-qgis.html"><a href="what-is-qgis.html"><i class="fa fa-check"></i><b>3</b> What is QGIS?</a></li>
+<li class="chapter" data-level="4" data-path="why-qgis.html"><a href="why-qgis.html"><i class="fa fa-check"></i><b>4</b> Why QGIS?</a></li>
+<li class="chapter" data-level="5" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Data Types - Vector vs. Raster vs. other types of spatial data</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#vector-data"><i class="fa fa-check"></i><b>5.1</b> Vector Data</a></li>
+<li class="chapter" data-level="5.2" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#raster-data"><i class="fa fa-check"></i><b>5.2</b> Raster Data</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="download-data.html"><a href="download-data.html"><i class="fa fa-check"></i><b>6</b> Download data</a></li>
+<li class="chapter" data-level="7" data-path="start-qgis-open-a-new-project.html"><a href="start-qgis-open-a-new-project.html"><i class="fa fa-check"></i><b>7</b> Start QGIS &amp; Open a New Project</a></li>
+<li class="chapter" data-level="8" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html"><i class="fa fa-check"></i><b>8</b> Import data into QGIS</a><ul>
+<li class="chapter" data-level="8.1" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#raster-data-1"><i class="fa fa-check"></i><b>8.1</b> Raster Data</a></li>
+<li class="chapter" data-level="8.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#vector"><i class="fa fa-check"></i><b>8.2</b> Vector</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#shapefiles"><i class="fa fa-check"></i><b>8.2.1</b> Shapefiles</a></li>
+<li class="chapter" data-level="8.2.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#csv-data"><i class="fa fa-check"></i><b>8.2.2</b> CSV Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="saving-project-files.html"><a href="saving-project-files.html"><i class="fa fa-check"></i><b>9</b> Saving Project Files</a></li>
+<li class="chapter" data-level="10" data-path="working-with-raster-data.html"><a href="working-with-raster-data.html"><i class="fa fa-check"></i><b>10</b> Working with Raster Data</a></li>
+<li class="chapter" data-level="11" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html"><i class="fa fa-check"></i><b>11</b> Working with Vector Data</a><ul>
+<li class="chapter" data-level="11.1" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#single-symbol-styling"><i class="fa fa-check"></i><b>11.1</b> Single Symbol Styling</a></li>
+<li class="chapter" data-level="11.2" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#attributes-tables"><i class="fa fa-check"></i><b>11.2</b> Attributes tables</a></li>
+<li class="chapter" data-level="11.3" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#select-by-attributes"><i class="fa fa-check"></i><b>11.3</b> Select by attributes</a></li>
+<li class="chapter" data-level="11.4" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#symbolizing-layers-by-attributes"><i class="fa fa-check"></i><b>11.4</b> Symbolizing layers by attributes</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#classifying-attributes"><i class="fa fa-check"></i><b>11.4.1</b> Classifying Attributes</a></li>
+<li class="chapter" data-level="11.4.2" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#rule-based-symbology"><i class="fa fa-check"></i><b>11.4.2</b> Rule-Based Symbology</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html"><i class="fa fa-check"></i><b>12</b> Making a map with the print composer</a><ul>
+<li class="chapter" data-level="12.1" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html#prepare-your-layers"><i class="fa fa-check"></i><b>12.1</b> Prepare your Layers</a></li>
+<li class="chapter" data-level="12.2" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html#working-in-the-print-composer"><i class="fa fa-check"></i><b>12.2</b> Working in the Print Composer</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="select-by-location.html"><a href="select-by-location.html"><i class="fa fa-check"></i><b>13</b> Select by Location</a></li>
+<li class="divider"></li>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+  <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
+</a>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to Desktop GIS with QGIS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data" class="section level1 hasAnchor">
+<h1><span class="header-section-number">5</span> Data Types - Vector vs. Raster vs. other types of spatial data<a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#data-types---vector-vs.-raster-vs.-other-types-of-spatial-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>There are several data spatial data models that you may encounter as you work with spatial data. The two you will likely encounter most frequently are called vector and raster data.</p>
+<p><img src="images/geometries_data_types.png" title="A visual table of raster vs. vector data as continuous and discrete data." alt="alt text" /></p>
+<div id="vector-data" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.1</span> Vector Data<a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#vector-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Vector data represents discrete objects in the real world with points, lines, and polygons in the dataset.</p>
+<p>If you were to draw a map to your house for a friend, you would typically use vector data - roads would be lines, a shopping center included as an important landmark might be a rectangle of sorts, and your house might be a point (perhaps represented by a star or a house icon).</p>
+</div>
+<div id="raster-data" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.2</span> Raster Data<a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#raster-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Raster data represents continuous fields or discrete objects on a grid, storing measurements or category names in each cell of the grid.</p>
+<p>Digital photos are raster data you are already familiar with. If you zoom in far enough on a digital photo, you’ll see that photo is made up of pixels, which appear as colored squares. Pixels are cells in a regular grid and each contains the digital code that corresponds to the color that should be displayed there. Satellite images are a very similar situation.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="why-qgis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="download-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/04_Data-Types-Vector-vs-Raster-vs-other-types-of-spatial-data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/04_Data-Types-Vector-vs-Raster-vs-other-types-of-spatial-data.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
