@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Download Data | Intro to Desktop GIS with QGIS</title>
-  <meta name="description" content="6 Download Data | Intro to Desktop GIS with QGIS" />
+  <title>12 Composing a Map | Intro to Desktop GIS with QGIS</title>
+  <meta name="description" content="12 Composing a Map | Intro to Desktop GIS with QGIS" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Download Data | Intro to Desktop GIS with QGIS" />
+  <meta property="og:title" content="12 Composing a Map | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Download Data | Intro to Desktop GIS with QGIS" />
+  <meta name="twitter:title" content="12 Composing a Map | Intro to Desktop GIS with QGIS" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"/>
-<link rel="next" href="start-qgis-open-a-new-project.html"/>
+<link rel="prev" href="working-with-vector-data.html"/>
+<link rel="next" href="select-by-location.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -142,26 +142,48 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="download-data" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Download Data<a href="download-data.html#download-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this workshop, we’ll be using the following data:</p>
+<div id="composing-a-map" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">12</span> Composing a Map<a href="composing-a-map.html#composing-a-map" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>One common task in any desktop GIS is to produce a map to include in a document or presentation. In QGIS we create maps in the <em>Print Composer</em>. Let’s make a finished map of our tree locations.</p>
+<div id="prepare-your-layers" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Prepare your Layers<a href="composing-a-map.html#prepare-your-layers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The first thing we need to do is add all the layers we want in our finished map to our Map Canvas in the main QGIS window. Turn on your trees and roads layers and add in any other data you think will help support the tree locations such as the shoreline data.</p>
+<p>We also need to style our layers here as well. Take some time to work with your layer symbology. Make choices that you feel help communicate the data well. Simple or plain choices are often better than complicated or fancy symbology. For example, you could use a tree-shaped icon to represent your trees, but this would probably make a rather busy map. A simple circle icon might be better.</p>
+<p>Just get to a point where you have a solid draft. We can always make changes later if we decide we need to adjust.</p>
+</div>
+<div id="working-in-the-print-composer" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Working in the Print Composer<a href="composing-a-map.html#working-in-the-print-composer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once you’ve added all the layers you need to your Map Canvas and styled them in a way you like, we can start composing our map.</p>
 <ol style="list-style-type: decimal">
-<li>Digital Elevation Model (DEM) of San Francisco</li>
-<li>Streets</li>
-<li>Trees</li>
-<li>Seismic Hazard Zones</li>
-<li>City of San Francisco Boundary (shoreline)</li>
+<li>Open the <em>Print Composer</em> by clicking on the <em>Project</em> menu and choosing <em>New Print Layout</em>.</li>
+<li>Give your new Print Layout a name. I’ll call mine “Canary Pine Locations”. You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map. Click <em>OK</em> when you’ve picked a name. The <em>Print Composer</em> will now open.</li>
+<li>The white box in the middle of the window is where you will compose your map. Right click in this white space and choose <em>Page Properties</em> from the menu that appears. The menu on the right will now let us adjust the page size and orientation. Let’s use size <em>Letter</em> and <em>Landscape</em> orientation for this map.<br />
+</li>
+<li>Add a map to your layout by clicking the <em>Add Map</em> tool and then clicking and dragging on your map layout. <img src="images/Tool_AddMap.PNG" title="Add Map tool." alt="alt text" /> You can adjust the size so don’t worry if it’s not perfect at first. The <em>Move Item</em> tool moves and adjusts items in your map. <img src="images/Tool_MoveItem.PNG" title="Move Item tool." alt="alt text" /></li>
+<li>Adjust the scale of your map by selecting your map. In the <em>Item Properties</em> on the right, adjust the scale number to zoom in or out of your map data. I used a scale of about 40,000.</li>
+<li>Add other items to your map as needed: title, legend, scale bar, etc. The item properties for each item you add are available by selecting the item and editing the properties in the pane on the right side of the <em>Print Composer</em> window.</li>
+<li>When you’ve made a layout you like, you can export the map to a variety of formats. On the <em>Layout</em> menu, select <em>Save as Image</em>. Navigate to where you would like to save the image, name the file, and choose the type of image. Let’s pick .png for this image. Click <em>Save</em>.</li>
+<li>Make any adjustments to the image parameters you would like. Click <em>Save</em> to finish the process.</li>
+<li>When you’re finished exporting your map, you can close the <em>Print Composer</em> window.</li>
 </ol>
-<p>You can download all of this data from this <a href="https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm">Box Folder Online</a>. Use the <em>Download</em> button in the upper right corner of the screen to download a zipped file containing all of the workshop data (sometimes you’ll need to dismiss a message at the top of the screen before you can see the download button). Unzip the file to a location on your computer that you can find later.</p>
+<p><img src="images/Map_CanaryPineLocations.png" title="Finished map of canary pine locations." alt="alt text" /></p>
+<p>Your map might look something like this. I added an <em>Outer Glow</em> in the <em>Draw Effects</em> menu to the Shoreline data to achieve the fading blue outline.</p>
+<p>You may want to add background layers such as coastlines or land masses from data sources like:</p>
+<ul>
+<li><a href="http://naturalearthdata.com/">Natural Earth Data</a></li>
+<li><a href="http://www.projectlinework.org/">Project Linework</a></li>
+<li><a href="https://gadm.org/">GADM</a></li>
+</ul>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="start-qgis-open-a-new-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-with-vector-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="select-by-location.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -182,7 +204,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/edit/master/05_Download-data.Rmd",
+"link": "https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/edit/master/11_Making-a-map-with-the-print-composer.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -190,7 +212,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/blob/master/05_Download-data.Rmd",
+"link": "https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/blob/master/11_Making-a-map-with-the-print-composer.Rmd",
 "text": null
 },
 "download": null,

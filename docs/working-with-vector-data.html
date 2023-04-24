@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Working with Vector Data | Intro to Desktop GIS with QGIS</title>
   <meta name="description" content="11 Working with Vector Data | Intro to Desktop GIS with QGIS" />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Working with Vector Data | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
   
   
-  <meta name="github-repo" content="ucdavisdatalab/workshop-intro-QGIS" />
+  <meta name="github-repo" content="ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="11 Working with Vector Data | Intro to Desktop GIS with QGIS" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Michele Tobias" />
 
 
-<meta name="date" content="2023-04-18" />
+<meta name="date" content="2023-04-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="working-with-raster-data.html"/>
-<link rel="next" href="making-a-map-with-the-print-composer.html"/>
+<link rel="next" href="composing-a-map.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,7 +49,6 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -75,7 +74,8 @@
 <li><a href="./" style="font-size: 18px">Intro to Desktop GIS with QGIS</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#workshop-description"><i class="fa fa-check"></i><b>0.1</b> Workshop Description</a></li>
 <li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>0.2</b> Prerequisites</a></li>
 <li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#learning-objectives"><i class="fa fa-check"></i><b>0.3</b> Learning Objectives</a></li>
@@ -84,35 +84,42 @@
 <li class="chapter" data-level="2" data-path="what-is-gis.html"><a href="what-is-gis.html"><i class="fa fa-check"></i><b>2</b> What is GIS?</a></li>
 <li class="chapter" data-level="3" data-path="what-is-qgis.html"><a href="what-is-qgis.html"><i class="fa fa-check"></i><b>3</b> What is QGIS?</a></li>
 <li class="chapter" data-level="4" data-path="why-qgis.html"><a href="why-qgis.html"><i class="fa fa-check"></i><b>4</b> Why QGIS?</a></li>
-<li class="chapter" data-level="5" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Data Types - Vector vs. Raster vs. other types of spatial data</a><ul>
+<li class="chapter" data-level="5" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Data Types - Vector vs. Raster vs. other types of spatial data</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#vector-data"><i class="fa fa-check"></i><b>5.1</b> Vector Data</a></li>
 <li class="chapter" data-level="5.2" data-path="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html"><a href="data-types---vector-vs.-raster-vs.-other-types-of-spatial-data.html#raster-data"><i class="fa fa-check"></i><b>5.2</b> Raster Data</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="download-data.html"><a href="download-data.html"><i class="fa fa-check"></i><b>6</b> Download data</a></li>
+<li class="chapter" data-level="6" data-path="download-data.html"><a href="download-data.html"><i class="fa fa-check"></i><b>6</b> Download Data</a></li>
 <li class="chapter" data-level="7" data-path="start-qgis-open-a-new-project.html"><a href="start-qgis-open-a-new-project.html"><i class="fa fa-check"></i><b>7</b> Start QGIS &amp; Open a New Project</a></li>
-<li class="chapter" data-level="8" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html"><i class="fa fa-check"></i><b>8</b> Import data into QGIS</a><ul>
+<li class="chapter" data-level="8" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html"><i class="fa fa-check"></i><b>8</b> Import Data into QGIS</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#raster-data-1"><i class="fa fa-check"></i><b>8.1</b> Raster Data</a></li>
-<li class="chapter" data-level="8.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#vector"><i class="fa fa-check"></i><b>8.2</b> Vector</a><ul>
+<li class="chapter" data-level="8.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#vector"><i class="fa fa-check"></i><b>8.2</b> Vector</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#shapefiles"><i class="fa fa-check"></i><b>8.2.1</b> Shapefiles</a></li>
 <li class="chapter" data-level="8.2.2" data-path="import-data-into-qgis.html"><a href="import-data-into-qgis.html#csv-data"><i class="fa fa-check"></i><b>8.2.2</b> CSV Data</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="saving-project-files.html"><a href="saving-project-files.html"><i class="fa fa-check"></i><b>9</b> Saving Project Files</a></li>
 <li class="chapter" data-level="10" data-path="working-with-raster-data.html"><a href="working-with-raster-data.html"><i class="fa fa-check"></i><b>10</b> Working with Raster Data</a></li>
-<li class="chapter" data-level="11" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html"><i class="fa fa-check"></i><b>11</b> Working with Vector Data</a><ul>
+<li class="chapter" data-level="11" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html"><i class="fa fa-check"></i><b>11</b> Working with Vector Data</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#single-symbol-styling"><i class="fa fa-check"></i><b>11.1</b> Single Symbol Styling</a></li>
 <li class="chapter" data-level="11.2" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#attributes-tables"><i class="fa fa-check"></i><b>11.2</b> Attributes tables</a></li>
 <li class="chapter" data-level="11.3" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#select-by-attributes"><i class="fa fa-check"></i><b>11.3</b> Select by attributes</a></li>
-<li class="chapter" data-level="11.4" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#symbolizing-layers-by-attributes"><i class="fa fa-check"></i><b>11.4</b> Symbolizing layers by attributes</a><ul>
+<li class="chapter" data-level="11.4" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#symbolizing-layers-by-attributes"><i class="fa fa-check"></i><b>11.4</b> Symbolizing layers by attributes</a>
+<ul>
 <li class="chapter" data-level="11.4.1" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#classifying-attributes"><i class="fa fa-check"></i><b>11.4.1</b> Classifying Attributes</a></li>
 <li class="chapter" data-level="11.4.2" data-path="working-with-vector-data.html"><a href="working-with-vector-data.html#rule-based-symbology"><i class="fa fa-check"></i><b>11.4.2</b> Rule-Based Symbology</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html"><i class="fa fa-check"></i><b>12</b> Making a map with the print composer</a><ul>
-<li class="chapter" data-level="12.1" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html#prepare-your-layers"><i class="fa fa-check"></i><b>12.1</b> Prepare your Layers</a></li>
-<li class="chapter" data-level="12.2" data-path="making-a-map-with-the-print-composer.html"><a href="making-a-map-with-the-print-composer.html#working-in-the-print-composer"><i class="fa fa-check"></i><b>12.2</b> Working in the Print Composer</a></li>
+<li class="chapter" data-level="12" data-path="composing-a-map.html"><a href="composing-a-map.html"><i class="fa fa-check"></i><b>12</b> Composing a Map</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="composing-a-map.html"><a href="composing-a-map.html#prepare-your-layers"><i class="fa fa-check"></i><b>12.1</b> Prepare your Layers</a></li>
+<li class="chapter" data-level="12.2" data-path="composing-a-map.html"><a href="composing-a-map.html#working-in-the-print-composer"><i class="fa fa-check"></i><b>12.2</b> Working in the Print Composer</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="select-by-location.html"><a href="select-by-location.html"><i class="fa fa-check"></i><b>13</b> Select by Location</a></li>
+<li class="chapter" data-level="14" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>14</b> Additional Resources</a></li>
 <li class="divider"></li>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
   <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="float: right; padding-right: 10px;" />
@@ -135,10 +142,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="working-with-vector-data" class="section level1 hasAnchor">
+<div id="working-with-vector-data" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">11</span> Working with Vector Data<a href="working-with-vector-data.html#working-with-vector-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Now let’s learn about working with vector data. In the <em>Layers</em> panel, turn off the DEM and turn on the streets layer. Notice that the streets are represented with lines.</p>
-<div id="single-symbol-styling" class="section level2 hasAnchor">
+<div id="single-symbol-styling" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Single Symbol Styling<a href="working-with-vector-data.html#single-symbol-styling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Your street layer is loaded by default with a randomly selected color. Let’s start our vector work by changing the styling of our streets to something more appropriate.</p>
 <ol style="list-style-type: decimal">
@@ -153,7 +160,7 @@
 <li>Once you’ve picked a color, use the <em>Go Back</em> button to return to the main dialog. <img src="images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" /></li>
 </ol>
 </div>
-<div id="attributes-tables" class="section level2 hasAnchor">
+<div id="attributes-tables" class="section level2 hasAnchor" number="11.2">
 <h2><span class="header-section-number">11.2</span> Attributes tables<a href="working-with-vector-data.html#attributes-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the <strong>geometry</strong> and (2) information about those entities, typically in table format, called <strong>attributes</strong>.</p>
 <p>Let’s look at the attribute table for our streets:</p>
@@ -167,7 +174,7 @@
 <li>If you’d like to zoom to see all of the streets data, right click on the streets layer in the <em>Layers</em> panel and select <em>Zoom to layer(s)</em>.</li>
 </ol>
 </div>
-<div id="select-by-attributes" class="section level2 hasAnchor">
+<div id="select-by-attributes" class="section level2 hasAnchor" number="11.3">
 <h2><span class="header-section-number">11.3</span> Select by attributes<a href="working-with-vector-data.html#select-by-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight. Let’s investigate the <em>classcode</em> column.</p>
 <ol style="list-style-type: decimal">
@@ -183,9 +190,9 @@
 <p>You can review the metadata/data dictionary on the About tab on the <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/San-Francisco-Basemap-Street-Centerlines">data’s homepage</a>. 1 Freeways; 2 Highways; 3 Major Streets; 4 Secondary Streets; 5 Local Streets; 6 Freeway Ramps; 0 Private Streets</p>
 <p>Selecting our data based on the attribute information is a good way to explore and understand data, but it is only a temporary way to highlight data. To use differences in attribute data in a map, we’ll need to work with the layer symbology.</p>
 </div>
-<div id="symbolizing-layers-by-attributes" class="section level2 hasAnchor">
+<div id="symbolizing-layers-by-attributes" class="section level2 hasAnchor" number="11.4">
 <h2><span class="header-section-number">11.4</span> Symbolizing layers by attributes<a href="working-with-vector-data.html#symbolizing-layers-by-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="classifying-attributes" class="section level3 hasAnchor">
+<div id="classifying-attributes" class="section level3 hasAnchor" number="11.4.1">
 <h3><span class="header-section-number">11.4.1</span> Classifying Attributes<a href="working-with-vector-data.html#classifying-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s style this street data based on the kind of street. This will be a good visualization for giving context to some of the other data we have to work with.</p>
 <ol style="list-style-type: decimal">
@@ -296,7 +303,7 @@
 </table>
 <p><img src="images/Vector_ClassifiedRoads.PNG" title="Classified Roads" alt="alt text" /></p>
 </div>
-<div id="rule-based-symbology" class="section level3 hasAnchor">
+<div id="rule-based-symbology" class="section level3 hasAnchor" number="11.4.2">
 <h3><span class="header-section-number">11.4.2</span> Rule-Based Symbology<a href="working-with-vector-data.html#rule-based-symbology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We’ve just seen how we can use an automated classification method to change the symbology of data. Now let’s look at how we can build rules based on attributes to create tailored symbology. The street tree layer has many, many tree locations - too many to make a useful map of all the trees so we’ll need to select a subset of the data to include.</p>
 <p>Here’s a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California. These beetles can damage and kill trees. Let’s make a map of one species of tree that might be affected, Canary Pine (<em>Pinus canariensis</em>), to investigate their spatial distribution and think about where you might want to concentrate monitoring efforts. The <a href="http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html">UC IPM site</a> has more information about bark beetle species and tree species affected by them.</p>
@@ -329,7 +336,7 @@
         </div>
       </div>
 <a href="working-with-raster-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="making-a-map-with-the-print-composer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="composing-a-map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -350,7 +357,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/edit/master/10_Working-with-Vector-Data.Rmd",
+"link": "https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/edit/master/10_Working-with-Vector-Data.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -358,7 +365,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/workshop-intro-QGIS/blob/master/10_Working-with-Vector-Data.Rmd",
+"link": "https://github.com/ucdavisdatalab/Intro-to-Desktop-GIS-with-QGIS/blob/master/10_Working-with-Vector-Data.Rmd",
 "text": null
 },
 "download": null,

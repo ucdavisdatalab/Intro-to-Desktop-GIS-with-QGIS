@@ -24,7 +24,8 @@ select-by-attributes
 symbolizing-layers-by-attributes
 classifying-attributes
 rule-based-symbology
-making-a-map-with-the-print-composer
+composing-a-map
 prepare-your-layers
 working-in-the-print-composer
 select-by-location
+additional-resources
