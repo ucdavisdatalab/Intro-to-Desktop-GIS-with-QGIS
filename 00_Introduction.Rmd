@@ -1,5 +1,5 @@
 # Introduction
-This tutorial uses QGIS 3 to teach the basics of desktop mapping software for beginners with no previous mapping experience.
+This tutorial uses QGIS 3.x to teach the basics of desktop mapping software for beginners with no previous mapping experience.
 
 This workshop has been taught on multiple occasions, some of which have video recordings you can watch:
 

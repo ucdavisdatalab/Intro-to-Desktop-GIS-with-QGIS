@@ -1,4 +1,4 @@
-# Import data into QGIS
+# Import Data into QGIS
 Let's load some data.
 
 ##  Raster Data

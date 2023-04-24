@@ -1,4 +1,4 @@
-# Download data
+# Download Data
 In this workshop, we'll be using the following data: 
 
 1. Digital Elevation Model (DEM) of San Francisco 

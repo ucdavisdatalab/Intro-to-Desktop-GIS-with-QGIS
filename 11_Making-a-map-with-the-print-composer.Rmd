@@ -1,4 +1,4 @@
-# Making a map with the print composer
+# Composing a Map
 One common task in any desktop GIS is to produce a map to include in a document or presentation.  In QGIS we create maps in the *Print Composer*.  Let's make a finished map of our tree locations.
 
 ## Prepare your Layers
@@ -26,6 +26,7 @@ Once you've added all the layers you need to your Map Canvas and styled them in 
 Your map might look something like this.  I added an *Outer Glow* in the *Draw Effects* menu to the Shoreline data to achieve the fading blue outline.
 
 You may want to add background layers such as coastlines or land masses from data sources like:
+
 * [Natural Earth Data](http://naturalearthdata.com/)
 * [Project Linework](http://www.projectlinework.org/)
 * [GADM](https://gadm.org/)
