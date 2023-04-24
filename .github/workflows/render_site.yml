@@ -1,24 +1,47 @@
+# Adapted from https://github.com/r-lib/actions/blob/v2-branch/examples/bookdown.yaml
+#
+# Deployment app: https://github.com/JamesIves/github-pages-deploy-action
+
 on:
   push:
-    branches: master
+    branches: [main, master]
 
-name: Render site
+name: bookdown
 
 jobs:
-  render:
-    name: Render site
-    runs-on: macOS-latest
+  bookdown:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-pandoc@v2
       - uses: r-lib/actions/setup-r@v2
-      - uses: r-lib/actions/setup-pandoc@v1
-      - name: Install bookdown
-        run: Rscript -e 'install.packages("bookdown")'
-      - name: Render site
-        run: Rscript knit.R
-      - name: Add new site files
-        run: git add docs
-      - name: Commit results
-        run: |
-          git commit docs -m 'Re-build site' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-renv@v2
+      
+      - name: Cache results
+        uses: actions/cache@v3
+        with:
+          path: docs
+          key: bookdown-${{ hashFiles('**/*Rmd') }}
+          restore-keys: bookdown-
+
+      - name: Install dependencies
+        run: install.packages("bookdown")
+        shell: Rscript {0}
+
+      - name: Build
+        run: bookdown::render_book("index.Rmd", output_dir="./docs")
+        shell: Rscript {0}
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: master
+          folder: docs
+          target-folder: docs
+          clean: true
