@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Working with Vector Data | Intro to Desktop GIS with QGIS</title>
   <meta name="description" content="11 Working with Vector Data | Intro to Desktop GIS with QGIS" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Working with Vector Data | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Michele Tobias" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -159,8 +159,7 @@
 <li>In the white box near the top, you’ll see the word <em>Line</em> and <em>Simple line</em>. Click on the words <em>Simple line</em>. This will let us access lots of options for how to symbolize this set of lines.</li>
 <li>In the <em>Color</em> box, click on the colored box to open the color selection dialog.</li>
 <li>The color selection dialog has multiple options for how you select your colors. Take a minute to get a feel for how each of these works. I find each of these has advantages for certain situations.</li>
-<li>Choose a color that you think represents roads well. I used a dark gray. You can enter <em>#666666</em> into the <em>HTML notation</em> box to use the same color if you’d like.<br />
-</li>
+<li>Choose a color that you think represents roads well. I used a dark gray. You can enter <em>#666666</em> into the <em>HTML notation</em> box to use the same color if you’d like. Click <em>Apply</em> to apply the change.</li>
 <li>Once you’ve picked a color, use the <em>Go Back</em> button to return to the main dialog. <img src="images/Tool_GoBack.PNG" title="Go Back button." alt="alt text" /></li>
 </ol>
 </div>
@@ -186,7 +185,7 @@
 <li>We’ll build an expression in the white box on the left side of the tool. In the center panel, expand the <em>Fields and Values</em> list.</li>
 <li>Double click the <em>classcode</em> field to add it to the expression box on the left.<br />
 </li>
-<li>Then click the <em>=</em> button to add an equal sign to the equation.</li>
+<li>Then click the <em>=</em> button below the white dialog box to add an equal sign to the equation.</li>
 <li>We can also click the <em>All Unique</em> button on the right to see all of the values that are found in the <em>classcode</em> column. I don’t recommend using this option on continuous data; it’s best for categorical data with a relatively small number of unique values. Click <em>‘1’</em> in the list. Note that while we think of the items in this list as numbers, this column was likely defined as text, so this is why the numbers are wrapped in quotes. If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1. Your expression should look like <em>“classcode” = ‘1’</em>. If QGIS read the <em>classcode</em> field as numbers, your expression should look like this: <em>“classcode” = 1</em> <strong>NOTE: in QGIS 3.24, both options work.</strong></li>
 <li>Click <em>Select features</em>. You’ll notice that rows in the attribute table and lines on the map have been highlighted. What do you think a <em>classcode</em> of 1 means?</li>
 </ol>

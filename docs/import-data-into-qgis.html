@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Import Data into QGIS | Intro to Desktop GIS with QGIS</title>
   <meta name="description" content="8 Import Data into QGIS | Intro to Desktop GIS with QGIS" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Import Data into QGIS | Intro to Desktop GIS with QGIS" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Michele Tobias" />
 
 
-<meta name="date" content="2023-05-15" />
+<meta name="date" content="2024-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -170,9 +170,9 @@
 <ol style="list-style-type: decimal">
 <li>In the <em>Data Source Manager</em>, click on the <em>Vector</em> tab on the left.</li>
 <li>In the <em>Source</em> section, click on the “…” and navigate to the folder containing your vector data.</li>
-<li>Holding down the Ctrl button on your keyboard while you click, select the <em>StreetCenterlines.shp</em>, <em>SeismicHazardZones.shp</em>, and <em>Shoreline.shp</em> (don’t worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click <em>Open</em>.</li>
+<li>Holding down the Ctrl (Windows) or Command (Mac) button on your keyboard while you click, select the <em>StreetCenterlines.shp</em>, <em>SeismicHazardZones.shp</em>, and <em>Shoreline.shp</em> (don’t worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click <em>Open</em>.</li>
 <li>In the <em>Options</em> section, you can leave the default values as they are for this data. Make note of what options are there - the <em>ENCODING</em> section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.</li>
-<li>In the <em>Data Source Manager</em> click <em>Add</em>. If the <em>Select Transformation</em> dialog appears, pick a transformation that fits the data, such as <em>NAD83 to WGS 84 (43)</em>.</li>
+<li>In the <em>Data Source Manager</em> click <em>Add</em>. If the <em>Select Transformation</em> dialog appears, pick a transformation that fits the data, such as <em>NAD83 to WGS 84 (43)</em>. If if the <em>Select Transformation</em> dialog doesn’t appear, it means the projection of your dataset matched the projection of the project so you don’t need a transformation.</li>
 </ol>
 </div>
 <div id="csv-data" class="section level3 hasAnchor" number="8.2.2">
@@ -185,7 +185,7 @@
 <li>In the <em>File format</em> section, we’ll leave the default selection of <em>CSV (comma separated values)</em>, but if you had a file with a different delimiter, you could change the delimiter by using <em>Custom delimiters</em>.</li>
 <li>In the <em>Records and Fields Options</em> section, make sure <em>First record has field names</em> is checked. If your data didn’t have table headings, you would want to uncheck this box. You can also check <em>Detect field types</em>.</li>
 <li>In the <em>Geometry definition</em> section is where we indicate what kind of geometry we have. For ours, select <em>Point coordinates</em> and in the <em>X field</em>, pick “Longitude”, and for the <em>Y field</em> pick “Latitude”.</li>
-<li>For the <em>Geometry CRS</em>, click on the <em>Select CRS</em> button (it looks like a little globe wearing a cone-shaped hat). In the <em>Filter</em>, type 4326 to find and select <em>WGS 84</em>.</li>
+<li>For the <em>Geometry CRS</em>, click on the <em>Select CRS</em> button (it looks like a little globe wearing a cone-shaped hat). In the <em>Filter</em>, type 4326 to find and select <em>WGS 84</em>, then click <em>OK</em>.</li>
 <li>Review the <em>Sample data</em> section to preview how the attribute table will look. This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).</li>
 <li>If everything looks good, click <em>Add</em>. This is a reasonably large file, so be patient as it loads.</li>
 <li>Close the <em>Data Source Manager</em> window because we are done adding data.</li>

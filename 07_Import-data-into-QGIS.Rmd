@@ -19,9 +19,9 @@ Shapefiles are a very popular vector data format, so that's what we'll work with
 
 1. In the *Data Source Manager*, click on the *Vector* tab on the left.
 1. In the *Source* section, click on the "..." and navigate to the folder containing your vector data.
-1. Holding down the Ctrl button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp* (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file).  Then click *Open*. 
+1. Holding down the Ctrl (Windows) or Command (Mac) button on your keyboard while you click, select the *StreetCenterlines.shp*, *SeismicHazardZones.shp*, and *Shoreline.shp* (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file).  Then click *Open*. 
 1. In the *Options* section, you can leave the default values as they are for this data. Make note of what options are there - the *ENCODING* section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
-1. In the *Data Source Manager* click *Add*. If the *Select Transformation* dialog appears, pick a transformation that fits the data, such as *NAD83 to WGS 84 (43)*.
+1. In the *Data Source Manager* click *Add*. If the *Select Transformation* dialog appears, pick a transformation that fits the data, such as *NAD83 to WGS 84 (43)*. If if the *Select Transformation* dialog doesn't appear, it means the projection of your dataset matched the projection of the project so you don't need a transformation.
 
 ### CSV Data
 It's pretty common to get point data in "CSV" file, especially if the spatial data is represented by latitude and longitude coordinates.  CSV stands for Comma Separated Value.  Typically this is tabular data where the edge of each cell of the table is indicated by a comma.  Sometimes people use a different character instead of the comma such as a semicolon, tab, or pipe. The character used to indicate the edge of the cells is called the "delimiter".  If a file has tabs as the delimeter, for example, you would call that file a "tab delimited" file.
@@ -33,7 +33,7 @@ To load our .csv file:
 1. In the *File format* section, we'll leave the default selection of *CSV (comma separated values)*, but if you had a file with a different delimiter, you could change the delimiter by using *Custom delimiters*.
 1. In the *Records and Fields Options* section, make sure *First record has field names* is checked.  If your data didn't have table headings, you would want to uncheck this box. You can also check *Detect field types*.
 1. In the *Geometry definition* section is where we indicate what kind of geometry we have.  For ours, select *Point coordinates* and in the *X field*, pick "Longitude", and for the *Y field* pick "Latitude".
-1. For the *Geometry CRS*, click on the *Select CRS* button (it looks like a little globe wearing a cone-shaped hat). In the *Filter*, type 4326 to find and select *WGS 84*.
+1. For the *Geometry CRS*, click on the *Select CRS* button (it looks like a little globe wearing a cone-shaped hat). In the *Filter*, type 4326 to find and select *WGS 84*, then click *OK*.
 1. Review the *Sample data* section to preview how the attribute table will look.  This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
 1. If everything looks good, click *Add*.  This is a reasonably large file, so be patient as it loads.
 1. Close the *Data Source Manager* window because we are done adding data.

@@ -23,7 +23,7 @@ Chances are, this isn't exactly what you want and we can make some more improvem
 
 1. In the *Layer Styling* panel again, for the *Interpolation* drop-down, select *Discrete*.
 1. For the *Mode*, select *Equal Interval*. For *Classes*, input 10.
-1. Change the *Value* number for the lowest category to 0 by double clicking on the default number and typing in the number 0 and pressing enter on your keyboard.  If it doesn't automatically upadte, click *Apply* in the Layer Properties to see how it looks.  You should see a more defined coastline that looks more like the docks around the city.
+1. Change the *Value* number for the lowest category to 0 by double clicking on the default number and typing in the number 0 and pressing enter on your keyboard.  If it doesn't automatically update, click *Apply* in the Layer Properties to see how it looks.  You should see a more defined coastline that looks more like the docks around the city.
 1. Continue to adjust the colors and/or breaks until you are happy with how it looks, then click *Ok*.  (See the image below for one option.)
 
 I chose breaks at 0, 50, 75, 125, 175, 225, 275, 325, 350, and inf.
