@@ -1,8 +1,24 @@
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
-      - uses: r-lib/actions/setup-renv@v2
-      #- uses: r-lib/actions/setup-renv@v2
+on:
+  push:
+    branches: main
 
-      - name: Cache results
-        uses: actions/cache@v3
+name: Render site
+
+jobs:
+  render:
+    name: Render site
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v2
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install bookdown
+        run: Rscript -e 'install.packages("bookdown")'
+      - name: Render site
+        run: Rscript knit.R -p
+      - name: Add new site files
+        run: git add docs
+      - name: Commit results
+        run: |
+          git commit docs -m 'Re-build site' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
