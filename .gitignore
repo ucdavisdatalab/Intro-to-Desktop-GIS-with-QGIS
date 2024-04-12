@@ -29,5 +29,5 @@ Temporary Items
 .apdisk
 
 # Bookdown intermediate files
-_main*
+#_main*  #when knitting with the pdf flag, the output is _main.pdf and we need this file because it links on the reader
 docs/*.md

@@ -1,0 +1,814 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{american}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Intro to Desktop GIS with QGIS},
+  pdfauthor={Michele Tobias},
+  pdflang={en-us},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Intro to Desktop GIS with QGIS}
+\author{Michele Tobias}
+\date{2023-05-15}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{overview}{%
+\section*{Overview}\label{overview}}
+\addcontentsline{toc}{section}{Overview}
+
+\hypertarget{workshop-description}{%
+\subsection{Workshop Description}\label{workshop-description}}
+
+This introductory-level workshop will focus upon the fundamental concepts and skills needed to explore and analyze data using Geographic Information Systems (GIS) software with examples using the QGIS platform.
+
+\hypertarget{prerequisites}{%
+\subsection{Prerequisites}\label{prerequisites}}
+
+No prior experience with QGIS or other GIS software is needed, though attendees should be comfortable learning new computer applications, working with the basics of spreadsheets, and managing, organizing, and moving computer files on their operating system.
+
+You should download and install \href{https://qgis.org/}{QGIS} on your computer. This workshop was last proofed for version 3.30.
+
+The data we'll use in this workshop is available in this \href{https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm}{Box Folder Online}.
+
+\hypertarget{learning-objectives}{%
+\subsection{Learning Objectives}\label{learning-objectives}}
+
+By the end of this workshop, you will be able to:
+
+\begin{itemize}
+\tightlist
+\item
+  Define GIS and geospatial concepts and terminology.
+\item
+  Know the difference between vector and raster data types
+\item
+  Properly connect and add data to a QGIS project
+\item
+  Know where to find the attributes of your data in QGIS
+\item
+  Perform basic selections and queries in QGIS
+\item
+  Symbolize data by attributes
+\item
+  Assemble a basic map for export
+\end{itemize}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+This tutorial uses QGIS 3.x to teach the basics of desktop mapping software for beginners with no previous mapping experience.
+
+This workshop has been taught on multiple occasions, some of which have video recordings you can watch:
+
+\begin{itemize}
+\tightlist
+\item
+  April 30, 2019 with QGIS 3.4 \href{https://www.youtube.com/watch?v=avscRlskV2E\&t=1s}{UC Davis DataLab YouTube Channel}
+\item
+  April 14, 2020 with QGIS 3.12 \href{https://www.youtube.com/watch?v=XnabNKLop7c}{UC Davis DataLab YouTube Channel}
+\item
+  July 17, 2020 with QGIS 3.14 \href{https://www.youtube.com/channel/UCLQd1MsyWWPoIi6rNLUCjhg}{QGIS North America YouTube Channel}
+\item
+  November 16, 2021 with QGIS 3.16
+\item
+  April 12, 2022 with QGIS 3.24 \href{https://youtu.be/PAcZUPSmqDE}{\#maptimeDavis YouTube Channel}
+\item
+  March 24, 2023 with QGIS 3.30 for the \href{https://iep.ca.gov/}{Interagency Ecological Program (IEP)} Annual Workshop
+\end{itemize}
+
+\hypertarget{what-is-gis}{%
+\section{What is GIS?}\label{what-is-gis}}
+
+GIS stands for either Geographic Information System or Geographic Information Science, depending on what aspect of the term we are interested in.
+
+Geographic Information \textbf{System} typically refers to the software, like QGIS, we use to create spatial data and to investigate spatial relationships between that data.
+
+Geographic Information \textbf{Science} is the framework we use to ask questions about the spatial relationship between data.
+
+It's good to understand the difference, but you'll rarely hear people distinguish between the two. We'll do both today - work with the software and ask questions about the spatial relationships in our chosen datasets.
+
+\hypertarget{what-is-qgis}{%
+\section{What is QGIS?}\label{what-is-qgis}}
+
+From the \href{https://qgis.org}{QGIS} website, ``QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.''
+
+Let's unpack some of that.
+
+\textbf{QGIS is a desktop GIS.} That means you get a program that opens up on your computer as a window with buttons you can click, forms you can fill out to do tasks, and it's generally a visual interactive experience (as opposed to commandline programming in a terminal). Often this kind of interface is called a Graphical User Interface or GUI (often pronounced ``gooey'') for short.
+
+\textbf{QGIS is open source.} That means the code is available for you to read or modify, should you choose to, but you don't have to. What's the advantage of this? It means anyone can make fixes if something is wrong or anyone can add new features. You don't have to wait for a paid developer to add something.
+
+\textbf{QGIS is an official project of the \href{https://www.osgeo.org/}{Open Source Geospatial Foundation (OSGeo)}.} ``The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization whose mission is to foster global adoption of open geospatial technology by being an inclusive software foundation devoted to an open philosophy and participatory community driven development.'' OSGeo supports and assists open source geospatial projects providing infrastructure and organization as well as conferences and means of communication with the broader public and education.
+
+\hypertarget{why-qgis}{%
+\section{Why QGIS?}\label{why-qgis}}
+
+\href{https://www.qgis.org}{QGIS} is an open source, community-driven desktop GIS software that allows users to visualize and analyze spatial data in a variety of ways. There are many reasons to use QGIS, but here are a few:
+
+\begin{itemize}
+\tightlist
+\item
+  It's a robust, powerful desktop GIS
+\item
+  Runs on all major platorms: Mac, Linux, \& Windows
+\item
+  Free of charge, all access (no paid add-ons or extensions)
+\item
+  Frequent updates \& bug fixes
+\item
+  Responsive, enthusiastic community
+\item
+  Integration with other geospatial tools \& programming languages like R, Python, \& PostGIS
+\item
+  Access to analysis tools from other established software like GRASS and SAGA
+\item
+  Native access to open data formats like geoJSON \& GeoPackage
+\item
+  Comes in \href{https://www.qgis.org/en/site/getinvolved/translate.html}{more than 40 languages}, making it easier to work with a larger variety of colaborators
+\item
+  Growing use by local, state, federal, and international governments
+\end{itemize}
+
+\hypertarget{data-types---vector-vs.-raster-vs.-other-types-of-spatial-data}{%
+\section{Data Types - Vector vs.~Raster vs.~other types of spatial data}\label{data-types---vector-vs.-raster-vs.-other-types-of-spatial-data}}
+
+There are several data spatial data models that you may encounter as you work with spatial data. The two you will likely encounter most frequently are called vector and raster data.
+
+\begin{figure}
+\centering
+\includegraphics{./images/geometries_data_types.png}
+\caption{alt text}
+\end{figure}
+
+\hypertarget{vector-data}{%
+\subsection{Vector Data}\label{vector-data}}
+
+Vector data represents discrete objects in the real world with points, lines, and polygons in the dataset.
+
+If you were to draw a map to your house for a friend, you would typically use vector data - roads would be lines, a shopping center included as an important landmark might be a rectangle of sorts, and your house might be a point (perhaps represented by a star or a house icon).
+
+\hypertarget{raster-data}{%
+\subsection{Raster Data}\label{raster-data}}
+
+Raster data represents continuous fields or discrete objects on a grid, storing measurements or category names in each cell of the grid.
+
+Digital photos are raster data you are already familiar with. If you zoom in far enough on a digital photo, you'll see that photo is made up of pixels, which appear as colored squares. Pixels are cells in a regular grid and each contains the digital code that corresponds to the color that should be displayed there. Satellite images are a very similar situation.
+
+\hypertarget{download-data}{%
+\section{Download Data}\label{download-data}}
+
+In this workshop, we'll be using the following data:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Digital Elevation Model (DEM) of San Francisco
+\item
+  Streets
+\item
+  Trees
+\item
+  Seismic Hazard Zones
+\item
+  City of San Francisco Boundary (shoreline)
+\end{enumerate}
+
+You can download all of this data from this \href{https://ucdavis.box.com/s/cnlz6ejmje4qgf7z80h7ygbwydc65kkm}{Box Folder Online}. Use the \emph{Download} button in the upper right corner of the screen to download a zipped file containing all of the workshop data (sometimes you'll need to dismiss a message at the top of the screen before you can see the download button). Unzip the file to a location on your computer that you can find later.
+
+\hypertarget{start-qgis-open-a-new-project}{%
+\section{Start QGIS \& Open a New Project}\label{start-qgis-open-a-new-project}}
+
+Start QGIS in the way you typically open any program on your particular computer's operating system. It's normal that it may take a minute to open.
+
+When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed. It doesn't matter which you see, because we want to start a new project. To do this, click on the \emph{Project} menu in the upper left of the window and select \emph{New} - or you can click the white page icon that is usually near the \emph{Project} menu on the tool bar.
+
+\hypertarget{import-data-into-qgis}{%
+\section{Import Data into QGIS}\label{import-data-into-qgis}}
+
+Let's load some data.
+
+\hypertarget{raster-data-1}{%
+\subsection{Raster Data}\label{raster-data-1}}
+
+Let's start by loading the raster data:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Click on the \emph{Open Data Source Manager} button on your toolbar. It looks like three cards (one red, one yellow, and one blue) fanned out. Or, find it on the \emph{Layer} menu.
+\item
+  Click the \emph{Raster} button (it looks like a checker board) on the left side of the \emph{Data Source Manager} window.
+\item
+  Click on the ``\ldots{}'' button in the \emph{Source} section in the middle of the window. Navigate to where you saved your workshop data and select the \emph{DEM\_SF.tif} file.
+\item
+  Click \emph{Open}.
+\item
+  Some options will appear on the page. We can leave the defaults for this dataset.
+\item
+  Finally, click ``Add'' and you should see a black and white raster image appear in the map canvas below the dialog you're working in. If the \emph{Select Transformation} dialog pops up, select a transformation you feel fits the data well. I'd recommend \emph{NAD83 to WGS 84 (43)} because the table of options says this one has a high accuracy and is intended for California north of 36.5 degrees north, which fits our data.
+\end{enumerate}
+
+You can leave the \emph{Data Source Manager} window open so we can add some more data.
+
+\hypertarget{vector}{%
+\subsection{Vector}\label{vector}}
+
+\hypertarget{shapefiles}{%
+\subsubsection{Shapefiles}\label{shapefiles}}
+
+Shapefiles are a very popular vector data format, so that's what we'll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file). Let's load our shapefile data:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In the \emph{Data Source Manager}, click on the \emph{Vector} tab on the left.
+\item
+  In the \emph{Source} section, click on the ``\ldots{}'' and navigate to the folder containing your vector data.
+\item
+  Holding down the Ctrl button on your keyboard while you click, select the \emph{StreetCenterlines.shp}, \emph{SeismicHazardZones.shp}, and \emph{Shoreline.shp} (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click \emph{Open}.
+\item
+  In the \emph{Options} section, you can leave the default values as they are for this data. Make note of what options are there - the \emph{ENCODING} section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
+\item
+  In the \emph{Data Source Manager} click \emph{Add}. If the \emph{Select Transformation} dialog appears, pick a transformation that fits the data, such as \emph{NAD83 to WGS 84 (43)}.
+\end{enumerate}
+
+\hypertarget{csv-data}{%
+\subsubsection{CSV Data}\label{csv-data}}
+
+It's pretty common to get point data in ``CSV'' file, especially if the spatial data is represented by latitude and longitude coordinates. CSV stands for Comma Separated Value. Typically this is tabular data where the edge of each cell of the table is indicated by a comma. Sometimes people use a different character instead of the comma such as a semicolon, tab, or pipe. The character used to indicate the edge of the cells is called the ``delimiter''. If a file has tabs as the delimeter, for example, you would call that file a ``tab delimited'' file.
+
+To load our .csv file:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In the \emph{Data Source Manager}, click on the \emph{Delimited Text} tab on the left. Notice that the icon is a comma.
+\item
+  Next to the \emph{File Name} text box, click the ``\ldots{}'' button, then navigate to your \emph{Street\_Tree\_Map.csv} file and click \emph{Open}.
+\item
+  In the \emph{File format} section, we'll leave the default selection of \emph{CSV (comma separated values)}, but if you had a file with a different delimiter, you could change the delimiter by using \emph{Custom delimiters}.
+\item
+  In the \emph{Records and Fields Options} section, make sure \emph{First record has field names} is checked. If your data didn't have table headings, you would want to uncheck this box. You can also check \emph{Detect field types}.
+\item
+  In the \emph{Geometry definition} section is where we indicate what kind of geometry we have. For ours, select \emph{Point coordinates} and in the \emph{X field}, pick ``Longitude'', and for the \emph{Y field} pick ``Latitude''.
+\item
+  For the \emph{Geometry CRS}, click on the \emph{Select CRS} button (it looks like a little globe wearing a cone-shaped hat). In the \emph{Filter}, type 4326 to find and select \emph{WGS 84}.
+\item
+  Review the \emph{Sample data} section to preview how the attribute table will look. This is a good way to find out if you picked the right delimiter or if your data has some formatting issues (such as someone put commas in a text field and use commas as the delimiter).
+\item
+  If everything looks good, click \emph{Add}. This is a reasonably large file, so be patient as it loads.
+\item
+  Close the \emph{Data Source Manager} window because we are done adding data.
+\end{enumerate}
+
+\hypertarget{saving-project-files}{%
+\section{Saving Project Files}\label{saving-project-files}}
+
+Now that we've added data to our project, let's save it so we can come back to it later.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Click on the blue floppy disk icon (or from the \emph{File} menu, select \emph{Save}).
+\item
+  Navigate to where you want to save your project file.
+\item
+  In the \emph{File name} box, type the name you would like your file to have. Give it a descriptive name so you'll remember what the file was for.
+\item
+  Click \emph{Save}.
+\end{enumerate}
+
+Note for ESRI users: QGIS' .qgs and .qgz file are analogous to ArcMap's .mxd files.
+
+\hypertarget{working-with-raster-data}{%
+\section{Working with Raster Data}\label{working-with-raster-data}}
+
+Let's start by looking at some Raster data. We'll work with a digital elevation model (DEM) for San Francisco. A DEM is a raster in which each cell in the grid contains the elevation at that location.
+
+For now, let's turn off all of the layers in the \emph{Layers} panel except for the \emph{DEM\_SF} layer by unchecking the boxes next to the layer names in the \emph{Layers} Panel on the left side of your screen.
+
+Now you should see a gray scale image that roughly looks like the San Francisco peninsula. This is a Digital Elevation Model (DEM). Each cell in the raster contains a number representing the elevation at that location.
+
+Let's style this data:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open the \emph{Layer Styling} Panel by clicking on the \emph{View} menu, then \emph{Panels}, and checking the box for \emph{Layer Styling}.
+\item
+  At the top of the panel that opens, select the DEM from the drop-down menu, or highlight that layer in the \emph{Layers} panel.
+\item
+  Click on the \emph{Symbology} tab on the left side (the icon looks like a paintbrush painting a rainbow).
+\item
+  For the \emph{Render type} drop down (just below where you selected the layer), select \emph{Singleband pseudocolor}.
+\item
+  Expand the \emph{Min/Max Value Settings'' area. In the }Statistics extent* drop-down, select \emph{Whole raster}. For \emph{Accuracy}, select \emph{Actual (slower)}.
+\item
+  For the \emph{Color ramp}, select \emph{Create new color ramp}
+\item
+  Select \emph{Catalog: cpt-city} from the drop down and click \emph{Ok}
+\item
+  Pick \emph{Topography} from the options on the left.
+\item
+  Pick \emph{cd-a} for our gradient. Or select another scheme you think will work well for representing topography. Click \emph{Ok}.
+\item
+  You'll see that the color ramp in the Layers Properties has updated. Click \emph{Apply} to see what it looks like with our data or check the box next to \emph{Live update} to apply changes as you make them.
+\end{enumerate}
+
+Chances are, this isn't exactly what you want and we can make some more improvements to see the shoreline and topography better.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In the \emph{Layer Styling} panel again, for the \emph{Interpolation} drop-down, select \emph{Discrete}.
+\item
+  For the \emph{Mode}, select \emph{Equal Interval}. For \emph{Classes}, input 10.
+\item
+  Change the \emph{Value} number for the lowest category to 0 by double clicking on the default number and typing in the number 0 and pressing enter on your keyboard. If it doesn't automatically upadte, click \emph{Apply} in the Layer Properties to see how it looks. You should see a more defined coastline that looks more like the docks around the city.
+\item
+  Continue to adjust the colors and/or breaks until you are happy with how it looks, then click \emph{Ok}. (See the image below for one option.)
+\end{enumerate}
+
+I chose breaks at 0, 50, 75, 125, 175, 225, 275, 325, 350, and inf.
+
+In the event that you need to reset your classes to start over with modifying your classes, click the \emph{Classify} button again.
+
+Note: In case you need to know, in our DEM data, the Min value is -9.36748 and the Max value is 399.963. You can reset this if you need to by selecting the \emph{Min/max} radio button in the \emph{Min/Max Value Settings} again.
+
+\begin{figure}
+\centering
+\includegraphics{./images/Raster_LayerProperties.PNG}
+\caption{alt text}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{./images/Raster_DEM.PNG}
+\caption{alt text}
+\end{figure}
+
+Now you've had a first look at how to style raster data for better viewer understanding. There is a wide variety of analysis and data processing that we can't learn today in our limited time. For more on working with raster data, see the \href{https://docs.qgis.org/3.10/en/docs/user_manual/working_with_raster/index.html}{Raster Module of the QGIS Training Manual}.
+
+\hypertarget{working-with-vector-data}{%
+\section{Working with Vector Data}\label{working-with-vector-data}}
+
+Now let's learn about working with vector data. In the \emph{Layers} panel, turn off the DEM and turn on the streets layer. Notice that the streets are represented with lines.
+
+\hypertarget{single-symbol-styling}{%
+\subsection{Single Symbol Styling}\label{single-symbol-styling}}
+
+Your street layer is loaded by default with a randomly selected color. Let's start our vector work by changing the styling of our streets to something more appropriate.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If your \emph{Layer Styling} panel isn't still open, reopen it from the \emph{View} menu by selecting \emph{Panels} and then checking the box next to \emph{Layer Styling}.
+\item
+  Make sure the drop-down to select the layers to work with is set to your streets data.
+\item
+  Leave the drop-down for selecting the method of symbolizing the data on \emph{Single symbol}. We'll look at some of the other options later.
+\item
+  In the white box near the top, you'll see the word \emph{Line} and \emph{Simple line}. Click on the words \emph{Simple line}. This will let us access lots of options for how to symbolize this set of lines.
+\item
+  In the \emph{Color} box, click on the colored box to open the color selection dialog.
+\item
+  The color selection dialog has multiple options for how you select your colors. Take a minute to get a feel for how each of these works. I find each of these has advantages for certain situations.
+\item
+  Choose a color that you think represents roads well. I used a dark gray. You can enter \emph{\#666666} into the \emph{HTML notation} box to use the same color if you'd like.\\
+\item
+  Once you've picked a color, use the \emph{Go Back} button to return to the main dialog. \includegraphics{./images/Tool_GoBack.PNG}
+\end{enumerate}
+
+\hypertarget{attributes-tables}{%
+\subsection{Attributes tables}\label{attributes-tables}}
+
+Vector data is typically made of up of two parts: (1) the points, lines, or polygons that represent real-world entities called the \textbf{geometry} and (2) information about those entities, typically in table format, called \textbf{attributes}.
+
+Let's look at the attribute table for our streets:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In the \emph{Layers} panel, right click on the streets layer and select \emph{Open Attribute Table}.
+\item
+  Scroll to the right to explore the information in this table. We have information like the name of the street, whether or not it's a one-way street, and the name of the neighborhood it's in.
+\item
+  Each row in this table is linked to a street in our data set. Click on the row number of any row. The program will automatically highlight this street in the map canvas HOWEVER, many of these streets are small so we might not see it right away. We can zoom to the selected row by clicking the \emph{Zoom map to selected row} button. \includegraphics{./images/Tool_ZoomToSelection.PNG}
+\item
+  Minimize the attribute table, and use the zoom in and out tools \includegraphics{./images/Tool_ZoomInOut.PNG} to adjust your view. The \emph{Pan} tool can also help navigate. \includegraphics{./images/Tool_Pan.PNG}\\
+\item
+  You can clear the selection (make nothing selected) with the \emph{Deselect Features} tool. \includegraphics{./images/Tool_Deselect.PNG} This tool just makes nothing selected, it doesn't delete data.
+\item
+  If you'd like to zoom to see all of the streets data, right click on the streets layer in the \emph{Layers} panel and select \emph{Zoom to layer(s)}.
+\end{enumerate}
+
+\hypertarget{select-by-attributes}{%
+\subsection{Select by attributes}\label{select-by-attributes}}
+
+Selecting streets by hand is helpful, but depending on what we want to do, we might want an automated way to select the streets that we want to highlight. Let's investigate the \emph{classcode} column.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In the attribute table for the streets layer, click on the \emph{Select features using an expression} \includegraphics{./images/Tool_SelectFeaturesUsingExpression.png} to open the \emph{Select by Expression} tool.
+\item
+  We'll build an expression in the white box on the left side of the tool. In the center panel, expand the \emph{Fields and Values} list.
+\item
+  Double click the \emph{classcode} field to add it to the expression box on the left.\\
+\item
+  Then click the \emph{=} button to add an equal sign to the equation.
+\item
+  We can also click the \emph{All Unique} button on the right to see all of the values that are found in the \emph{classcode} column. I don't recommend using this option on continuous data; it's best for categorical data with a relatively small number of unique values. Click \emph{`1'} in the list. Note that while we think of the items in this list as numbers, this column was likely defined as text, so this is why the numbers are wrapped in quotes. If we tried to use the number without the quotes, the GIS would find no matches because it would be looking for the number 1, not the text 1. Your expression should look like \emph{``classcode'' = `1'}. If QGIS read the \emph{classcode} field as numbers, your expression should look like this: \emph{``classcode'' = 1} \textbf{NOTE: in QGIS 3.24, both options work.}
+\item
+  Click \emph{Select features}. You'll notice that rows in the attribute table and lines on the map have been highlighted. What do you think a \emph{classcode} of 1 means?
+\end{enumerate}
+
+\textbf{Challenge:} Try changing the expression to select different \emph{classcode} categories. What do you think each category means?
+
+You can review the metadata/data dictionary on the About tab on the \href{https://data.sfgov.org/Geographic-Locations-and-Boundaries/San-Francisco-Basemap-Street-Centerlines}{data's homepage}. 1 Freeways; 2 Highways; 3 Major Streets; 4 Secondary Streets; 5 Local Streets; 6 Freeway Ramps; 0 Private Streets
+
+Selecting our data based on the attribute information is a good way to explore and understand data, but it is only a temporary way to highlight data. To use differences in attribute data in a map, we'll need to work with the layer symbology.
+
+\hypertarget{symbolizing-layers-by-attributes}{%
+\subsection{Symbolizing layers by attributes}\label{symbolizing-layers-by-attributes}}
+
+\hypertarget{classifying-attributes}{%
+\subsubsection{Classifying Attributes}\label{classifying-attributes}}
+
+Let's style this street data based on the kind of street. This will be a good visualization for giving context to some of the other data we have to work with.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Clear out any selections you may still have with the \emph{Deselect Features} tool. \includegraphics{./images/Tool_Deselect.PNG}
+\item
+  In the \emph{Layer Styling} panel, pick the street data from the dropdown list so we are working with this data.\\
+\item
+  Instead of \emph{Single symbol}, pick \emph{Categorized} from the dropdown menu near the top of the dialog. (Don't worry if the data disappears.)
+\item
+  For the \emph{Value} dropdown, pick the \emph{classcode} column so we can use this data for our categories.
+\item
+  Click the \emph{Classify} button to see our categories.
+\end{enumerate}
+
+Ok! We can see each road classified by it's \emph{classcode}. The colors will default to \emph{Random Colors} for the palette. We can change the colors to meet our needs and communicate better. Let's use the width of the line rather than color to indicate the type of road.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  You can uncheck the last row in the list of symbols. This category is for data with no \emph{classcode}.
+\item
+  Select all of the symbol levels in the list of symbols by selecting the first row and then the last row while holding down the shift key.
+\item
+  Right click on the highlighted symbols and choose \emph{Change Color}.
+\item
+  Pick a gray color. I used \emph{HTML code} \#a0a0a0. Click \emph{Apply}. All of the roads will now be the same gray color. Remember that our goal is to vary the widths of the lines based on the type of road.
+\item
+  Click the \emph{Go Back} button \includegraphics{./images/Tool_GoBack.PNG} to return to the main window.
+\end{enumerate}
+
+To guide our work, let's change the text of the legend. For each legend item, double click on the label and change the number label to the following text:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule()
+Value & Legend \\
+\midrule()
+\endhead
+0 & Private Streets \\
+1 & Freeways \\
+2 & Highways \\
+3 & Major Streets \\
+4 & Secondary Streets \\
+5 & Local Streets \\
+6 & Freeway Ramps \\
+\bottomrule()
+\end{longtable}
+
+Next we'll change the line width (also known as the line weight).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  For each row in the legend, double click on the line symbol to open the \emph{Symbol Selector} dialog.
+\item
+  Change the \emph{Width} to match the Line Weight in the table below.
+\end{enumerate}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule()
+Value & Legend & Line Weight \\
+\midrule()
+\endhead
+0 & Private Streets & 0.26 \\
+1 & Freeways & 2.0 \\
+2 & Highways & 2.0 \\
+3 & Major Streets & 1.0 \\
+4 & Secondary Streets & 0.26 \\
+5 & Local Streets & 0.26 \\
+6 & Freeway Ramps & 0.5 \\
+\bottomrule()
+\end{longtable}
+
+\begin{figure}
+\centering
+\includegraphics{./images/Vector_ClassifiedRoads.PNG}
+\caption{alt text}
+\end{figure}
+
+\hypertarget{rule-based-symbology}{%
+\subsubsection{Rule-Based Symbology}\label{rule-based-symbology}}
+
+We've just seen how we can use an automated classification method to change the symbology of data. Now let's look at how we can build rules based on attributes to create tailored symbology. The street tree layer has many, many tree locations - too many to make a useful map of all the trees so we'll need to select a subset of the data to include.
+
+Here's a real-world scenario for us to think about: in recent years, a number of non-native bark beetles have been introduced to California. These beetles can damage and kill trees. Let's make a map of one species of tree that might be affected, Canary Pine (\emph{Pinus canariensis}), to investigate their spatial distribution and think about where you might want to concentrate monitoring efforts. The \href{http://ipm.ucanr.edu/PMG/PESTNOTES/pn7421.html}{UC IPM site} has more information about bark beetle species and tree species affected by them.
+
+Let's look at rule-based symbology:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In the \emph{Layer Styling} panel, select the street tree data.
+\item
+  Select \emph{Rule-Based} from the drop-down menu for the symbology method.
+\item
+  Click the green + button (near the bottom) to add a rule.
+\item
+  In the \emph{Label} box, type ``Canary Pine''. This will give our new rule a name we can easily understand.
+\item
+  Next to the \emph{Filter} box, click on the \emph{Expression} button \includegraphics{./images/Tool_ExpressionButton.PNG} to open the \emph{Expression String Builder} dialog. This should look familiar - it's very similar to how we selected rows by their attributes earlier.
+\item
+  Add the \emph{qSpecies} field to the expression window from the \emph{Fields \& Values} list.
+\item
+  Next, type the word \emph{LIKE}. \emph{LIKE} is a comparison operator for strings. You might think of this as = for text.
+\item
+  Finally, we need to say which species we want. You may have noticed that the species column typically contains a long string with several pieces of information. We can search for a portion of the text by using a wildcard character to match part of the string in the column. Type \emph{`\%Pinus canariensis\%'} after \emph{LIKE} in your expression. The single quotes indicate that the words we just typed are a string (and not another variable or field from the attribute table) and the \emph{\%} means ``it doesn't matter what text is here''. So the program will search for rows that contain the sting \emph{Pinus canariensis}, regardless of what else the column says.
+\item
+  Your expression string should look like this: \emph{``qSpecies'' LIKE `\%Pinus canariensis\%'} Click \emph{OK} when you are done.
+\item
+  In the \emph{Rule Editing} dialog, you can also make changes to the color, size, and shape.
+\item
+  Click the back button when you are done. \includegraphics{./images/Tool_GoBack.PNG}
+\item
+  You may need to uncheck the box next to the \emph{(no filter)} rule to see the results of our \emph{Canary Pine} filter.
+\end{enumerate}
+
+Based on where the Canary Pines are in the city, where would you want to focus your monitoring efforts? Are there places you think might be impacted more quickly if a bark beetle came to the city?
+
+\begin{figure}
+\centering
+\includegraphics{./images/Vector_CanaryPine.PNG}
+\caption{alt text}
+\end{figure}
+
+\textbf{Challenge:} Choose another species to add to your map. Add another rule-based classification with a different map symbol.
+
+To learn more about processing and analyzing vector data, see the \href{https://docs.qgis.org/2.18/en/docs/training_manual/vector_analysis/index.html}{QGIS Training Manual's Module on Vector Analysis}. To learn about creating vector data, see the \href{https://docs.qgis.org/2.18/en/docs/training_manual/create_vector_data/index.html}{QGIS Training Manual's Module on Creating Vector Data}.
+
+\hypertarget{composing-a-map}{%
+\section{Composing a Map}\label{composing-a-map}}
+
+One common task in any desktop GIS is to produce a map to include in a document or presentation. In QGIS we create maps in the \emph{Print Composer}. Let's make a finished map of our tree locations.
+
+\hypertarget{prepare-your-layers}{%
+\subsection{Prepare your Layers}\label{prepare-your-layers}}
+
+The first thing we need to do is add all the layers we want in our finished map to our Map Canvas in the main QGIS window. Turn on your trees and roads layers and add in any other data you think will help support the tree locations such as the shoreline data.
+
+We also need to style our layers here as well. Take some time to work with your layer symbology. Make choices that you feel help communicate the data well. Simple or plain choices are often better than complicated or fancy symbology. For example, you could use a tree-shaped icon to represent your trees, but this would probably make a rather busy map. A simple circle icon might be better.
+
+Just get to a point where you have a solid draft. We can always make changes later if we decide we need to adjust.
+
+\hypertarget{working-in-the-print-composer}{%
+\subsection{Working in the Print Composer}\label{working-in-the-print-composer}}
+
+Once you've added all the layers you need to your Map Canvas and styled them in a way you like, we can start composing our map.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open the \emph{Print Composer} by clicking on the \emph{Project} menu and choosing \emph{New Print Layout}.
+\item
+  Give your new Print Layout a name. I'll call mine ``Canary Pine Locations''. You can have multiple map layouts using the data in this map document, so pick a name that will remind you of the purpose of this map. Click \emph{OK} when you've picked a name. The \emph{Print Composer} will now open.
+\item
+  The white box in the middle of the window is where you will compose your map. Right click in this white space and choose \emph{Page Properties} from the menu that appears. The menu on the right will now let us adjust the page size and orientation. Let's use size \emph{Letter} and \emph{Landscape} orientation for this map.\\
+\item
+  Add a map to your layout by clicking the \emph{Add Map} tool and then clicking and dragging on your map layout. \includegraphics{./images/Tool_AddMap.PNG} You can adjust the size so don't worry if it's not perfect at first. The \emph{Move Item} tool moves and adjusts items in your map. \includegraphics{./images/Tool_MoveItem.PNG}
+\item
+  Adjust the scale of your map by selecting your map. In the \emph{Item Properties} on the right, adjust the scale number to zoom in or out of your map data. I used a scale of about 40,000.
+\item
+  Add other items to your map as needed: title, legend, scale bar, etc. The item properties for each item you add are available by selecting the item and editing the properties in the pane on the right side of the \emph{Print Composer} window.
+\item
+  When you've made a layout you like, you can export the map to a variety of formats. On the \emph{Layout} menu, select \emph{Save as Image}. Navigate to where you would like to save the image, name the file, and choose the type of image. Let's pick .png for this image. Click \emph{Save}.
+\item
+  Make any adjustments to the image parameters you would like. Click \emph{Save} to finish the process.
+\item
+  When you're finished exporting your map, you can close the \emph{Print Composer} window.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{./images/Map_CanaryPineLocations.png}
+\caption{alt text}
+\end{figure}
+
+Your map might look something like this. I added an \emph{Outer Glow} in the \emph{Draw Effects} menu to the Shoreline data to achieve the fading blue outline.
+
+You may want to add background layers such as coastlines or land masses from data sources like:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://naturalearthdata.com/}{Natural Earth Data}
+\item
+  \href{http://www.projectlinework.org/}{Project Linework}
+\item
+  \href{https://gadm.org/}{GADM}
+\end{itemize}
+
+\hypertarget{select-by-location}{%
+\section{Select by Location}\label{select-by-location}}
+
+So far, we've seen analysis that relies mainly on cartographic choices. There are many other kinds of analysis we could do. Let's look at an example where we need to undertand the spatial relationship between two different layers: identify large trees inside areas designated as earthquake hazard zones.
+
+One way to measure the size of a tree is by measuring the width of the trunk, about 4 feet off the ground. This measurement is called the \emph{Diameter at Breast Height} or \emph{DBH} for short. The street tree data has a column in the attribute table called DBH so we can use this to identify the larger trees.
+
+First, let's use the \emph{Select By Attributes} process we learned earlier today to select trees with a DBH of 36 inches or larger. A quick reminder of the process: open the attribute table and use the query tool to write a query. \emph{Hint:} We can write ``greater than or equal to'' as \emph{\textgreater=} in the selection interface.
+
+Because the street tree dataset is so large, let's save our large tree selection as a new file to make processes run faster with this subset of the data. Now that you have the trees with a DBH of 3 feet or more selected:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Right click on the layer in the \emph{Layers Panel}.\\
+\item
+  Select \emph{Export} from the menu that pops up and then \emph{Save selected features as}.\\
+\item
+  For the format, choose \emph{ESRI Shapefile}, or any of the vector formats you prefer (I personally like geojson because it's one text file, but geopackage is also pretty handy\ldots{} KML is only a good choice if you're going to use the file in a Google application).
+\item
+  Next to the \emph{File Name} box, click the ``\ldots{}'' button to pick a folder to save the file in and give the file a name. I called my ``LargeTrees''. Click \emph{Save} when you're done.
+\item
+  Make sure the \emph{Save only Selected Features} and \emph{Add saved file to map} boxes are checked, then click \emph{OK}.
+\item
+  You should have a file with only the features we had previously selected.
+\item
+  You can uncheck the full street trees layer in the \emph{Layers Panel}.
+\end{enumerate}
+
+Now we can find which of the large trees are inside seismic hazard zones:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  On the \emph{Vector} menu, select \emph{Research Tools} and then \emph{Select by Location} to open the \emph{Select by Location} tool.
+\item
+  Select features from \emph{Large Trees}, that \emph{Intersect} the \emph{Seismic Hazards} layer and create a new selection.
+\item
+  Click \emph{Run}.
+\end{enumerate}
+
+The large trees that fall inside the seismic hazard zones are now selected. But how do we record this information in a way that we can keep and use in a map? Let's add a column with this information in our attribute table:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Open the attribute table for the large trees layer.
+\item
+  Click on the \emph{Field Calculator} button. \includegraphics{./images/Tool_FieldCalculator.png}
+\item
+  Check the box next to ``Only update selected features'' at the top of the window.
+\item
+  Name your new field ``EarthQZone'' so we remember what information it contains.
+\item
+  For the field type, select \emph{Text}.
+\item
+  In the expression field, type \emph{`yes'}. This will add the word ``yes'' to the EarthQZone column where the record is currently selected.
+\item
+  Click \emph{OK} and then inspect your attribute table to see the new column.
+\item
+  When we started the Field Calculator, QGIS automatically turned on editing for our shapefile. Save the edits we made by clicking the Save Edits button (blue floppy disk on the attribute table) and turn off the editing mode by clicking the Toggle Editing Mode button (yellow pencil).
+\item
+  You can now clear your selection because the attribute information now contains the information we need.
+\end{enumerate}
+
+Use your new symbology skills to syle this layer to show which large trees are in seismic hazard zones. Hint: Rule-based or Categorized symbology are good options!
+
+\begin{figure}
+\centering
+\includegraphics{./images/Map_BigTreesInZone.PNG}
+\caption{alt text}
+\end{figure}
+
+\hypertarget{additional-resources}{%
+\section{Additional Resources}\label{additional-resources}}
+
+Below are some additional resource to help you along your future learning journey:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://qgis.org/en/docs/index.html}{QGIS Documentation}: includes the User Guide, Training Manual, and Gentle Introduction to GIS
+\item
+  \href{https://www.osgeo.org/}{Open Source Geospatial Foundation}: includes news and information about projects, conferences, and community
+\end{itemize}
+
+\end{document}
