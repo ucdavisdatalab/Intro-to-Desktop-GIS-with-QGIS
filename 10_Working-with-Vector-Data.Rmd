@@ -76,9 +76,9 @@ Value | Legend
 Next we'll change the line width (also known as the line weight).
 
 1. For each row in the legend, double click on the line symbol to open the *Symbol Selector* dialog.
-1. Change the *Width* to match the Line Weight in the table below.
+1. Change the *Width* to match the Line Weight (use *points* as the units) in the table below.
 
-Value | Legend | Line Weight
+Value | Legend | Line Weight (points)
 --- | --- | ---
 0| Private Streets | 0.26
 1| Freeways | 2.0
@@ -87,6 +87,8 @@ Value | Legend | Line Weight
 4| Secondary Streets | 0.26
 5| Local Streets | 0.26
 6| Freeway Ramps | 0.5
+
+Note that points is the unit of measure for the size of a font. You're probably familiar with the size off 12 point font from word processing. It might also be helpful to know that 72 point font is equivalent to one inch high.
 
 ![alt text](./images/Vector_ClassifiedRoads.PNG "Classified Roads") 
 
